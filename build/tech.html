@@ -1,0 +1,3830 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Guide</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+
+  </head>
+
+  <body>
+
+    <!-- begin header -->
+    <header class="header">
+      <div class="header__top js-menu-close">
+        <div class="inner">
+          <button class="btn-nav js-nav-open">
+				<span></span>
+			</button>
+          <a href="#" class="logo header__logo">
+
+            <svg class="icon icon-logo"><use xlink:href="img/sprite.svg#icon-logo"></use></svg>
+
+            <div class="logo__text">
+              <span>Shopping</span>
+              <strong>Skidka.com</strong>
+            </div>
+          </a>
+
+          <!-- begin sm-search -->
+          <div class="sm-search header__search js-search-box">
+            <form action="/">
+              <div class="sm-search__field">
+
+                <svg class="icon icon-search-default"><use xlink:href="img/sprite.svg#icon-search-default"></use></svg>
+
+                <input type="text" class="input input_xlg sm-search__input js-search-input" placeholder="Название товара">
+                <button class="sm-search__close js-search-clear" type="button">
+				
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+              </div>
+
+              <button class="btn btn_lg sm-search__btn" type="submit">Найти</button>
+
+            </form>
+          </div>
+          <!-- end sm-search -->
+
+          <ul class="header__list">
+
+            <li>
+              <a href="#" class="header__link header__link_plane">
+
+                <span class="icon-wrapper icon-wrapper-plane">
+	<svg class="icon icon-plane-default"><use xlink:href="img/sprite.svg#icon-plane-default"></use></svg>
+	<svg class="icon icon-plane-active"><use xlink:href="img/sprite.svg#icon-plane-active"></use></svg>
+</span>
+
+                <span class="header__link-text">Москва</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="header__link header__link_percent">
+
+                <svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+                <span class="header__link-text">Скидки</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="header__link header__link_heart">
+
+                <span class="icon-wrapper icon-wrapper-heart">
+	<svg class="icon icon-heart-default"><use xlink:href="img/sprite.svg#icon-heart-default"></use></svg>
+	<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+</span>
+
+                <span class="header__link-text">Избранное</span>
+              </a>
+            </li>
+
+            <li class="js-dropdown dropdown-parent">
+              <a href="#" class="header__link header__link_user js-dropdown-open">
+
+                <span class="icon-wrapper icon-wrapper-user">
+	<svg class="icon icon-user-default"><use xlink:href="img/sprite.svg#icon-user-default"></use></svg>
+	<svg class="icon icon-user-active"><use xlink:href="img/sprite.svg#icon-user-active"></use></svg>
+</span>
+
+                <span class="header__link-text">Личный кабинет</span>
+              </a>
+              <div class="dropdown js-dropdown-container">
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">Мои данные</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Избранное</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Подписки</a>
+                  </li>
+                </ul>
+                <div class="dropdown__logout">
+                  <a href="#" class="dropdown__link js-popup-open" data-target="logout">Выйти</a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="header__bottom js-menu-close">
+        <div class="inner">
+          <nav class="nav">
+
+            <ul class="nav__list">
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link">
+
+                  <span>Совместные <br>покупки</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-0">
+
+                  <span>Бытовая <br>техника</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-1">
+
+                  <span>Электроника</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-2">
+
+                  <span>Мебель</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-3">
+
+                  <span>Одежда <br>и аксессуары</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-4">
+
+                  <span>Красота <br>и здоровье</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-5">
+
+                  <span>Товары <br>для детей</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-6">
+
+                  <span>Спорт <br>и отдых</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-7">
+
+                  <span>Зоотовары</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-8">
+
+                  <span>Авто <br>и мото</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-9">
+
+                  <span>Дом <br>и дача</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link" data-menu="menu-10">
+
+                  <span>Строительство <br>и ремонт</span>
+                </a>
+              </li>
+
+              <li class="nav__item">
+
+                <a href="#" class="nav__link js-menu-link">
+
+                  <span>Другие <br>категории</span>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+        <div class="menu js-menu">
+          <div class="inner">
+
+            <div class="menu__row js-menu-item" data-menu="menu-0">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-1">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-2">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-3">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-4">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-5">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-6">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-7">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-8">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-9">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+            <div class="menu__row js-menu-item" data-menu="menu-10">
+              <div class="menu__col menu__col_lg">
+                <div class="menu__lists">
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Электроника, фото, связь</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Аудио-видео техника</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu__col-in">
+                    <div class="menu__title"><a href="#">Компьютеры</a></div>
+                    <ul class="menu__list">
+
+                      <li><a href="#">Телефоны</a></li>
+
+                      <li><a href="#">Навигация</a></li>
+
+                      <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                      <li><a href="#">Электронные книги</a></li>
+
+                      <li><a href="#">Оптические приборы</a></li>
+
+                      <li><a href="#">Еще</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="menu__col menu__col_xs">
+
+                <!-- begin item -->
+                <div class="item js-item">
+
+                  <div class="sticker-text item__discount">-25%</div>
+
+                  <a href="#" class="item__inner">
+                    <div class="item__figure">
+                      <div class="item__image">
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload">
+                      </div>
+                      <div class="item__images">
+
+                        <img src="" alt="" data-img="img/item1.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item2.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item3.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item4.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item5.jpg" class="js-lazyload js-item-img">
+
+                        <img src="" alt="" data-img="img/item6.jpg" class="js-lazyload js-item-img">
+
+                      </div>
+                      <div class="item__pagination js-item-pagination"></div>
+                    </div>
+                    <div class="item__info">
+                      <div class="item__title">Hartan Racer GT</div>
+                      <div class="item__category">Детские коляски</div>
+                    </div>
+                  </a>
+
+                  <div class="item__footer">
+                    <div class="item__price">
+                      <div class="item__current">91 730 руб.</div>
+
+                      <div class="item__old">98 763 руб.</div>
+
+                    </div>
+                    <div class="item__btns">
+
+                      <div class="item__col item__col_lg">
+                        <button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					
+					
+<svg class="icon icon-percent"><use xlink:href="img/sprite.svg#icon-percent"></use></svg>
+
+					<span>Сообщить о скидке</span>
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					
+					
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+				</button>
+                      </div>
+
+                      <div class="item__col item__col_sm">
+                        <button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					
+					
+<svg class="icon icon-heart-active"><use xlink:href="img/sprite.svg#icon-heart-active"></use></svg>
+
+				</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end item -->
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- begin search-results  -->
+    <div class="search-results js-search-container">
+      <div class="inner">
+        <ul class="search-results__list">
+
+          <li class="js-search-item">samsung</li>
+
+          <li class="js-search-item">samsung galaxy</li>
+
+          <li class="js-search-item">мобильные телефоны samsung</li>
+
+          <li class="js-search-item">телевизоры и плазменные панели samsung</li>
+
+          <li class="js-search-item">samsung galaxy s7</li>
+
+          <li class="js-search-item">samsung galaxy s5</li>
+
+          <li class="js-search-item">samsung galaxy s3</li>
+
+          <li class="js-search-item">samsung galaxy s1</li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- end search-results -->
+
+    <!-- begin mobile-nav -->
+    <div class="mobile-nav js-nav">
+      <div class="mobile-nav__header">
+        <button class="mobile-nav__close js-nav-close">
+			
+<svg class="icon icon-prev"><use xlink:href="img/sprite.svg#icon-prev"></use></svg>
+
+		</button>
+        <a href="#" class="logo mobile-nav__logo">
+
+          <svg class="icon icon-logo"><use xlink:href="img/sprite.svg#icon-logo"></use></svg>
+
+          <div class="logo__text">
+            <span>Shopping</span>
+            <strong>Skidka.com</strong>
+          </div>
+        </a>
+      </div>
+      <div class="mobile-action">
+        <div class="mobile-search">
+
+          <!-- begin sm-search -->
+          <div class="sm-search mobile-search__inner js-search-box">
+            <form action="/">
+              <div class="sm-search__field">
+
+                <svg class="icon icon-search-default"><use xlink:href="img/sprite.svg#icon-search-default"></use></svg>
+
+                <input type="text" class="input input_xlg sm-search__input js-search-input" placeholder="Название товара">
+                <button class="sm-search__close js-search-clear" type="button">
+				
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+			</button>
+              </div>
+
+            </form>
+          </div>
+          <!-- end sm-search -->
+
+        </div>
+        <div class="mobile-action__item">
+          <a href="#" class="mobile-action__link">
+
+            <span class="icon-wrapper icon-wrapper-plane">
+	<svg class="icon icon-plane-default"><use xlink:href="img/sprite.svg#icon-plane-default"></use></svg>
+	<svg class="icon icon-plane-active"><use xlink:href="img/sprite.svg#icon-plane-active"></use></svg>
+</span>
+
+            <span class="mobile-action__text">Москва</span>
+          </a>
+        </div>
+      </div>
+      <a href="#" class="mobile-nav__title">Совместные покупки</a>
+      <ul class="mobile-nav__menu js-accordion-md" data-accordion-parent="nav-submenu">
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Электроника</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Бытовая техника</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Мебель</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Одежда и аксессуары</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Красота и здоровье</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Товары для детей</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Спорт и отдых</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Зоотовары</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Авто и мото</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Дом и дача</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="mobile-nav__item">
+          <a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+            <span>Строительство и ремонт</span>
+
+            <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+          </a>
+          <ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Электроника, фото, связь</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Аудио-видео техника</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+            <li class="mobile-nav__subitem">
+              <a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+                <span>Компьютеры</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </a>
+              <ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+
+                <li><a href="#">Телефоны</a></li>
+
+                <li><a href="#">Навигация</a></li>
+
+                <li><a href="#">Фотоаппараты и аксессуары</a></li>
+
+                <li><a href="#">Электронные книги</a></li>
+
+                <li><a href="#">Оптические приборы</a></li>
+
+                <li><a href="#">Еще</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <!-- end mobile-nav -->
+    <!-- BEGIN content -->
+    <div class="out">
+
+      <div class="guide">
+        <div class="inner">
+
+          <!-- begin breadcrumbs  -->
+          <ul class="breadcrumbs ">
+
+            <li>
+              <a href="#">Хлебнаые крошки</a>
+            </li>
+
+            <li class="is-active">
+              <a href="#" class="is-active">Типовая страница</a>
+            </li>
+
+          </ul>
+          <!-- end breadcrumbs -->
+
+          <article class="article">
+            <h1>Заголовок H1</h1>
+            <div class="title-h1">Заголовок H1</div>
+
+            <h2>Заголовок H2</h2>
+            <div class="title-h2">Заголовок H2</div>
+
+            <h3>Заголовок H2</h3>
+            <div class="title-h3">Заголовок H3</div>
+
+            <div class="article__text article__text_indent">
+              <p>Выбрать умные часы не так уж и просто. Одни привлекают благородством и стилем, другие берут отличным функционалом, третьи впечатляют уровнем защиты или спортивными возможностями. Мы поможем тебе разобраться и решить, какой гаджет идеально
+                подойдет именно тебе!</p>
+              <p>Если ты достиг высокого социального статуса, большую часть времени проводишь в деловом костюме, то и часы на руке должны быть соответствующими. Основным трендом у бизнес-элиты десятилетиями остается стрелочная классика. Но теперь, с появлением
+                Huawei Watch Classic, ты можешь позволить себе умные часы, внешне почти не отличимые от премиальных механических моделей.</p>
+            </div>
+
+            <div class="article__text article__text_indent">
+              <div class="article__row">
+                <div class="article__col">
+                  <p>ShoppingSkidka.com — старейший в рунете сервис подбора и сравнения товаров. Был образован в 1996 году как каталог цен компьютерных товаров и офисного оборудования в интернете. Со временем ShoppingSkidka.com расширял категории представленных
+                    товаров и сейчас насчитывает предложения по 1200 категориям, от более чем 5 000 интернет-магазинов. Ежемесячная аудитория сервиса согласно данным TNS 4 млн. пользователей (данные за декабрь 2014, вся Россия, возраст 12-64).</p>
+                </div>
+                <div class="article__col">
+                  <p>Cервис ShoppingSkidka.com позволяет экономить время на поиски интересующего товара в интернете. Достаточно просто зайти на ShoppingSkidka.com, выбрать нужную категорию или набрать название товара в поиске, и получить список магазинов,
+                    предлагающих нужную продукцию с текущими ценами. Отзывы на товары и рейтинги магазинов позволяют получить от процесса покупки максимальное количество положительных эмоций.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="blockquote-wrapper">
+              <blockquote class="blockquote blockquote_right">
+
+                <svg class="icon icon-quotes-open"><use xlink:href="img/sprite.svg#icon-quotes-open"></use></svg>
+
+                <svg class="icon icon-quotes-close"><use xlink:href="img/sprite.svg#icon-quotes-close"></use></svg>
+
+                <p>Всегда был за яблочную продукцию. Но при сравнении понял что те проиграли на порядок и по цене и по качеству. У яблока нет нормальных циферблатов. Все какое то детское. Хувы похожи на реальные часы на столько, что люди далеко не всегда
+                  понимают что они не аналоговые. Большой косяк когда паришь их с айфоном. Мочь то могут, только функций 2/3 не работаю, приложения не установишь, карты не посмотри и еще много чего нету. Может быть со временем софт обновят и что то поменяется,
+                  но не факт и надо ждать. Подключив их к андроиду, узнал много нового и приятного о них. В сухом остатке - вещ! Вещ хорошая! Всем советую!</p>
+              </blockquote>
+            </div>
+
+            <div class="blockquote-wrapper">
+              <blockquote class="blockquote">
+
+                <svg class="icon icon-quotes-open"><use xlink:href="img/sprite.svg#icon-quotes-open"></use></svg>
+
+                <svg class="icon icon-quotes-close"><use xlink:href="img/sprite.svg#icon-quotes-close"></use></svg>
+
+                <p>Всегда был за яблочную продукцию. Но при сравнении понял что те проиграли на порядок и по цене и по качеству. У яблока нет нормальных циферблатов. Все какое то детское. Хувы похожи на реальные часы на столько, что люди далеко не всегда
+                  понимают что они не аналоговые. Большой косяк когда паришь их с айфоном. Мочь то могут, только функций 2/3 не работаю, приложения не установишь, карты не посмотри и еще много чего нету. Может быть со временем софт обновят и что то поменяется,
+                  но не факт и надо ждать. Подключив их к андроиду, узнал много нового и приятного о них. В сухом остатке - вещ! Вещ хорошая! Всем советую!</p>
+              </blockquote>
+            </div>
+
+          </article>
+
+          <div class="guide__btns">
+            <button class="btn-direction btn-direction_prev">
+					
+<svg class="icon icon-prev"><use xlink:href="img/sprite.svg#icon-prev"></use></svg>
+
+				</button>
+            <button class="btn-direction btn-direction_next">
+					
+<svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+				</button>
+            <button class="btn-direction btn-direction_lg btn-direction_up">
+					
+<svg class="icon icon-up"><use xlink:href="img/sprite.svg#icon-up"></use></svg>
+
+				</button>
+            <button class="btn-close btn-close_lg js-close">
+					
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+				</button>
+            <button class="btn btn_lg">Button</button>
+            <button class="btn btn_lg" disabled>Button</button>
+            <button class="btn">Button</button>
+            <button class="btn" disabled>Button</button>
+            <button class="btn btn_extra">Button</button>
+            <button class="btn btn_extra btn_gray" disabled>Button</button>
+            <a href="#" class="btn-social">
+              <div class="btn-social__link">
+
+                <svg class="icon icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+
+              </div>
+              <span class="btn-social__meta">Oleg toptalov</span>
+            </a>
+
+            <!-- begin btn-filter -->
+            <button class="btn-filter js-filter-open">
+	
+<svg class="icon icon-filter"><use xlink:href="img/sprite.svg#icon-filter"></use></svg>
+
+	
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+	<span class="btn-filter_track">
+		<span class="btn-filter_visible">Фильтр</span>
+		<span class="btn-filter_hidden">Закрыть</span>
+	</span>
+</button>
+            <!-- end btn-filter -->
+
+            <button type="button" class="btn-del">Удалить</button>
+          </div>
+
+          <div class="guide__field">
+            <div class="field">
+              <input type="text" class="input" placeholder="По Дефолту">
+            </div>
+          </div>
+          <div class="guide__field">
+            <div class="field is-success">
+              <input type="text" class="input is-success" placeholder="По Дефолту" value="Поис">
+
+              <svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+            </div>
+          </div>
+          <div class="guide__field">
+            <div class="field is-error">
+              <input type="text" class="input is-error" placeholder="По Дефолту" value="+790s">
+
+              <svg class="icon icon-error"><use xlink:href="img/sprite.svg#icon-error"></use></svg>
+
+            </div>
+          </div>
+          <div class="guide__field">
+            <div class="field">
+              <input type="text" class="input" placeholder="По Дефолту" value="Заполненное поле">
+            </div>
+          </div>
+          <div class="guide__field">
+
+            <label class="checkbox ">
+	<input type="checkbox" >
+	<span class="checkbox__icon">
+		
+<svg class="icon icon-checkbox"><use xlink:href="img/sprite.svg#icon-checkbox"></use></svg>
+
+	</span>
+	<span class="checkbox__text">
+		
+			Checkbox
+		
+	</span>
+</label>
+
+          </div>
+          <div class="guide__field">
+
+            <label class="radio ">
+	<input type="radio" name="" >
+	<span class="radio__icon"></span>
+	<span class="radio__text">
+		
+			Radio
+		
+	</span>
+</label>
+
+          </div>
+          <div class="guide__field">
+
+            <div class="select ">
+              <select class="js-select" style="width: 100%;">
+		
+		<option value="Цене, Возрастание">Цене, Возрастание</option>
+		
+		<option value="Цене, Убывание">Цене, Убывание</option>
+		
+		<option value="Популярности">Популярности</option>
+		
+		<option value="Новизне">Новизне</option>
+		
+	</select>
+            </div>
+
+          </div>
+          <div class="guide__range">
+
+            <div class="js-range-input" data-start="200" data-end="800" data-min="0" data-max="1000"></div>
+
+          </div>
+
+          <!-- begin pagination -->
+          <div class="pagination ">
+            <ul class="pagination__list">
+
+              <li><span>...</span></li>
+              <li><a href="#">16</a></li>
+            </ul>
+          </div>
+          <!-- end pagination -->
+
+          <div class="guide__warning">
+
+            <div class="warning">
+
+              <div class="warning__circle">
+
+                <svg class="icon icon-i"><use xlink:href="img/sprite.svg#icon-i"></use></svg>
+
+              </div>
+
+              <div class="warning__title">Заголовок проблемы</div>
+              <div class="warning__text">Пояснительный текст</div>
+
+            </div>
+
+          </div>
+          <div class="guide__warning">
+
+            <div class="warning">
+
+              <div class="warning__triangle">
+
+                <svg class="icon icon-triangle"><use xlink:href="img/sprite.svg#icon-triangle"></use></svg>
+
+                <svg class="icon icon-exclamation"><use xlink:href="img/sprite.svg#icon-exclamation"></use></svg>
+
+              </div>
+
+              <div class="warning__title">Заголовок проблемы</div>
+              <div class="warning__text">Пояснительный текст</div>
+
+            </div>
+
+          </div>
+          <div class="guide__warning">
+
+            <div class="warning">
+
+              <div class="warning__circle">
+
+                <svg class="icon icon-i"><use xlink:href="img/sprite.svg#icon-i"></use></svg>
+
+              </div>
+
+              <div class="warning__title">Заголовок проблемы</div>
+              <div class="warning__text">Пояснительный текст и предполагаемое решение</div>
+
+              <div class="warning__btn">
+                <button class="btn">Сообщить о проблеме</button>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="guide__warning">
+
+            <div class="alert alert_success">
+
+              <div class="alert__circle">
+
+                <svg class="icon icon-check"><use xlink:href="img/sprite.svg#icon-check"></use></svg>
+
+              </div>
+
+              <div class="alert__text">Обновление успешно</div>
+              <button class="alert__close">
+		
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+	</button>
+            </div>
+
+          </div>
+          <div class="guide__warning">
+
+            <div class="alert alert_error">
+
+              <div class="alert__triangle">
+
+                <svg class="icon icon-triangle"><use xlink:href="img/sprite.svg#icon-triangle"></use></svg>
+
+                <svg class="icon icon-exclamation"><use xlink:href="img/sprite.svg#icon-exclamation"></use></svg>
+
+              </div>
+
+              <div class="alert__text">Поле заполнено не верно</div>
+              <button class="alert__close">
+		
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+	</button>
+            </div>
+
+          </div>
+
+          <div class="guide__tabs">
+            <div class="tabs js-tabs">
+              <ul class="tabs__list tabs__list_left">
+                <li><a href="tab1" class="js-tabs-open">Сумки и чемоданы</a></li>
+                <li><a href="tab2" class="js-tabs-open is-active">Встраиваемая техника</a></li>
+                <li><a href="tab3" class="js-tabs-open">Товары для собак</a></li>
+              </ul>
+              <div class="tabs__container">
+                <div class="tabs__content js-tabs-content" data-id="tab1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam saepe facere error omnis dolor incidunt nostrum quod optio corporis porro ipsa tempora esse, in aliquam alias dolore, neque modi temporibus.</p>
+                </div>
+                <div class="tabs__content js-tabs-content is-active" data-id="tab2">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente earum voluptatum in beatae laboriosam, quaerat ab dicta eligendi minus aut doloremque rem eos, adipisci neque magnam sit iusto quo quibusdam. Expedita consequuntur, dolores!</p>
+                </div>
+                <div class="tabs__content js-tabs-content" data-id="tab3">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tenetur quibusdam reiciendis veritatis natus laborum ipsam perferendis minus nam voluptatem, fugiat rerum odio sed ratione minima vitae, temporibus impedit perspiciatis debitis
+                    tempore aliquid officia? Unde.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="grid__row">
+              <div class="grid__col grid__col_xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+              <div class="grid__col grid__col_xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, illum.</div>
+              <div class="grid__col grid__col_xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, similique!</div>
+              <div class="grid__col grid__col_xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, asperiores.</div>
+            </div>
+            <div class="grid__row">
+              <div class="grid__col grid__col_sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+              <div class="grid__col grid__col_sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, illum.</div>
+              <div class="grid__col grid__col_sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, similique!</div>
+            </div>
+            <div class="grid__row">
+              <div class="grid__col grid__col_md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+              <div class="grid__col grid__col_md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, illum.</div>
+            </div>
+            <div class="grid__row">
+              <div class="grid__col grid__col_lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+            </div>
+            <div class="grid__row">
+              <div class="grid__col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+            </div>
+          </div>
+        </div>
+        <!-- begin subscribe -->
+        <div class="subscribe">
+          <div class="inner">
+            <div class="subscribe__inner">
+              <div class="subscribe__title">
+
+                <svg class="icon icon-subscribe"><use xlink:href="img/sprite.svg#icon-subscribe"></use></svg>
+
+                <span>Подписка</span>
+              </div>
+              <div class="subscribe__label">
+                <strong>Подпишитесь!</strong>
+                <span>Скидки, акции и выгодные предложения!</span>
+              </div>
+              <div class="subscribe__form">
+                <form action="/">
+                  <button class="btn btn_lg subscribe__btn" type="submit">Подписаться</button>
+                  <button class="btn-direction btn-direction_next subscribe__next" type="submit">
+						
+<svg class="icon icon-next"><use xlink:href="img/sprite.svg#icon-next"></use></svg>
+
+					</button>
+                  <div class="subscribe__field">
+                    <input type="text" class="input" placeholder="Ваш email">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end subscribe -->
+      </div>
+
+      <div class="inner">
+        <div class="stock">
+          <div class="stock__container">
+
+            <div class="stock__row scrollbar js-scrollbar">
+              <div class="stock__col stock__col_right">
+                <div class="stock__item">
+
+                  <!-- begin product  -->
+                  <div class="product product_lg product_side-left">
+                    <a href="#" class="product__img">
+                      <img alt="" data-img="img/product-lg.jpg" class="js-lazyload">
+                    </a>
+                    <div class="product__box">
+                      <div class="product__content">
+
+                        <div class="product__content-in">
+                          <h3 class="title-h3 product__title">
+                            <a href="#" class="js-cut-text">При покупке стиральной машины LG F-12U1HBS4 вы получаете в подарок хлебопечку!</a>
+                          </h3>
+                          <ul class="product__meta">
+                            <li class="product__participant">
+                              <span>Участников:</span>
+                              <strong>4</strong>
+                            </li>
+                            <li class="product__time">
+                              <span>Осталось:</span>
+
+                              <strong>12 дней</strong>
+
+                            </li>
+                          </ul>
+                          <div class="product__footer">
+                            <div class="product__footer-in">
+                              <h4 class="product__more">
+                                <a href="#">Подробнее</a>
+                              </h4>
+                              <button class="btn btn_lg btn_extra btn_participate">
+							
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+							<span>Участвовать</span>
+						</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end product -->
+
+                </div>
+              </div>
+
+              <div class="stock__col stock__col_left">
+                <div class="stock__item">
+
+                  <!-- begin product  -->
+                  <div class="product product_row product_side-left">
+                    <a href="#" class="product__img">
+                      <img alt="" data-img="img/product-row.jpg" class="js-lazyload">
+                    </a>
+                    <div class="product__box">
+                      <div class="product__content">
+
+                        <div class="product__content-in">
+                          <h3 class="title-h3 product__title">
+                            <a href="#" class="js-cut-text">Моноблок Dell Inspiron со скидкой 40%</a>
+                          </h3>
+                          <ul class="product__meta">
+                            <li class="product__participant">
+                              <span>Участников:</span>
+                              <strong>8</strong>
+                            </li>
+                            <li class="product__time">
+                              <span>Осталось:</span>
+
+                              <strong class="is-timeout">5 дней</strong>
+
+                            </li>
+                          </ul>
+                          <div class="product__footer">
+                            <div class="product__footer-in">
+                              <h4 class="product__more">
+                                <a href="#">Подробнее</a>
+                              </h4>
+                              <button class="btn btn_lg btn_extra btn_participate">
+							
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+							<span>Участвовать</span>
+						</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end product -->
+
+                </div>
+              </div>
+
+              <div class="stock__col stock__col_left">
+                <div class="stock__item">
+
+                  <!-- begin product  -->
+                  <div class="product product_row product_side-right">
+                    <a href="#" class="product__img">
+                      <img alt="" data-img="img/product-row.jpg" class="js-lazyload">
+                    </a>
+                    <div class="product__box">
+                      <div class="product__content">
+
+                        <div class="product__content-in">
+                          <h3 class="title-h3 product__title">
+                            <a href="#" class="js-cut-text">Мягкие игрушки 	Orange Toys 3 по цене 2</a>
+                          </h3>
+                          <ul class="product__meta">
+                            <li class="product__participant">
+                              <span>Участников:</span>
+                              <strong>16</strong>
+                            </li>
+                            <li class="product__time">
+                              <span>Осталось:</span>
+
+                              <strong class="is-timeout">2 часа</strong>
+
+                            </li>
+                          </ul>
+                          <div class="product__footer">
+                            <div class="product__footer-in">
+                              <h4 class="product__more">
+                                <a href="#">Подробнее</a>
+                              </h4>
+                              <button class="btn btn_lg btn_extra btn_participate">
+							
+<svg class="icon icon-cooperative"><use xlink:href="img/sprite.svg#icon-cooperative"></use></svg>
+
+							<span>Участвовать</span>
+						</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end product -->
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- END content -->
+    <!-- begin footer -->
+    <footer class="footer">
+      <div class="inner">
+
+        <div class="footer__row js-accordion-md" data-accordion-parent="footer">
+
+          <div class="footer__col">
+            <div class="footer__nav">
+              <div class="footer__title js-accordion-md-open" data-accordion-child="footer">
+                <span>Покупателям</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </div>
+              <ul class="footer__list js-accordion-md-content" data-accordion-child="footer">
+
+                <li><a href="#">Покупки на ShopingSkidka.com</a></li>
+
+                <li><a href="#">Доставка и оплата товаров</a></li>
+
+                <li><a href="#">Пользовательское соглашение</a></li>
+
+                <li><a href="#">Соглашение о конфиденциальности и персональных данных</a></li>
+
+                <li><a href="#">Юридическим лицам</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__col">
+            <div class="footer__nav">
+              <div class="footer__title js-accordion-md-open" data-accordion-child="footer">
+                <span>Магазинам</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </div>
+              <ul class="footer__list js-accordion-md-content" data-accordion-child="footer">
+
+                <li><a href="#">Истории успеха</a></li>
+
+                <li><a href="#">Торговля на ShopingSkidka.com</a></li>
+
+                <li><a href="#">Все еще думаете?</a></li>
+
+                <li><a href="#">Добавить магазин</a></li>
+
+                <li><a href="#">Договор оферты</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__col">
+            <div class="footer__nav">
+              <div class="footer__title js-accordion-md-open" data-accordion-child="footer">
+                <span>Партнерам</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </div>
+              <ul class="footer__list js-accordion-md-content" data-accordion-child="footer">
+
+                <li><a href="#">Реклама на сайте</a></li>
+
+                <li><a href="#">Сотрудничество</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__col">
+            <div class="footer__nav">
+              <div class="footer__title js-accordion-md-open" data-accordion-child="footer">
+                <span>О компании</span>
+
+                <svg class="icon icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg>
+
+              </div>
+              <ul class="footer__list js-accordion-md-content" data-accordion-child="footer">
+
+                <li><a href="#">Что такое ShopingSkidka.com</a></li>
+
+                <li><a href="#">Работа в ShopingSkidka.com</a></li>
+
+                <li><a href="#">Отзывы</a></li>
+
+                <li><a href="#">Пресс-центр</a></li>
+
+                <li><a href="#">Контактные данные</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="footer__bottom">
+
+          <ul class="footer__social">
+
+            <li>
+              <a href="#">
+
+                <svg class="icon icon-vk"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+
+                <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+
+                <svg class="icon icon-od"><use xlink:href="img/sprite.svg#icon-od"></use></svg>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+
+                <svg class="icon icon-youtube"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+
+                <svg class="icon icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+
+                <svg class="icon icon-google"><use xlink:href="img/sprite.svg#icon-google"></use></svg>
+
+              </a>
+            </li>
+
+          </ul>
+          <a href="#" class="logo logo_sm footer__logo">
+
+            <svg class="icon icon-logo"><use xlink:href="img/sprite.svg#icon-logo"></use></svg>
+
+            <div class="logo__text">
+              <span>Shopping</span>
+              <strong>Skidka.com</strong>
+            </div>
+          </a>
+          <div class="footer__copy">© 2016 ShopingSkidka.com</div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- begin popup  -->
+    <div class="popup js-popup" data-modal="login">
+      <div class="popup__container popup__container_xs js-popup-container">
+        <button class="btn-close btn-close_lg popup__close js-popup-close">
+			
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+		</button>
+        <div class="popup__form">
+          <form action="/">
+            <div class="popup__title">Вход</div>
+            <div class="popup__field">
+
+              <input type="email" class="input " placeholder="Email">
+
+            </div>
+            <div class="popup__field">
+
+              <input type="password" class="input " placeholder="Пароль">
+
+            </div>
+            <div class="popup__forgot">
+              <a href="#" class="popup__link">Забыли пароль?</a>
+            </div>
+            <div class="popup__submit">
+              <button class="btn btn_extra btn_lg">Войти</button>
+            </div>
+            <div class="popup__slash">
+              <span>или</span>
+            </div>
+
+            <!-- begin social  -->
+            <div class="social popup__social">
+
+              <ul class="social__list">
+
+                <li class="social__item">
+                  <a href="#" class="social__link social__link_vk">
+
+                    <svg class="icon icon-vk"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a href="#" class="social__link social__link_fb">
+
+                    <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a href="#" class="social__link social__link_google">
+
+                    <svg class="icon icon-google"><use xlink:href="img/sprite.svg#icon-google"></use></svg>
+
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a href="#" class="social__link social__link_od">
+
+                    <svg class="icon icon-od"><use xlink:href="img/sprite.svg#icon-od"></use></svg>
+
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- end social -->
+
+          </form>
+        </div>
+        <div class="popup__footer">
+          <a href="#" class="popup__link js-popup-open" data-target="registration">Регистрация нового пользователя</a>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup  -->
+    <div class="popup js-popup" data-modal="registration">
+      <div class="popup__container popup__container_xs js-popup-container">
+        <button class="btn-close btn-close_lg popup__close js-popup-close">
+			
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+		</button>
+        <div class="popup__form">
+          <form action="/">
+            <div class="popup__title">Регистрация</div>
+            <div class="popup__field">
+
+              <input type="email" class="input " placeholder="Email">
+
+            </div>
+            <div class="popup__field">
+
+              <input type="password" class="input " placeholder="Пароль">
+
+            </div>
+            <div class="popup__checkbox">
+
+              <label class="checkbox checkbox_blue">
+	<input type="checkbox" >
+	<span class="checkbox__icon">
+		
+<svg class="icon icon-checkbox"><use xlink:href="img/sprite.svg#icon-checkbox"></use></svg>
+
+	</span>
+	<span class="checkbox__text">
+		
+			Подписаться на новости
+		
+	</span>
+</label>
+
+            </div>
+            <div class="popup__submit">
+              <button class="btn btn_extra btn_lg">Зарегистрироваться</button>
+            </div>
+            <div class="popup__slash">
+              <span>или</span>
+            </div>
+
+            <!-- begin social  -->
+            <div class="social popup__social">
+
+              <ul class="social__list">
+
+                <li class="social__item">
+                  <a href="#" class="social__link social__link_vk">
+
+                    <svg class="icon icon-vk"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a href="#" class="social__link social__link_fb">
+
+                    <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a href="#" class="social__link social__link_google">
+
+                    <svg class="icon icon-google"><use xlink:href="img/sprite.svg#icon-google"></use></svg>
+
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a href="#" class="social__link social__link_od">
+
+                    <svg class="icon icon-od"><use xlink:href="img/sprite.svg#icon-od"></use></svg>
+
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- end social -->
+
+          </form>
+        </div>
+        <div class="popup__footer">
+          <div class="popup__text">Уже есть аккаунт? <a href="#" class="popup__link js-popup-open" data-target="login">Войти</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup  -->
+    <div class="popup js-popup" data-modal="logout">
+      <div class="popup__container popup__container_sm js-popup-container">
+        <button class="btn-close btn-close_lg popup__close js-popup-close">
+			
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+		</button>
+        <div class="popup__notice">
+          <div class="popup__title">Выход</div>
+          <div class="popup__info">
+            <p>Вы действительно хотите выйти из профиля?</p>
+          </div>
+          <div class="popup__btn">
+            <button class="btn btn_lg btn_extra">Выйти</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup  -->
+    <div class="popup js-popup" data-modal="add-social">
+      <div class="popup__container popup__container_md popup__container_social js-popup-container">
+        <button class="btn-close btn-close_lg popup__close js-popup-close">
+			
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
+		</button>
+        <div class="popup__add-social">
+          <div class="popup__title">Добавить социальную сеть</div>
+
+          <!-- begin social  -->
+          <div class="social social_lg popup__social-lg">
+
+            <ul class="social__list">
+
+              <li class="social__item">
+                <a href="#" class="social__link social__link_vk">
+
+                  <svg class="icon icon-vk"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a href="#" class="social__link social__link_fb">
+
+                  <svg class="icon icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a href="#" class="social__link social__link_google">
+
+                  <svg class="icon icon-google"><use xlink:href="img/sprite.svg#icon-google"></use></svg>
+
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a href="#" class="social__link social__link_od">
+
+                  <svg class="icon icon-od"><use xlink:href="img/sprite.svg#icon-od"></use></svg>
+
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <!-- end social -->
+
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+
+    <div class="overlay js-overlay"></div>
+
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+
+  </body>
+
+</html>

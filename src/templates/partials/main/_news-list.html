@@ -1,0 +1,89 @@
+<!-- begin section -->
+<div class="section inner">
+	<div class="heading">
+		<h2 class="title-h2 heading__title">Новости</h2>
+		<div class="heading__more">
+			<button class="btn">Все новости</button>
+		</div>
+	</div>
+	{% set news = [
+		{
+			date: '26 сент. 2016 г.',
+			title: 'Старт продаж iPhone 7. <br>Как это было',
+			text: 'Первые покупатели забрали свои девайсы уже в ночь с 22 на 23 сентября.',
+			info: [
+				{
+					icon: 'view',
+					text: '12'
+				},
+				{
+					icons: 'heart-sm',
+					text: '3'
+				},
+				{
+					icons: 'comment',
+					text: '1'
+				}
+			]
+		},
+		{
+			date: '03 авг. 2016 г.',
+			title: 'Пройди квест банка «Тинькофф» и выиграй план…',
+			text: 'А пятеро победителей разделят между собой миллион',
+			info: [
+				{
+					icon: 'view',
+					text: '12'
+				},
+				{
+					icons: 'heart-sm',
+					text: '4'
+				}
+			]
+		},
+		{
+			date: '28 июня 2016 г.',
+			title: 'Играй и побеждай с футбольной лотереей!',
+			text: 'Лотереи «6 из 36» и «Футбол».',
+			info: [
+				{
+					icon: 'view',
+					text: '12'
+				},
+				{
+					icons: 'heart-sm',
+					text: '1'
+				},
+				{
+					icons: 'comment',
+					text: '2'
+				}
+			]
+		},
+		{
+			date: '21 июня 2016 г.',
+			title: 'Купи смартфон Xiaomi прямо сейчас',
+			text: 'Официально в России и только в Shopping Skidka.com.',
+			info: [
+				{
+					icon: 'view',
+					text: '12'
+				},
+				{
+					icons: 'comment',
+					text: '2'
+				}
+			]
+		}
+	] %}
+	<div class="news-list js-news-list">
+		<div class="news-list__row js-news-list-slider">
+			{% for item in news %}
+				<div class="news-list__col">
+					{{mixins.newsItem(item)}}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end section -->

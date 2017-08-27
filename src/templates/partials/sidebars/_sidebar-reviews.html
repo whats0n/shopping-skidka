@@ -1,0 +1,25 @@
+<div class="sm-reviews sidebar__sm-reviews">
+	<div class="sm-reviews__header">
+		<h2 class="title-h2 sm-reviews__title">Обзоры и статьи</h2>
+		<div class="sm-reviews__more">
+			{{mixins.btnDirection({
+				link: true,
+				classes: 'btn-direction_next',
+				icon: 'next'
+			})}}
+		</div>
+	</div>
+	{% for review in sidebar.reviews %}
+		<div class="sm-review">
+			<a href="#" class="sm-review__img">
+				<img src="img/{{review.img}}" alt="">
+			</a>
+			{% if review.category %}
+				<small class="sm-review__category">{{review.category}}</small>
+			{% endif %}
+			<h3 class="sm-review__title">
+				<a href="#">{{review.title |safe }}</a>
+			</h3>
+		</div>
+	{% endfor %}
+</div>

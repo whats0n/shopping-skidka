@@ -1,0 +1,29 @@
+.rating
+	&__list
+		margin: 0 -2px
+		font-size: 0
+		li,
+		label
+			display: inline-block
+			vertical-align: top
+		label
+			position: relative
+			padding: 6px 2px 5px
+			cursor: pointer
+			+hover
+				.icon
+					fill: $blue
+			&.is-active
+				.icon
+					fill: $blue
+		input
+			position: absolute
+			top: 0
+			left: 0
+			cursor: pointer
+			opacity: 0
+			visibility: hidden
+		.icon
+			font-size: 13px
+			fill: rgba($dark, 0.1)
+			+t(fill)

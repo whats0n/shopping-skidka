@@ -1,0 +1,97 @@
+---
+title: Catalog/Main
+navActive: 2
+recommendedItems: 3
+recommendedItemsClass: 'recommended__col_sm'
+newestItems: 3
+newestItemsClass: 'newest__col_sm'
+partnerClass: 'partner_sm'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main">
+	<div class="section inner">
+		<div class="page">
+			<div class="page__heading">
+				<h1>Электроника</h1>
+			</div>
+			<div class="page__row">
+				{% include "partials/sidebars/_catalog-main.html" %}
+				<div class="page__content">
+					{% include "partials/components/_banners.html" %}
+					{% include "partials/main/_recommended.html" %}
+					<div class="page__popular js-popular" data-slides-show="3">
+						{% include "partials/main/_popular.html" %}
+					</div>
+					<div class="page__newest tabs js-tabs">
+						{% set newest = [
+							{
+								id: 'tab-1',
+								text: 'Встраиваемая техника',
+								active: true
+							},
+							{
+								id: 'tab-2',
+								text: 'Товары для собак'
+							},
+							{
+								id: 'tab-3',
+								text: 'GPS-навигация'
+							},
+							{
+								id: 'tab-4',
+								text: 'Мебель'
+							}
+						] %}
+						{% include "partials/main/_newest.html" %}
+					</div>
+					<div class="page__partners tabs js-tabs">
+						{% include "partials/main/_partners.html" %}
+					</div>
+
+					{% set lookingFor = {
+						title: 'Часто ищут',
+						list: [
+							[
+								'Смартфоны на Android',
+								'Карты памяти SD 8-16 Гб',
+								'Рации для охоты',
+								'Планшеты iPad',
+								'Миниатюрные диктофоны'
+							],
+							[
+								'Умные часы и браслеты для Android',
+								'Недорогие устройства громкой связи',
+								'Недорогие телефоны',
+								'Цифровые плееры Apple iPod',
+								'Магнитолы с CD'
+							],
+							[
+								'Универсальные внешние аккумуляторы для iPhone',
+								'Радиотелефоны с двумя трубками',
+								'Портативная акустика с воспроизведением с USB',
+								'Электронные книги',
+								'Радиоприемники с интернет-радио'
+							]
+						]
+					} %}
+					{% include "partials/components/_looking-for.html" %}
+
+					{% set blockText = {
+						title: 'Электроника',
+						content: [
+							{
+								p: 'Поскольку в аналоговых и цифровых схемах информация кодируется по-разному, у них отличаются и процессы обработки сигналов. Следует при этом заметить, что все операции, которые могут быть совершены над аналоговым сигналом (в частности, усиление, фильтрация, ограничение диапазона и т. п.) могут быть осуществлены и методами цифровой электроники и программного моделирования в микропроцессорах.'
+							}
+						]
+					} %}
+					{% include "partials/components/_text.html" %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers(true, 'Категории')}}
+</div>
+{% endblock %}

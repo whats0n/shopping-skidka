@@ -1,0 +1,98 @@
+.comment
+	padding: 24px 0 16px
+	border-bottom: 1px solid rgba($dark, 0.1)
+	+md
+		padding: 16px 0 8px
+	&__header
+		position: relative
+		padding: 8px 0 8px 64px
+		+clr
+		+sm
+			padding: 0 0 8px 56px
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		overflow: hidden
+		border-radius: 50%
+		width: 40px
+		height: 40px
+		font-size: 0
+		img
+			border-radius: 50%
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__meta,
+	&__name,
+	&__info
+		float: left
+	&__meta
+		padding-right: 2px
+	&__name
+		color: $dark
+		+reg
+		+f(15, 24, 1)
+		+md
+			+f(14, 24, 1)
+		+sm
+			+f(14, 16, 1)
+	&__info
+		color: $text
+		+sreg
+		+f(12, 24)
+		+sm
+			+f(12, 16)
+		&:before, &:after
+			content: "\2013"
+			display: inline-block
+			vertical-align: top
+			padding: 0 6px
+		&:after
+			+sm
+				display: none
+	&__rating
+		float: left
+		padding: 6px 0 5px
+		+sm
+			clear: both
+	&__reaction
+		float: right
+	&__body
+		padding-left: 64px
+		+reg
+		+sm
+			padding-left: 0
+		p, li
+			color: $text
+			+sreg
+			+f(14, 24)
+			+md
+				+f(12, 24)
+	&__title
+		margin-bottom: 8px
+		+md
+			padding: 4px 0
+		+sm
+			padding: 0
+	&__subtitle
+		color: $dark
+		+f(15, 24, 1)
+		+md
+			+f(14, 24, 1)
+	&__list,
+	&__message
+		margin-bottom: 8px
+	&__list
+		li
+			position: relative
+			padding-left: 10px
+			&:before
+				content: ""
+				position: absolute
+				top: 11px
+				left: 1px
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: $blue

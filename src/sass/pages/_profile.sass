@@ -1,0 +1,107 @@
+@import profile/main-form
+
+.page-head
+	padding: 24px 0 16px
+	border-bottom: 1px solid rgba(29, 46, 73, 0.1)
+	margin-bottom: 24px
+	+md
+		margin: 8px 0
+		padding: 0
+		border: 0
+	&__title
+		+md
+			+f(24, 32, 0.44)
+
+.profile
+	position: relative
+	padding-bottom: 40px
+	+clr
+	+sm
+		padding-bottom: 32px
+	&__row,
+	&__items
+		margin: 0 -8px
+		+clr
+		+md
+			overflow: hidden
+			margin: 0 -6px
+		+sm
+			overflow: visible
+			margin: 0 -8px
+	&__sidebar,
+	&__filter
+		float: left
+		width: 25%
+		padding: 0 8px
+		+md
+			padding: 0 6px
+		+sm
+			padding: 0 8px
+	&__sidebar
+		+md
+			width: 100%
+		&:after
+			content: ''
+			display: none
+			margin-top: -1px
+			border-bottom: 1px solid rgba(29, 46, 73, 0.1)
+			+sm
+				display: block
+	&__filter
+		+filterOpened
+			+md
+				opacity: 1
+				transform: translate3d(0,0,0)
+		+md
+			margin-top: 12px
+			width: 33.33%
+			opacity: 0
+			transform: translate3d(-100%,0,0)
+			transition: opacity 0.35s ease, transform 0.35s ease
+		+sm
+			position: fixed
+			z-index: 1000
+			top: 0
+			left: 0
+			bottom: 0
+			overflow: auto
+			padding: 12px 0
+			margin: 0
+			width: 248px
+			opacity: 1
+			background: whitesmoke
+	&__content
+		float: right
+		padding: 0 8px
+		width: 75%
+		+filterOpened
+			+md
+				transform: translate3d(33.33%,0,0)
+			+sm
+				+gpu
+		+md
+			padding: 16px 6px 0
+			margin-left: -33.33%
+			width: 100%
+			+gpu
+			transition: transform 0.35s ease
+		+sm
+			padding: 16px 8px 0
+			margin-left: 0
+	&__col
+		float: left
+		padding: 0 8px 16px
+		+md
+			padding: 0 6px 16px
+		+sm
+			padding: 0 8px 16px
+	&__col_sm
+		width: 33.33%
+		+sm
+			width: 50%
+	&__col_xs
+		width: 25%
+	&__col_md
+		width: 50%
+	&__col_lg
+		width: 75%

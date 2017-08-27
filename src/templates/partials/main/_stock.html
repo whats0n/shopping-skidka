@@ -1,0 +1,94 @@
+<!-- begin section -->
+<div class="section inner">
+	<div class="heading">
+		<h2 class="title-h2 heading__title">Совместные покупки и Акции</h2>
+		<div class="heading__more">
+			<button class="btn">Ещё</button>
+		</div>
+	</div>
+	<div class="stock">
+		<div class="stock__container">
+			{% set stock = {
+				row: [
+					{
+						img: 'product-row.jpg',
+						title: 'Моноблок Dell Inspiron со скидкой 40%',
+						side: 'left',
+						meta: {
+							participant: '8',
+							time: '5 дней',
+							timeout: true
+						}
+					},
+					{
+						img: 'product-row.jpg',
+						title: 'Мягкие игрушки 	Orange Toys 3 по цене 2',
+						side: 'right',
+						meta: {
+							participant: '16',
+							time: '2 часа',
+							timeout: true
+						}
+					}
+				],
+				lg: {
+					img: 'product-lg.jpg',
+					title: 'При покупке стиральной машины LG F-12U1HBS4 вы получаете в подарок хлебопечку!',
+					side: 'left',
+					logo: 'm-video.png',
+					meta: {
+						participant: '4',
+						time: '12 дней'
+					}
+				},
+				col: {
+					img: 'product-col.jpg',
+					title: 'Моноблок Dell Inspiron со скидкой 40%',
+					meta: {
+						participant: '8',
+						time: '5 дней'
+					}
+				}
+			} %}
+
+			<div class="stock__row scrollbar js-scrollbar">
+				<div class="stock__col stock__col_right">
+					<div class="stock__item">
+						{{mixins.product({
+							classes: 'product_lg product_side-' + stock.lg.side,
+							img: stock.lg.img,
+							title: stock.lg.title,
+							logo: stock.lg.logo,
+							meta: stock.lg.meta
+						})}}
+					</div>
+				</div>
+				{% for item in stock.row %}
+				<div class="stock__col stock__col_left">
+					<div class="stock__item">
+						{{mixins.product({
+							classes: 'product_row product_side-' + item.side,
+							img: item.img,
+							title: item.title,
+							meta: item.meta
+						})}}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="stock__row scrollbar js-scrollbar stock__more">
+				{% for item in range(0, 4) %}
+				<div class="stock__col stock__col_xs">
+					{{mixins.product({
+						classes: 'product_col',
+						img: stock.col.img,
+						title: stock.col.title,
+						meta: stock.col.meta
+					})}}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end section -->

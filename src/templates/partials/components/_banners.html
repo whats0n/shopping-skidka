@@ -1,0 +1,63 @@
+<!-- begin banners  -->
+<div class="banners js-banners">
+	{% set banners = [
+		{
+			items: [
+				{
+					small: true,
+					class: 'banner_blue banner_sm',
+					title: 'Совершенно новый взгляд на камеру',
+					img: 'banner1.jpg'
+				},
+				{
+					small: true,
+					class: 'banner_pink banner_sm',
+					title: 'Для самых одаренных',
+					img: 'banner2.jpg'
+				}
+			]
+		},
+		{
+			item: {
+				small: true,
+				class: 'banner_orange banner_lg',
+				title: 'Безупречное звучание',
+				text: 'Лучшая акустика',
+				img: 'banner3.jpg'
+			}
+		},
+		{
+			items: [
+				{
+					class: 'banner_gray banner_sm',
+					title: 'Для учебы',
+					text: 'Рабочие компьютеры',
+					img: 'banner4.jpg'
+				},
+				{
+					class: 'banner_green banner_sm',
+					title: 'Лучшие моменты',
+					img: 'banner5.jpg'
+				}
+			]
+		}
+	] %}
+	<div class="banners__row js-banners-slider">
+		{% for banner in banners %}
+		<div class="banners__col">
+			{% if banner.items %}
+				{% for item in banner.items %}
+					<div class="banners__item">
+						{{mixins.banner(item)}}
+					</div>
+				{% endfor %}
+			{% else %}
+				<div class="banners__item">
+					{{mixins.banner(banner.item)}}
+				</div>
+			{% endif %}
+		</div>
+		{% endfor %}
+	</div>
+</div>
+<!-- end banners -->

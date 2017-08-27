@@ -1,0 +1,76 @@
+<!-- begin overview-row  -->
+<div class="overview-row js-overview-row">
+	<div class="heading">
+		<h2 class="title-h2 heading__title">Одной строкой</h2>
+		<div class="heading__navigation">
+			{{mixins.btnDirection({
+				classes: 'btn-direction_prev heading__arrow js-overview-row-prev',
+				icon: 'prev'
+			})}}
+			{{mixins.btnDirection({
+				classes: 'btn-direction_next heading__arrow js-overview-row-next',
+				icon: 'next'
+			})}}
+		</div>
+	</div>
+
+	{% set overviewItems = [
+		{
+			sticker: 'Техника',
+			title: 'Играй и побеждай с футбольной лотереей!',
+			meta: [
+				{
+					icon: 'view',
+					text: '12'
+				},
+				{
+					icons: 'heart-sm',
+					text: '3'
+				},
+				{
+					icons: 'comment',
+					text: '1'
+				}
+			]
+		},
+		{
+			sticker: 'Новинки',
+			title: 'Снижена цена на LG K10 LTE',
+			meta: [
+				{
+					icon: 'view',
+					text: '12'
+				},
+				{
+					icons: 'comment',
+					text: '2'
+				}
+			]
+		},
+		{
+			sticker: 'Новинки',
+			title: 'Пройди квест банка «Тинькофф» и выиграй план бла бла бла, бла бла бла бла бла бла бла бла бла.',
+			meta: [
+				{
+					icon: 'view',
+					text: '12'
+				},
+				{
+					icons: 'comment',
+					text: '2'
+				}
+			]
+		}
+	] %}
+
+	<div class="overview-row__container js-overview-row-slider">
+		{% for row in range(0,2) %}
+			{% for item in overviewItems %}
+				<div class="overview-row__col">
+					{{mixins.reviewRow(item)}}
+				</div>
+			{% endfor %}
+		{% endfor %}
+	</div>
+</div>
+<!-- end overview-row -->

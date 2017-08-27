@@ -1,0 +1,102 @@
+.scrollbar
+	position: relative
+
+.ps-container
+	&:hover
+		&.ps-in-scrolling
+			&.ps-x > .ps-scrollbar-x-rail,
+			&.ps-y > .ps-scrollbar-y-rail,
+			&.ps-x > .ps-scrollbar-x-rail:hover,
+			&.ps-y > .ps-scrollbar-y-rail:hover
+				opacity: 1
+				background: none
+			&.ps-x
+				>
+					.ps-scrollbar-x-rail
+						>
+							.ps-scrollbar-x
+								height: 100%
+								background: none
+			&.ps-y
+				>
+					.ps-scrollbar-y-rail
+						>
+							.ps-scrollbar-y
+								width: 100%
+								background: rgba($dark, 0.5)
+		>
+			.ps-scrollbar-x-rail,
+			.ps-scrollbar-y-rail,
+			.ps-scrollbar-x-rail:hover,
+			.ps-scrollbar-y-rail:hover
+				opacity: 1
+				background: none
+
+			.ps-scrollbar-x-rail
+				&:hover
+					>
+						.ps-scrollbar-x
+							background: none
+			.ps-scrollbar-y-rail
+				&:hover
+					>
+						.ps-scrollbar-y
+							background: rgba($dark, 0.3)
+	&.ps-in-scrolling
+		&.ps-x > .ps-scrollbar-x-rail,
+		&.ps-y > .ps-scrollbar-y-rail
+			opacity: 1
+			background: none
+		&.ps-x
+			>
+				.ps-scrollbar-x-rail
+					>
+						.ps-scrollbar-x
+							height: 100%
+							background: none
+		&.ps-y
+			>
+				.ps-scrollbar-y-rail
+					>
+						.ps-scrollbar-y
+							width: 100%
+							background: rgba($dark, 0.5)
+	>
+		.ps-scrollbar-x-rail
+			height: 10px
+			&:hover, &:active
+				>
+					.ps-scrollbar-x
+						height: 100%
+			>
+				.ps-scrollbar-x
+					bottom: 0
+					height: 100%
+					background: none
+					&:before
+						content: ''
+						position: absolute
+						bottom: 0
+						left: 16px
+						right: 16px
+						height: 2px
+						background: $blue
+		.ps-scrollbar-y-rail
+			margin-right: 9px
+			width: 6px
+			&:hover, &:active
+				>
+					.ps-scrollbar-y
+						width: 100%
+			>
+				.ps-scrollbar-y
+					right: 0
+					border-radius: 3px
+					width: 100%
+					background: rgba($dark, 0.1)
+
+		.ps-scrollbar-x-rail,
+		.ps-scrollbar-y-rail
+			z-index: 10
+			opacity: 1
+			cursor: pointer

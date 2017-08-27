@@ -1,0 +1,49 @@
+.filter
+	background: #fff
+	border: 1px solid rgba(28, 46, 73, 0.1)
+	border-radius: 2px
+	padding: 16px
+	&_popup
+		+md
+			position: fixed
+			transform: translate3d(-100%, 0, 0)
+			will-change: transform
+			+tr(transform .4s ease)
+			z-index: 100
+			top: 0
+			left: 0
+			bottom: 0
+			padding: 0
+			overflow-y: auto
+			overflow-x: hidden
+			.accord
+				&:before,
+				&:after
+					left: -24px
+					right: -24px
+		.filter__inner
+			+md
+				padding: 24px 24px 40px
+				width: 264px
+				min-height: 100vh
+		&.is-active
+			transform: translate3d(0, 0, 0)
+	&__top
+		margin-bottom: 16px
+	&__bottom
+		margin-top: 16px
+	&__box
+		padding: 20px 0
+		line-height: 1
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0
+			left: -16px
+			right: -16px
+			border-top: 1px solid rgba(29, 46, 73, 0.1)
+			+md
+				left: -24px
+				right: -24px

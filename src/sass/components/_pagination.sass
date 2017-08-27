@@ -1,0 +1,65 @@
+.pagination
+	font-size: 0
+	text-align: center
+	&_lg
+		position: relative
+		padding: 15px 63px
+		border: 1px solid rgba(28, 46, 73, 0.1)
+		border-radius: 2px
+		background: $white
+		+sm
+			padding: 0
+			border: none
+			background: none
+		.pagination
+			&__list
+				li
+					+sm
+						padding: 0 3px
+					&:nth-child(4)
+						+sm
+							display: none
+	&_sm
+		.pagination
+			&__list
+				li
+					padding: 0
+	&__list
+		li, a, span
+			display: inline-block
+			vertical-align: top
+		li
+			padding: 0 4px
+		a, span
+			padding: 7px 0
+			width: 32px
+			height: 32px
+
+			color: $text
+
+			+reg
+			+f(15, 16, 0.27)
+			text-align: center
+		a
+			border: 1px solid transparent
+			border-radius: 2px
+			+t(color)
+			+hover
+				color: $blue
+			&.is-active
+				border-color: #3664ac
+				color: $blue
+	&__prev
+		left: 15px
+		+sm
+			left: 0
+	&__next
+		right: 15px
+		+sm
+			right: 0
+	&__prev,
+	&__next
+		position: absolute
+		top: 15px
+		+sm
+			top: 0

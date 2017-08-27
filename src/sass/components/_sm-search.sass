@@ -1,0 +1,59 @@
+.sm-search
+	+clr
+	&.is-active
+		.sm-search
+			&__close
+				opacity: 1
+				visibility: visible
+	&__field
+		position: relative
+		float: left
+		padding-right: 16px
+	&__input
+		position: relative
+		z-index: 2
+		padding-left: 40px
+		width: 248px
+		+md
+			padding-left: 40px
+	&__btn
+		+md
+			display: none
+	.icon-search-default
+		position: absolute
+		top: 11px
+		left: 15px
+
+		color: $blue-light
+		fill: $dark
+
+		font-size: 19px
+		// +md
+		// 	display: none
+	&__close
+		position: absolute
+		z-index: 3
+		top: 0
+		right: 16px
+		width: 40px
+		height: 100%
+		opacity: 0
+		visibility: hidden
+		background: none
+		+vertical
+		transition: opacity 0.25s ease, visibility 0.25s ease
+		+hover
+			.icon-close
+				fill: $blue
+		+active
+			.icon-close
+				fill: $blue-dark
+		// +md
+		// 	width: 32px
+		.icon-close
+			display: inline-block
+			vertical-align: middle
+			fill: $darkGray
+			font-size: 14px
+			// +md
+			// 	font-size: 13px

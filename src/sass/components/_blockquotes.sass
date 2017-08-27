@@ -1,0 +1,54 @@
+.blockquote-wrapper
+	+clr
+	padding-bottom: 40px
+
+.blockquote
+	position: relative
+
+	padding: 24px 112px
+	border: 1px solid rgba(28, 46, 73, 0.1)
+	border-radius: 2px
+
+	background-color: rgba(#fff, 0.5)
+	text-align: center
+	+md
+		padding: 24px 88px
+	+sm
+		padding: 24px 16px
+		margin: 32px 0
+	&_right
+		float: right
+		width: 75%
+	.icon
+		position: absolute
+		color: $dark
+		opacity: 0.1
+		font-size: 42px
+		+md
+			font-size: 36px
+		+sm
+			font-size: 24px
+	.icon-quotes-open
+		top: 39px
+		left: 40px
+		+md
+			top: 22px
+			left: 23px
+		+sm
+			top: -12px
+			left: -12px
+	.icon-quotes-close
+		bottom: 39px
+		right: 40px
+		+md
+			bottom: 22px
+			right: 23px
+		+sm
+			bottom: -12px
+			right: -12px
+	p, li
+		color: $text
+		+italic
+		+f(15, 24, 0.27)
+		+md
+			+f(13, 24, 1)

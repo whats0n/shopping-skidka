@@ -1,0 +1,148 @@
+.tabs
+	&__scroll
+		position: relative
+		overflow: auto
+		white-space: nowrap
+		&.ps-active-x
+			.tabs__list
+				a
+					&.is-active
+						&:before
+							display: none
+			.tabs__btn.is-active
+				&:before
+					display: none
+	&__list
+		font-size: 0
+		// border-bottom: 1px solid rgba($dark, 0.1)
+		&.tabs__list_sm
+			li
+				padding-right: 32px
+			a
+				line-height: 16px
+		li, a
+			display: inline-block
+			vertical-align: top
+		a
+			position: relative
+			padding-bottom: 16px
+			color: $text
+
+			+sreg
+			+f(13, 32)
+
+			transition: color 0.25s ease
+			+hover
+				color: $blue
+			&.is-active
+				color: $blue
+				&:before
+					transform: translate3d(0,0,0) scaleX(1)
+			&:before
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				border-radius: 2px
+				height: 2px
+				background: $blue
+				transform: translate3d(0,0,0) scaleX(0)
+				transition: transform 0.2s ease
+		small
+			color: $text
+		&_left
+			li
+				padding-right: 24px
+		&_right
+			li
+				padding-left: 24px
+		&_title
+			a
+				color: $dark
+				+reg
+				+f(26, 32, 0.47)
+				+md
+					+f(24, 32, 0.44)
+				+sm
+					+f(18, 32, 0.47)
+		&_subtitle
+			a
+				+reg
+				+f(18, 32, 1)
+				color: $dark
+				+md
+					+f(15, 24, 1)
+	&__container
+		position: relative
+	&__content
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		overflow: hidden
+		visibility: hidden
+		opacity: 0
+		&.is-active
+			position: relative
+			overflow: visible
+			visibility: visible
+			opacity: 1
+			// transition: opacity 0.25s ease, visibility 0.25s ease
+	&__btns
+		position: relative
+		font-size: 0
+		white-space: nowrap
+		li
+			display: inline-block
+			vertical-align: top
+			width: 33.33%
+			+sm
+				width: 258px
+	&__btn
+		position: relative
+		display: block
+		overflow: hidden
+		padding: 16px
+		white-space: normal
+		+hover
+			.tabs
+				&__btn
+					&-text
+						color: $blue
+		&.is-active
+			&:before
+				transform: translate3d(0,0,0) scaleX(1)
+			.tabs
+				&__btn
+					&-text
+						color: $blue
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			border-bottom: 2px solid $blue
+			transform: translate3d(0,0,0) scaleX(0)
+			+t(transform)
+		&-text
+			position: relative
+			z-index: 2
+			display: block
+			overflow: hidden
+			height: 48px
+			color: $text
+			+reg
+			+f(15, 24, 1)
+			+t(color)
+		&-number
+			position: absolute
+			z-index: 1
+			bottom: 0
+			left: 0
+			color: $gray
+			opacity: 0.5
+			+bold
+			+f(78, 64, 1)

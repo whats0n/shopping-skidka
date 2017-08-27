@@ -1,0 +1,189 @@
+.reviews-form
+	&_score
+		.reviews-form
+			&__fieldset
+				float: none
+				padding-right: 0
+				width: 100%
+				max-width: 592px
+				+md
+					padding-right: 96px
+					max-width: 100%
+				+sm
+					padding-right: 0
+			&__info
+				float: none
+				padding: 0 0 40px 176px
+				width: 100%
+				max-width: 592px
+				+md
+					padding-right: 96px
+					max-width: 100%
+				+sm
+					padding: 12px 0 16px
+			&__footnote
+				float: left
+				padding-bottom: 0
+				+sm
+					float: none
+					padding-bottom: 16px
+			&__authorization
+				float: right
+				padding-top: 8px
+				+sm
+					float: none
+					padding: 0
+	&__header
+		border-bottom: 1px solid rgba($dark, 0.1)
+	&__title
+		margin-bottom: 16px
+		+sm
+			margin-bottom: 20px
+	&__body
+		padding: 16px 0 0
+	&__subtitle
+		margin-bottom: 16px
+		color: $dark
+		+reg
+		+f(15, 24)
+		+md
+			margin-bottom: 8px
+	&__section
+		+clr
+	&__fieldset
+		float: left
+		padding-right: 56px
+		width: 66%
+		+md
+			padding-right: 96px
+			width: 100%
+		+sm
+			padding-right: 0
+	&__info
+		float: right
+		width: 34%
+		padding: 8px 0 40px
+		+clr
+		+md
+			padding: 0 96px 40px 176px
+			width: 100%
+		+sm
+			padding: 12px 0 16px
+	&__field
+		margin-bottom: 16px
+		+clr
+		&_rating
+			.reviews-form
+				&__label
+					+sm
+						padding: 8px 24px 8px 0
+		&_radios
+			.reviews-form
+				&__label
+					+sm
+						padding: 0 24px 8px 0
+		&_rating,
+		&_radios
+			+sm
+				margin-bottom: 8px
+			.reviews-form
+				&__label
+					+sm
+						float: left
+						width: 128px
+				&__box
+					+sm
+						padding-left: 128px
+	&__label
+		float: left
+		padding: 8px 24px 8px 0
+		width: 176px
+		color: $dark
+		+reg
+		+f(15, 24)
+		+sm
+			float: none
+			display: block
+			padding: 0 0 8px
+			width: 100%
+	&__box
+		padding-left: 176px
+		+sm
+			padding-left: 0
+	&__rating
+		padding: 8px 16px
+	&__list
+		font-size: 0
+		+sm
+			margin-right: -13px
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 8px 0
+			+sm
+				display: block
+				padding: 0
+			&:not(:last-child)
+				margin-right: 24px
+				+sm
+					margin-right: 0
+	&__text
+		padding-bottom: 16px
+		+md
+			padding-bottom: 24px
+		+sm
+			padding-bottom: 16px
+	&__footnote
+		padding-bottom: 40px
+		max-width: 220px
+		+md
+			float: left
+			padding-bottom: 0
+		+sm
+			float: none
+			padding-bottom: 16px
+	&__authorization
+		+md
+			float: right
+			padding-top: 8px
+		+sm
+			float: none
+			padding: 0
+		.btn
+			+sm
+				width: 100%
+	&__text,
+	&__footnote
+		color: $text
+		+sreg
+		+f(14, 24)
+		+md
+			+f(12, 24)
+	&__footer
+		position: relative
+		padding: 24px 0 0
+		border-top: 1px solid rgba($dark, 0.1)
+		+md
+			padding: 24px 0 0
+		+sm
+			padding: 16px 0 0
+	&__submit
+		text-align: center
+		.btn
+			+sm
+				width: 100%
+	&__agreement
+		position: absolute
+		top: 32px
+		right: 0
+		padding: 4px 0
+		width: 34%
+		font-size: 0
+		+md
+			width: 220px
+		+sm
+			position: relative
+			top: auto
+			right: auto
+			padding: 20px 0 0
+			width: auto

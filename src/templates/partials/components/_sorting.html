@@ -1,0 +1,45 @@
+<!-- begin sorting  -->
+<div class="sorting {{sortingClass}}">
+	<div class="sorting__row">
+		<div class="sorting__field">
+			<div class="label label_bottom">Сортировать по:</div>
+			{{mixins.select({
+				class: 'select_transparent',
+				options: [
+					'Цене, Возрастание',
+					'Цене, Убывание',
+					'Популярности',
+					'Новизне'
+				]
+			})}}
+		</div>
+		<div class="sorting__field sorting__field_xs">
+			<div class="label label_bottom">Отображать по:</div>
+			{{mixins.select({
+				class: 'select_transparent',
+				options: [
+					'32',
+					'24',
+					'16',
+					'8'
+				]
+			})}}
+		</div>
+		<div class="sorting__navigation">
+			<div class="sorting__navigation-in">
+				{{mixins.btnDirection({
+					classes: 'sorting__prev',
+					icon: 'prev'
+				})}}
+				{{mixins.btnDirection({
+					classes: 'sorting__next',
+					icon: 'next'
+				})}}
+				{{mixins.pagination({
+					class: 'pagination_sm'
+				})}}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end sorting -->

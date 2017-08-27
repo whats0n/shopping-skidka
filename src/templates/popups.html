@@ -1,0 +1,24 @@
+---
+title: Popups
+popupGallery: true
+popupBrandAbout: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% set popups = [
+		'logout',
+		'login',
+		'registration',
+		'add-social',
+		'card-gallery',
+		'brand-about'
+	] %}
+
+	<ul style="max-width: 1080px; padding: 20px; margin: 0 auto; list-style: square outside">
+		{% for popup in popups %}
+		<li><a href="#" data-target="{{popup}}" class="js-popup-open">{{popup}}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

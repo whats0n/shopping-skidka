@@ -1,0 +1,79 @@
+body
+	min-width: 320px
+	background: whitesmoke
+	+sreg
+	+f(14, 24)
+	&.is-hidden
+		overflow: hidden
+	&.filter-opened
+		.overlay
+			+sm
+				opacity: 1
+				visibility: visible
+
+.overlay
+	position: fixed
+	z-index: 800
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	background: rgba($dark, 0.7)
+	transition: opacity 0.25s ease, visibility 0.25s ease
+	&.is-active
+		opacity: 1
+		visibility: visible
+
+[hidden]
+	display: none !important
+
+%inner
+	position: relative
+	padding: 0 24px
+	margin: 0 auto
+	max-width: 1088px
+	+clr
+	+sm
+		padding: 0 16px
+
+.inner
+	@extend %inner
+
+
+//icons
+.icon
+	display: inline-block
+	vertical-align: top
+	transition: opacity 0.25s ease, fill 0.25s ease, color 0.25s ease
+
+.icon-wrapper
+	position: relative
+	display: inline-block
+	vertical-align: top
+	font-size: 0
+	.icon
+		&:last-child
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+
+.slider-load
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.25s ease, visibility 0.25s ease
+	&.is-loaded
+		opacity: 1
+		visibility: visible
+
+//adaptive
+.no-mobile
+	display: block
+	+sm
+		display: none
+.only-mobile
+	display: none
+	+sm
+		display: block

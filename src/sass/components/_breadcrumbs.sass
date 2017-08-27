@@ -1,0 +1,58 @@
+.breadcrumbs
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: top
+
+		color: $darkGray
+
+		+sreg
+		+f(12, 16)
+		+sm
+			display: none
+		&:not(:first-child)
+			&:before
+				content: '-'
+				display: inline-block
+				vertical-align: top
+				padding: 0 8px
+		&:first-child,
+		&:nth-child(2),
+		&:nth-child(3),
+		&:last-child
+			+sm
+				display: inline-block
+				vertical-align: top
+		&:last-child
+			+sm
+				max-width: 100%
+				+text-overflow
+		&:nth-child(3)
+			a
+				+sm
+					display: none
+			&:after
+				+sm
+					content: "..."
+					display: inline-block
+					vertical-align: top
+			&.is-active
+				+sm
+					display: block
+				a
+					+sm
+						display: inline
+				&:before,
+				&:after
+					+sm
+						display: none
+		&.is-active
+			+sm
+				display: block
+			&:before
+				+sm
+					display: none
+	a
+		color: inherit
+		&.is-active
+			color: $blue

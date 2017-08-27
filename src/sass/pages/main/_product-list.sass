@@ -1,0 +1,103 @@
+.product-list
+	&__row
+		padding-bottom: 32px
+		margin: 0 -8px
+		font-size: 0
+		+md
+			padding-bottom: 16px
+			margin: 0 -6px
+	&__col
+		display: inline-block
+		vertical-align: top
+		padding: 24px 8px 8px
+		width: 25%
+		+md
+			padding: 24px 6px 8px
+			width: 33.33%
+		+sm
+			padding: 8px 6px 8px
+			width: 100%
+	&__item
+		padding-left: 32px
+		+reg
+	&__title
+		position: relative
+		padding-bottom: 8px
+		border-bottom: 1px solid rgba($dark, 0.1)
+		color: $dark
+		+f(15, 24, 0.27)
+		+sm
+			padding: 8px 32px 8px 0
+			cursor: pointer
+		&.is-active
+			.icon-down
+				transform: translate3d(0, 0, 0) rotate(180deg)
+	&__icon
+		position: absolute
+		top: 0
+		left: -32px
+		width: 24px
+		height: 24px
+		+vertical
+		+sm
+			top: 8px
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: $dark
+			color: $blue-light
+			&-appliances
+				font-size: 22px
+			&-electronics
+				font-size: 20px
+			&-furniture
+				font-size: 20px
+			&-clothes
+				font-size: 20px
+			&-beauty
+				font-size: 22px
+			&-children
+				font-size: 19px
+			&-football
+				font-size: 20px
+			&-zoo
+				font-size: 18px
+			&-car
+				font-size: 16px
+			&-home
+				font-size: 19px
+			&-construction
+				font-size: 20px
+			&-music
+				font-size: 15px
+			&-gift
+				font-size: 20px
+			&-services
+				font-size: 21px
+			&-books
+				font-size: 20px
+			&-food
+				font-size: 16px
+	.icon-down
+		position: absolute
+		top: 17px
+		right: 11px
+		font-size: 6px
+		fill: $dark
+		transform: translate3d(0, 0, 0)
+		+t(transform)
+		display: none
+		+sm
+			display: block
+	&__content
+		padding-top: 8px
+		color: $text
+		+f(13, 24)
+		+sm
+			display: none
+		a
+			display: block
+			color: inherit
+			+t(color)
+			+hover
+				color: $blue

@@ -1,0 +1,78 @@
+{% import "data/form.html" as profileForm %}
+<!-- BEGIN main-form -->
+<div class="main-form">
+	<div class="main-form__container">
+		<div class="main-form__section">
+			<div class="main-form__header">
+				<div class="main-form__title title-h3">Мои данные</div>
+			</div>
+
+			{% for row in profileForm.items %}
+				{% if loop.index0 == 0%}
+				<div class="main-form__row main-form__row_first">
+				{% else %}
+				<div class="main-form__row">
+				{% endif %}
+					{% for col in row %}
+						<div class="main-form__col main-form__col_sm {{col.class}}">
+							{% if col.input %}
+								<input type="{{col.type or 'text'}}" 
+									class="input {{col.class}}" 
+									{% if col.placeholder %} placeholder="{{col.placeholder}}" {% endif %}
+									{% if col.inputValue %} value="{{col.inputValue}}" {% endif %}>
+							{% endif %}
+
+							{% if col.label %}
+								<div class="main-form__label">{{col.label}}</div>
+							{% endif %}
+
+							{% if col.value %}
+								<div class="main-form__value">{{col.value}}</div>
+							{% endif %}
+
+							{% if col.btn %}
+								<button class="btn btn_lg btn_extra" {{col.btn.attrs | safe}}>{{col.btn.text}}</button>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			{% endfor %}
+
+			<div class="main-form__save">
+				<div class="main-form__col main-form__col_sm main-form__col_pull-sm">
+					<button class="btn btn_lg btn_extra" disabled>Сохранить</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-form__section">
+			<div class="main-form__header">
+				<div class="main-form__title title-h3">Социальные сети</div>
+			</div>
+			<div class="main-form__row">
+				<div class="main-form__col main-form__col_lg">
+					<div class="main-form__meta">Добавьте аккаунты ваших социальных сетей и используйте их при авторизации</div>
+				</div>
+			</div>
+			<div class="main-form__row">
+				<div class="main-form__col main-form__col_sm">
+					<a href="#" class="user-social main-form__user-social">
+						<div class="user-social__link">
+							{{mixins.icon('fb')}}
+						</div>
+						<span class="user-social__meta">Oleg toptalov</span>
+					</a>
+				</div>
+				<div class="main-form__col main-form__col_sm">
+					<button type="button" class="btn-delete">Удалить</button>
+				</div>
+			</div>
+			<div class="main-form__row">
+				<div class="main-form__col main-form__col_lg">
+					<button class="btn btn_lg js-popup-open" data-target="add-social">Добавить аккаунт</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END main-form -->

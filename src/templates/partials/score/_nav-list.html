@@ -1,0 +1,22 @@
+<!-- BEGIN nav-list -->
+<div class="nav-list js-scrollbar">
+	<ul class="nav-list__inner">
+		{% set navList = [
+				{link: "О магазине"},
+				{link: "Контакты"},
+				{link: "Отзывы"},
+				{link: "Оплата и доставка"}
+			]
+		%}
+		{% for item in navList %}
+			<li class="nav-list__item">
+				{% if loop.index0 == activeNavItem %}
+					<a href="#" class="nav-list__link is-active">{{item.link}}</a>
+				{% else %}
+					<a href="#" class="nav-list__link">{{item.link}}</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+<!-- END nav-list -->

@@ -1,0 +1,83 @@
+.stock
+	&__container
+		padding-bottom: 8px
+		margin: 0 -8px
+		+sm
+			padding-bottom: 24px
+			margin: 0 -16px
+	&__more
+		display: none
+	&__row
+		padding: 8px 0
+		+clr
+		+sm
+			overflow: auto
+			padding: 8px 0 8px 4px
+
+			font-size: 0
+			white-space: nowrap
+	&__col
+		float: left
+		padding: 8px 8px
+		width: 100%
+		+md
+			padding: 8px 6px
+		+sm
+			float: none
+			display: inline-block
+			vertical-align: top
+			padding: 8px 16px 8px 12px
+		&_left,
+		&_right
+			width: 50%
+		&_left
+			+md
+				width: 66.67%
+		&_right
+			float: right
+			+md
+				width: 33.33%
+		&_xs
+			width: 25%
+		&_right,
+		&_left,
+		&_xs
+			+sm
+				width: 260px
+	&__item
+		padding-top: 16px
+		&:first-child
+			padding-top: 0
+	&__dots
+		margin-bottom: -8px
+		text-align: center
+		li, button
+			display: inline-block
+			vertical-align: top
+		li
+			&.slick-active
+				button
+					&:before
+						border-color: $blue
+						background: $blue
+		button
+			position: relative
+			width: 24px
+			height: 24px
+			font-size: 0
+			background: none
+			+hover
+				&:before
+					border-color: $blue
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 50%
+
+				margin: -4px 0 0 -4px
+				border: 1px solid $darkGray
+				border-radius: 50%
+				width: 8px
+				height: 8px
+				transition: border-color 0.25s ease, background 0.25s ease

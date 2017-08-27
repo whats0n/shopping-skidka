@@ -1,0 +1,387 @@
+.field
+	position: relative
+	.icon
+		position: absolute
+	.icon-check
+		top: 16px
+		right: 15px
+		fill: $blue
+		font-size: 8px
+		+md
+			top: 12px
+	.icon-error
+		top: 10px
+		right: 8px
+		fill: $red
+		font-size: 19px
+		+md
+			top: 5px
+
+.input,
+.textarea
+	display: inline-block
+	vertical-align: top
+	padding: 0 40px 0 15px
+	border: 1px solid $darkGray
+	border-radius: 2px
+	width: 100%
+
+	color: $dark
+	background: none
+	box-shadow: none !important
+
+	+sreg
+	font-size: 13px
+	transition: color 0.25s ease, border-color 0.25s ease
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	+md
+		font-size: 12px
+
+	&::placeholder
+		color: $text
+		opacity: 0.4
+	+hover
+		border-color: $dark
+	+no-touch
+		&:focus
+			border-color: $blue
+		&.is-error
+			border-color: $red
+			color: $text
+		&.is-success
+			border-color: $blue
+			color: $blue
+	&.is-valid
+		border-color: rgba($darkGray, 0.3)
+	&_sm
+		padding: 7px 15px 7px 15px
+		font-size: 12px
+	&_xlg
+		+md
+			font-size: 13px
+
+.input
+	height: 40px
+	// line-height: 38px
+	+md
+		padding: 7px 40px 7px 15px
+		height: 32px
+		line-height: 32px
+	&_lg,
+	&_xlg
+		+md
+			height: 40px
+			line-height: 40px
+	&_sm
+		height: 32px
+		line-height: 32px
+
+.textarea
+	padding: 11px 15px 11px 15px
+	height: 80px
+	line-height: 1.3
+	resize: none
+	&_lg,
+	&_xlg
+		height: 128px
+
+//CHECKBOX
+.checkbox, .radio
+	position: relative
+	display: inline-block
+	vertical-align: top
+	min-width: 16px
+	min-height: 16px
+	font-size: 0
+	user-select: none
+	cursor: pointer
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+	&__icon
+		position: absolute
+		top: 0
+		left: 0
+		border: 1px solid #a7aeba
+		width: 16px
+		height: 16px
+		transition: background 0.25s ease, border-color 0.25s ease
+	&__text
+		display: inline-block
+		vertical-align: top
+		padding-left: 24px
+		color: $text
+		+sreg
+		+f(13, 16)
+		+t(color)
+
+.checkbox
+	&_lg
+		.checkbox
+			&__icon
+				top: 4px
+			&__text
+				+reg 
+				+f(15, 24, 1)
+	&_md
+		.checkbox
+			&__icon
+				top: 4px
+			&__text
+				+f(14, 24)
+				+md
+					+f(12, 24)
+	&_sm
+		.checkbox
+			&__text
+				+md
+					+f(12, 16)
+	&_blue
+		input
+			&:checked ~ .checkbox__text
+				color: $blue
+	+hover
+		.checkbox
+			&__icon
+				border-color: $blue
+			&__text
+				color: $blue
+	input
+		&:checked + .checkbox__icon
+			border-color: $blue
+			background: $blue
+			.icon
+				opacity: 1
+		&:checked ~ .checkbox__text
+			color: $blue
+	.icon
+		position: absolute
+		top: 3px
+		left: 2px
+		opacity: 0
+
+		fill: #fff
+		font-size: 8px
+
+		transition: transform 0.25s ease, opacity 0.25s ease
+	&__icon
+		border-radius: 2px
+
+//RADIO
+.radio
+	&_lg
+		.radio
+			&__icon
+				top: 4px
+			&__text
+				+reg
+				+f(15, 24, 1) 
+	&_md
+		.radio
+			&__icon
+				top: 4px
+			&__text
+				+f(14, 24)
+				+md
+					+f(12, 24)
+	&_sm
+		.radio
+			&__text
+				+md
+					+f(12, 16)
+	&_blue
+		input
+			&:checked ~ .radio__text
+				color: $blue
+	+hover
+		.radio
+			&__icon
+				border-color: $blue
+			&__text
+				color: $blue 
+	input
+		&:checked + .radio__icon
+			border-color: $blue
+			&:after
+				opacity: 1
+				transform: scale(1)
+		&:checked ~ .radio__text
+			color: $blue
+
+	&__icon
+		border-radius: 50%
+		&:after
+			content: ''
+			position: absolute
+			top: 4px
+			bottom: 4px
+			left: 4px
+			right: 4px
+			border-radius: 50%
+			opacity: 0
+			background: $blue
+			transform: scale(0)
+			transition: transform 0.25s ease, opacity 0.25s ease
+
+//SELECT
+.select
+	width: 100%
+	&_transparent
+		.select2-container--default
+			.select2-selection--single
+				background: none
+	select
+		width: 100%
+
+.select2-container--default
+	&.select2-container--open
+		.select2-selection--single
+			+no-touch
+				border-color: $blue-dark
+				.select2-selection__rendered
+					color: $blue-dark
+				.select2-selection__arrow
+					&:before,
+					&:after
+						transform: rotate(180deg)
+					&:before
+						opacity: 0
+					&:after
+						opacity: 1
+		&.select2-container--below
+			.select2-selection--single, .select2-selection--multiple
+				border-radius: 2px
+	.select2-selection--single
+		border-radius: 2px
+		border-color: $darkGray
+		height: 32px
+		+t(border-color)
+		+hover
+			border-color: $blue
+			.select2-selection__rendered
+				color: $blue
+			.select2-selection__arrow
+				&:before
+					opacity: 0
+				&:after
+					opacity: 1
+		.select2-selection__rendered
+			padding: 7px 30px 7px 15px
+			color: $text
+			+sreg
+			+f(13, 16, null)
+			+t(color)
+		.select2-selection__arrow
+			top: 0
+			right: 0
+			width: 32px
+			height: 100%
+			b
+				display: none
+			&:before, &:after
+				content: ''
+				position: absolute
+				top: 13px
+				right: 15px
+				width: 10px
+				height: 6px
+				background: no-repeat center center
+				background-size: 10px 6px
+				transform-origin: center center
+				transition: opacity 0.25s ease, transform 0.25s ease
+			&:before
+				background-image: url(../img/down-default.svg)
+			&:after
+				opacity: 0
+				background-image: url(../img/down-active.svg)
+
+
+.select2-dropdown
+	padding: 16px 0
+	border: none
+	border-radius: 2px
+	background: white
+	box-shadow: 0 8px 16px rgba(7, 20, 39, 0.1)
+	&.select2-dropdown--below
+		margin-top: 8px
+	&.select2-dropdown--above
+		margin-top: -8px
+	.select2-container--open &
+		&.select2-dropdown--below, &.select2-dropdown--above
+			border-radius: 2px
+
+	.select2-results__option
+		padding: 0 16px
+		+sreg
+		+f(13, 24, null)
+		+t(color)
+		+hover
+			color: $blue
+		&[aria-selected=true]
+			color: $blue-dark
+			background: none
+	.select2-results__option--highlighted
+		&[aria-selected]
+			background: none
+			color: $blue
+
+//NOUISLIDER
+.noUi-target
+	margin: 0 12px
+	border: none
+	border-radius: 2px
+	background: none
+	box-shadow: none
+	cursor: pointer
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -12px
+		right: -12px
+		background: $darkGray
+
+
+.noUi-horizontal
+	height: 2px
+	.noUi-origin
+		top: 0
+	.noUi-handle
+		top: -11px
+		left: -12px
+		border: none
+		border-radius: 50%
+		width: 24px
+		height: 24px
+		background: rgba(#fff, 0.6)
+		box-shadow: none
+		cursor: pointer
+		+hover
+			&:before
+				background: $blue-dark
+		&:before
+			content: ''
+			position: absolute
+			top: 4px
+			bottom: 4px
+			left: 4px
+			right: 4px
+
+			border-radius: 50%
+			width: auto
+			height: auto
+			background: $blue
+			+t(background)
+		&:after
+			display: none
+
+
+.noUi-connect
+	background: $blue
+	box-shadow: none

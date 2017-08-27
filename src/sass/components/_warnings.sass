@@ -1,0 +1,115 @@
+.warning
+	position: relative
+	padding: 8px 16px 16px 72px
+	border: 1px solid rgba(28, 46, 73, 0.1)
+	border-radius: 2px
+	max-width: 288px
+	min-height: 72px
+
+	color: #fff
+	background: $dark
+	&__circle, &__triangle
+		position: absolute
+		font-size: 0
+	&__circle
+		top: 16px
+		left: 16px
+		border-radius: 50%
+		width: 40px
+		height: 40px
+		background: #fff
+		+vertical
+	&__triangle
+		top: 20px
+		left: 15px
+	.icon-triangle
+		display: inline-block
+		vertical-align: top
+		fill: #fff
+		font-size: 33px
+	.icon-exclamation
+		position: absolute
+		top: 9px
+		left: 19px
+		fill: $blue
+		font-size: 19px
+	.icon-i
+		margin-top: 8px
+		fill: $blue
+		font-size: 23px
+	&__title
+		margin-bottom: 8px
+		+bold
+		+f(16, 24, 0.24)
+	&__text
+		color: whitesmoke
+		+sreg
+		+f(12, 16)
+	&__btn
+		padding-top: 16px
+		.btn
+			width: 100%
+			padding-left: 0
+			padding-right: 0
+
+.alert
+	position: relative
+	padding: 6px 32px 6px 55px
+	border: 2px solid transparent
+	border-radius: 2px
+	max-width: 288px
+	&_success
+		border-color: $blue
+		background: $blue-light
+		.icon-close
+			fill: $blue
+		.alert
+			&__text
+				color: $dark
+	&_error
+		border-color: $red
+		background: #e9aba9
+		.icon-close
+			fill: $red
+		.alert
+			&__text
+				color: #a72622
+	&__text
+		+sreg
+		+f(14, 24)
+	&__close
+		position: absolute
+		top: 11px
+		right: 11px
+		background: none
+		font-size: 0
+		.icon-close
+			font-size: 14px
+	&__circle
+		position: absolute
+		top: 6px
+		left: 14px
+		border-radius: 50%
+		width: 24px
+		height: 24px
+		background: #fff
+		.icon-check
+			position: absolute
+			top: 8px
+			left: 7px
+			fill: $blue
+			font-size: 8px
+	&__triangle
+		position: absolute
+		top: 7px
+		left: 13px
+		font-size: 0
+		.icon-triangle
+			fill: #fff
+			font-size: 22px
+		.icon-exclamation
+			position: absolute
+			top: 7px
+			left: 12px
+			fill: $red
+			font-size: 12px

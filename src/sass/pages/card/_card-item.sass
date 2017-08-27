@@ -1,0 +1,89 @@
+.card-item
+	+clr
+	+md
+		padding-bottom: 28px
+	+sm
+		padding-bottom: 24px
+	&__title
+		padding-bottom: 8px
+		color: $dark
+		+reg
+		+f(22,32,1)
+		+md
+			float: left
+			padding-bottom: 0
+			width: 54.6%
+			+f(20,24,1)
+		+sm
+			float: none
+			padding-bottom: 8px
+			width: auto
+			+f(16,24,1)
+	&__body
+		+md
+			float: left
+			padding-left: 32px
+			width: 45.4%
+		+sm
+			float: none
+			width: auto
+			padding-left: 0
+	&__price
+		padding-bottom: 8px
+		font-size: 0
+		+md
+			padding-bottom: 0
+		+sm
+			padding-bottom: 8px
+		&-current,
+		&-old
+			display: inline-block
+			vertical-align: top
+		&-current
+			padding-right: 16px
+			color: $blue
+			+bold
+			+f(32,40,1)
+			+md
+				padding-right: 8px
+				+f(20,24,1)
+			+sm
+				+f(16,24,1)
+		&-old
+			color: $text
+			+med
+			+f(15,40,1)
+			text-decoration: line-through
+			+md
+				+f(13,24,1)
+			+sm
+				+f(12,24,1)
+	&__info
+		+md
+			float: left
+			padding-right: 24px
+	&__field
+		padding-bottom: 8px
+		font-size: 0
+		+md
+			padding-bottom: 0
+	&__label,
+	&__value
+		display: inline-block
+		vertical-align: top
+		+sreg
+		+f(13,24)
+		+md
+			+f(12,24)
+	&__label
+		padding-right: 8px
+		color: $text
+	&__value
+		color: $dark
+	&__rating
+		padding-bottom: 31px
+		+md
+			float: right
+			padding-bottom: 0
+		+sm
+			float: left

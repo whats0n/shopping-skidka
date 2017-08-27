@@ -1,0 +1,95 @@
+.card-info
+	&__nav
+		position: relative
+		z-index: 1
+		margin-bottom: -1px
+	&__container
+		padding: 16px 0 16px
+		border-top: 1px solid rgba($dark, 0.1)
+		border-bottom: 1px solid rgba($dark, 0.1)
+		+sreg
+		+f(13,24)
+	&__list
+		padding-bottom: 8px
+	&__text
+		overflow: hidden
+		margin-bottom: 8px
+		height: 168px
+	&__field
+		overflow: hidden
+		+clr
+	&__label
+		position: relative
+		z-index: 1
+		width: 44%
+		color: $text
+	&__value
+		position: relative
+		width: 56%
+		color: $dark
+		&:before
+			content: ""
+			position: absolute
+			bottom: 1px
+			right: 100%
+			border-bottom: 1px dashed rgba($dark, 0.1)
+			width: 300px
+	&__label,
+	&__value
+		float: left
+		+sm
+			float: none
+			display: inline
+			width: auto
+		span
+			display: inline-block
+			vertical-align: top
+			background: $white
+	&__link
+		color: $blue
+		+t(color)
+		+hover
+			color: $blue-light
+	&__footer
+		padding-bottom: 8px
+		font-size: 0
+		+md
+			text-align: center
+	&__btn
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding: 24px 24px 0 0
+		text-align: left
+		+sm
+			display: block
+			padding: 16px 0 0
+		&:last-child
+			padding: 24px 0 0
+			+sm
+				padding: 16px 0 0
+		&_xs
+			&:last-child
+				+sm
+					padding: 16px 8px 0
+			+sm
+				display: inline-block
+				vertical-align: top
+				padding: 16px 8px 0
+		.button,
+		.btn
+			width: 100%
+	&__small
+		position: absolute
+		top: 4px
+		left: 0
+		right: 0
+		color: $text
+		+sreg
+		+f(12,16)
+		+sm
+			position: relative
+			top: auto
+			left: auto
+			right: auto
+			padding-bottom: 4px

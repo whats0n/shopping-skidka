@@ -1,0 +1,29 @@
+<!-- begin reviews-nav  -->
+<div class="reviews-nav">
+	<div class="reviews-nav__show">
+		<div class="reviews-nav__label">Отображать по:</div>
+		{{mixins.select({
+			class: 'select_transparent',
+			options: [
+				'32',
+				'24',
+				'16',
+				'8'
+			]
+		})}}
+	</div>
+	<div class="reviews-nav__pagination">
+		{{mixins.btnDirection({
+			classes: 'reviews-nav__prev',
+			icon: 'prev'
+		})}}
+		{{mixins.btnDirection({
+			classes: 'reviews-nav__next',
+			icon: 'next'
+		})}}
+		{{mixins.pagination({
+			class: 'pagination_sm'
+		})}}
+	</div>
+</div>
+<!-- end reviews-nav -->

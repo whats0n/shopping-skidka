@@ -1,0 +1,473 @@
+.btn
+	position: relative
+	display: inline-block
+	vertical-align: top
+	padding: 4px 24px
+	border-radius: 2px
+	background-color: $blue-light
+
+	color: #fff
+
+	+bold
+	+f(14, 24, 0.21)
+	text-align: center
+
+	+t(background)
+
+	//states
+	+hover
+		&:not(:disabled)
+			background: $blue
+	+active
+		&:not(:disabled)
+			background: $blue-dark
+	&:disabled
+		color: $text
+		background: rgba($dark, 0.1)
+	&_lg
+		padding: 8px 24px
+		+md
+			padding: 4px 24px
+	&_full-lg
+		padding: 8px 24px
+	&_xlg
+		padding: 8px 24px
+		+f(16, 32, 1)
+	&_extra
+		width: 100%
+	&_participate
+		.icon-cooperative
+			position: absolute
+			top: 10px
+			left: 16px
+
+			fill: #fff
+			font-size: 19px
+			+md
+				top: 8px
+				font-size: 16px
+
+//DIRECTIONS
+.btn-direction,
+.btn-close
+	display: inline-block
+	vertical-align: top
+	border-radius: 2px
+	width: 32px
+	height: 32px
+
+	background: $blue-light
+	+vertical
+	+t(background)
+
+	//states
+	+hover
+		background: $blue
+	+active
+		background: $blue-dark
+
+	//directions
+	&_prev
+		padding-right: 2px
+	&_next
+		padding-left: 2px
+	&_up
+		padding-bottom: 2px
+
+	//sizes
+	&_lg
+		width: 40px
+		height: 40px
+
+
+	.icon
+		display: inline-block
+		vertical-align: middle
+	.icon-prev,
+	.icon-next
+		font-size: 14px
+	.icon-up
+		font-size: 10px
+
+//CLOSE
+.btn-close
+	.icon
+		fill: #fff
+		font-size: 14px
+
+////////////////////////////////////////////
+.btn-filter
+	position: relative
+	display: inline-block
+	vertical-align: top
+	overflow: hidden
+	padding: 8px 24px 8px 64px
+	border-radius: 2px
+	height: 40px
+
+	background: $blue-light
+	text-align: center
+	+t(background)
+	+sm
+		padding: 0
+		width: 40px
+
+	//states
+	+hover
+		background: $blue
+	+active
+		background: $blue-dark
+	&.is-active
+		.btn-filter
+			&_visible
+				transform: translate3d(0,-130%,0)
+			&_hidden
+				transform: translate3d(0,-100%,0)
+		.icon-filter
+			opacity: 0
+		.icon-close
+			opacity: 1
+
+	.icon
+		position: absolute
+		fill: #fff
+		+t(opacity)
+	.icon-filter
+		top: 10px
+		left: 24px
+		font-size: 20px
+		+sm
+			left: 8px
+	.icon-close
+		top: 13px
+		left: 29px
+		opacity: 0
+		font-size: 14px
+		+sm
+			left: 13px
+	&_track
+		display: block
+		height: 24px
+		+sm
+			display: none
+	&_visible, &_hidden
+		display: block
+		color: white
+		+bold
+		+f(14, 24, 0.21)
+		+t(transform)
+	&_visible
+		transform: translate3d(0,0,0)
+	&_hidden
+		transform: translate3d(0,130%,0)
+
+//SECONDARY BUTTON
+.btn-delete
+	padding: 8px 16px
+	color: $blue
+	background: transparent
+	+ss
+	+f(14, 24)
+	+t(color)
+	+sm
+		padding: 4px 0
+	+hover
+		color: $blue-light
+	+active
+		color: $blue-dark
+
+.btn-more
+	&.is-active
+		.btn-more
+			&__show
+				display: none
+			&__hide
+				display: block
+	&__show
+		display: block
+	&__hide
+		display: none
+
+.button,
+.button-sm
+	position: relative
+	display: inline-block
+	vertical-align: top
+	border: 2px solid $blue-light
+	border-radius: 2px
+	background: none
+	transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease
+	+hover
+		&:not(:disabled)
+			border-color: $blue
+			color: $white
+			background: $blue
+			.icon
+				fill: $white
+	+active
+		&:not(:disabled)
+			border-color: $blue-dark
+			color: $white
+			background: $blue-dark
+			.icon
+				fill: $white
+
+.button
+	color: $dark
+	font-size: 0
+	span
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding: 6px 14px 6px 46px
+		+bold
+		+f(16,32,1)
+	.icon
+		position: absolute
+		font-size: 19px
+		fill: $blue-light
+		&-heart-empty
+			top: 13px
+			left: 12px
+		&-cooperative
+			top: 12px
+			left: 10px
+
+.button-sm
+	width: 48px
+	height: 48px
+	+vertical
+	+hover
+		border-color: $blue
+		background: $blue
+		.icon
+			fill: $white
+	.icon
+		display: inline-block
+		vertical-align: middle
+		fill: $blue-light
+		color: transparent
+		+t(fill)
+		&-percent
+			font-size: 17px
+		&-heart-empty
+			font-size: 19px
+
+.btn-reaction
+	position: relative
+	display: inline-block
+	vertical-align: top
+	padding-left: 32px
+	background: none
+	+hover
+		.btn-reaction
+			&__text
+				color: $blue
+		.icon
+			fill: $blue
+	+active
+		.icon-like-active,
+		.icon-dislike-active
+			opacity: 1
+		.icon-like-default,
+		.icon-dislike-default
+			opacity: 0
+	.icon-wrapper
+		position: absolute
+		left: 4px
+		&-like
+			top: 1px
+		&-dislike
+			top: 5px
+	.icon
+		font-size: 18px
+		color: $blue-light
+	.icon-like-default,
+	.icon-dislike-default
+		fill: $dark
+	.icon-like-active,
+	.icon-dislike-active
+		fill: $blue
+	&__text
+		color: $text
+		+sreg
+		+f(14, 24)
+		+t(color)
+		+md
+			+f(12, 24)
+
+.btn-action
+	position: relative
+	display: inline-block
+	vertical-align: top
+	padding: 8px 0 8px 32px
+	background: none
+	+hover
+		.icon
+			fill: $blue
+		.icon-wrapper
+			.icon
+				&:first-child
+					opacity: 0
+				&:last-child
+					opacity: 1
+		.btn-action
+			&__text
+				color: $blue
+	+active
+		.icon
+			fill: $blue
+			color: $blue
+		.icon-wrapper
+			.icon
+				&:first-child
+					opacity: 0
+				&:last-child
+					opacity: 1
+		.btn-action
+			&__text
+				color: $blue
+	&.is-active
+		.icon
+			fill: $blue
+			color: $blue
+		.icon-wrapper
+			.icon
+				&:first-child
+					opacity: 0
+				&:last-child
+					opacity: 1
+		.btn-action
+			&__text
+				color: $dark
+	&__text
+		display: block
+		color: $text
+		+sreg
+		+f(12, 16)
+		+t(color)
+	.icon-wrapper
+		position: absolute
+		&-heart-sm
+			top: 9px
+			left: 9px
+			.icon
+				font-size: 13px
+		&-comment
+			top: 9px
+			left: 7px
+			.icon
+				font-size: 14px
+	.icon-view
+		position: absolute
+		top: 10px
+		left: 7px
+		font-size: 12px
+	.icon
+		fill: $dark
+		color: $blue-light
+
+.btn-edit
+	display: inline-block
+	vertical-align: top
+	width: 40px
+	height: 40px
+	background: none
+	+vertical
+	+hover
+		.icon
+			fill: $blue
+		.icon-wrapper
+			.icon
+				&:first-child
+					opacity: 0
+				&:last-child
+					opacity: 1
+	+active
+		.icon
+			fill: $blue-dark
+		.icon-wrapper
+			.icon
+				&:first-child
+					opacity: 0
+				&:last-child
+					opacity: 1
+	.icon-wrapper
+		display: inline-block
+		vertical-align: middle
+	.icon
+		fill: $dark
+		color: $blue-light
+		font-size: 23px
+
+.btn-share
+	position: relative
+	display: inline-block
+	vertical-align: top
+	padding: 8px 16px 8px 56px
+	border-radius: 2px
+	color: $white
+	+bold
+	+f(14, 24, 1)
+	+t(background)
+	+sm
+		padding: 0
+		width: 40px
+		height: 40px
+	&_like
+		background: $blue-light
+		+hover
+			background: $blue
+		+active
+			background: $blue-dark
+	&_vk
+		background: #45668e
+		+hover
+			background: darken(#45668e, 10%)
+		+active
+			background: darken(#45668e, 15%)
+	&_fb
+		background: #3b5998
+		+hover
+			background: darken(#3b5998, 10%)
+		+active
+			background: darken(#3b5998, 15%)
+	&_google
+		background: #dd4b39
+		+hover
+			background: darken(#dd4b39, 10%)
+		+active
+			background: darken(#dd4b39, 15%)
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 40px
+		border-left: 1px solid #f5f5f5
+		+sm
+			display: none
+	.icon
+		position: absolute
+		fill: $white
+		color: transparent
+	.icon-heart-active
+		top: 12px
+		left: 10px
+		font-size: 19px
+	.icon-vk
+		top: 14px
+		left: 11px
+		font-size: 12px
+	.icon-fb
+		top: 12px
+		left: 17px
+		font-size: 16px
+	.icon-google
+		top: 13px
+		left: 8px
+		font-size: 15px
+	span
+		display: block
+		+sm
+			display: none

@@ -1,0 +1,115 @@
+<!-- begin reivews-form  -->
+<div class="reviews-form {{reviewsFormClass}}">
+	<form action="/">
+		<div class="reviews-form__header">
+			<h3 class="title-h3 title-h3_sm reviews-form__title">Написать отзыв</h3>
+		</div>
+		<div class="reviews-form__body">
+			<h4 class="reviews-form__subtitle">Ваш отзыв поможет кому-то сделать выбор. Спасибо, что делитесь опытом!</h4>
+			<div class="reviews-form__section">
+				{% set reviewsFieldset = [
+					{
+						label: 'Оценка',
+						rating: true,
+						class: 'rating'
+					},
+					{
+						label: 'Достоинства',
+						id: 'reviews-good',
+						input: {
+							placeholder: 'Что оправдало ожидания'
+						}
+					},
+					{
+						label: 'Недостатки',
+						id: 'reviews-bad',
+						input: {
+							placeholder: 'Что не оправдало ожиданий'
+						}
+					},
+					{
+						label: 'Комментарий',
+						id: 'reviews-message',
+						textarea: {
+							placeholder: 'Другие впечатления о модели'
+						}
+					},
+					{
+						label: 'Опыт использования',
+						class: 'radios',
+						radio: [
+							{
+								name: 'reviews-experience',
+								class: 'radio_blue radio_md',
+								text: 'Менее месяца',
+								attrs: 'checked'
+							},
+							{
+								name: 'reviews-experience',
+								class: 'radio_blue radio_md',
+								text: 'Несколько месяцев'
+							},
+							{
+								name: 'reviews-experience',
+								class: 'radio_blue radio_md',
+								text: 'Более года'
+							}
+						]
+					}
+				] %}
+				<div class="reviews-form__fieldset">
+					{% for field in reviewsFieldset %}
+						<div class="reviews-form__field reviews-form__field_{{field.class}}">
+							{% if field.id %}
+								<label for="{{field.id}}" class="reviews-form__label">{{field.label}}</label>
+							{% else %}
+								<div class="reviews-form__label">{{field.label}}</div>
+							{% endif %}
+							<div class="reviews-form__box">
+								{% if field.input %}
+									<input type="text" class="input input_lg" placeholder="{{field.input.placeholder}}" id="{{field.id}}">
+								{% elif field.textarea %}
+									<textarea id="{{field.id}}" class="textarea" placeholder="{{field.textarea.placeholder}}"></textarea>
+								{% elif field.radio %}
+									<ul class="reviews-form__list">
+										{% for item in field.radio %}
+											<li>
+												{{mixins.radio(item)}}
+											</li>
+										{% endfor %}
+									</ul>
+								{% elif field.rating %}
+									<div class="reviews-form__rating">
+										{{mixins.rating({
+											name: 'reviews-evaluation'
+										})}}
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="reviews-form__info">
+					<div class="reviews-form__text">Подробно расскажите о своём опыте использования товара. Обратите внимание на качество, удобство модели, её соответствие заявленным характеристикам.</div>
+					<div class="reviews-form__footnote">Чтобы оставлять комментарии вам необходимо авторизоваться</div>
+					<div class="reviews-form__authorization">
+						<button class="btn btn_full-lg">Авторизация</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="reviews-form__footer">
+			<div class="reviews-form__submit">
+				<button class="btn btn_full-lg" disabled>Оставить отзыв</button>
+			</div>
+			<div class="reviews-form__agreement">
+				{{mixins.checkbox({
+					attrs: 'checked',
+					class: 'checkbox_blue checkbox_sm',
+					text: 'Я хочу получать новости о скидках'
+				})}}
+			</div>
+		</div>
+	</form>
+</div>
+<!-- end reivews-form -->

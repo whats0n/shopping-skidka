@@ -1,0 +1,72 @@
+<!-- begin score-about  -->
+<div class="score-about">
+	<h3 class="title-h3_sm score-about__title">О магазине</h3>
+	<div class="score-about__body">
+		<div class="score-about__item">
+			<div class="score-about__img">
+				<img src="img/logo-svyaznoy.jpg" alt="">
+			</div>
+			{% set statistics = [
+				{
+					label: 'Удобство'
+				},
+				{
+					label: 'Обслуживание'
+				},
+				{
+					label: 'Доставка'
+				}
+			] %}
+			<ul class="statistics score-about__statistics">
+				{% for item in statistics %}
+					<li class="statistics__row">
+						<span class="statistics__label">{{item.label}}</span>
+						<div class="statistics__rating">
+							{{mixins.ratingStatic({
+								size: 'sm',
+								number: 3.7
+							})}}
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="score-about__content">
+			{% set info = [
+				{
+					label: 'Сайт',
+					value: 'svyaznoy.ru'
+				},
+				{
+					label: 'Каталог магазина',
+					value: '<a href="#">Подробнее</a>'
+				},
+				{
+					label: 'Телефон',
+					value: '+7 (800) 700-50-00'
+				},
+				{
+					label: 'Адрес фирмы',
+					value: 'РФ, Москва, Ленинская Слобода, 19, 3 этаж'
+				},
+				{
+					label: 'Адрес электронной почты',
+					value: '<span>Не известно</span>'
+				}
+			] %}
+			<ul class="score-about__info">
+				{% for item in info %}
+					<li class="score-about__row">
+						<div class="score-about__label">
+							<div>{{item.label}}</div>
+						</div>
+						<div class="score-about__value">
+							<div>{{item.value | safe}}</div>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end score-about -->

@@ -1,0 +1,80 @@
+.nav-list
+	position: relative
+	margin-bottom: 40px
+	font-size: 0
+	+md
+		overflow: auto
+		padding: 0 16px
+		margin: 0 -16px
+		white-space: nowrap
+	&__inner
+		+md
+			display: inline-block
+			vertical-align: top
+			border-bottom: 1px solid rgba(29, 46, 73, 0.1)
+			min-width: 100%
+		+sm
+			border-bottom: none
+	&__item
+		line-height: 1
+		+md
+			display: inline-block
+			vertical-align: top
+		&:not(.nav-list__item_last)
+			margin-bottom: 16px
+			+md
+				margin: 0 40px 0 0
+			+sm
+				margin-right: 24px
+		&:last-child
+			&:not(.nav-list__item_last)
+				margin-bottom: 0
+				+md
+					margin-right: 0
+				+sm
+					margin-right: 0
+		&_last
+			padding-top: 16px
+			border-top: 1px solid rgba(29, 46, 73, 0.1)
+			+md
+				padding-top: 0
+				border: none
+	&__link
+		display: block
+		color: $dark
+		+reg
+		+f(15, 24, 0.27)
+		+t(color)
+		+hover
+			color: $blue
+		&.is-active
+			color: $blue
+			&:before
+				+md
+					transform: translate3d(0, 0, 0) scale(1)
+		+md
+			position: relative
+			padding-bottom: 16px
+		+sm
+			padding-bottom: 8px
+			+f(14, 24, 0.25)
+		&:before
+			content: ''
+			position: absolute
+			z-index: 1
+			bottom: 0
+			left: 0
+			right: 0
+			display: none
+			border-radius: 2px
+			height: 2px
+			background-color: $blue
+			transform: translate3d(0, 0, 0) scale(0)
+			+tr(transform 0.2s)
+			+md
+				display: block
+			+sm
+				// right: -5px
+				// left: -5px
+			.ps-active-x &
+				display: none

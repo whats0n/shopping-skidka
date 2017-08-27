@@ -1,0 +1,308 @@
+{% set category = [
+	{
+		title: 'Электроника, фото, связь',
+		list: [
+			{
+				link: 'Телефоны',
+				dropdown: true
+			},
+			{
+				link: 'Навигация'
+			},
+			{
+				link: 'Фотоаппараты и аксессуары'
+			},
+			{
+				link: 'Электронные книги',
+				dropdown: true
+			},
+			{
+				link: 'Оптические приборы'
+			},
+			{
+				link: 'Накопители',
+				hidden: true
+			},
+			{
+				link: 'Сетевые оборудования',
+				hidden: true
+			},
+			{
+				link: 'Аксессуары',
+				hidden: true
+			},
+			{
+				link: 'Игры и програмное обеспечение',
+				hidden: true
+			}
+		]
+	},
+	{
+		title: 'Аудио-видео техника',
+		list: [
+			{
+				link: 'Телевизоры'
+			},
+			{
+				link: 'Видеокамеры',
+				dropdown: true
+			},
+			{
+				link: 'Домашние кинотеатры',
+				dropdown: true
+			},
+			{
+				link: 'Портативная аудиотехника'
+			},
+			{
+				link: 'Игровые приставки и аксессуары',
+				dropdown: true
+			},
+			{
+				link: 'Накопители',
+				hidden: true
+			},
+			{
+				link: 'Сетевые оборудования',
+				hidden: true
+			},
+			{
+				link: 'Аксессуары',
+				hidden: true
+			},
+			{
+				link: 'Игры и програмное обеспечение',
+				hidden: true
+			}
+		]
+	},
+	{
+		title: 'Компьютеры',
+		list: [
+			{
+				link: 'Ноутбуки и компьютеры'
+			},
+			{
+				link: 'Оргтехника и периферия'
+			},
+			{
+				link: 'Комплектующие'
+			},
+			{
+				link: 'Сетевое оборудование'
+			},
+			{
+				link: 'Расходные материалы'
+			},
+			{
+				link: 'Периферийные устройства',
+				hidden: true
+			},
+			{
+				link: 'Накопители',
+				hidden: true
+			},
+			{
+				link: 'Сетевые оборудования',
+				hidden: true
+			},
+			{
+				link: 'Аксессуары',
+				hidden: true
+			},
+			{
+				link: 'Игры и програмное обеспечение',
+				hidden: true
+			}
+		]
+	},
+	{
+		title: 'Компьютеры',
+		list: [
+			{
+				link: 'Ноутбуки и компьютеры'
+			},
+			{
+				link: 'Оргтехника и периферия'
+			},
+			{
+				link: 'Комплектующие'
+			},
+			{
+				link: 'Сетевое оборудование'
+			},
+			{
+				link: 'Расходные материалы'
+			},
+			{
+				link: 'Периферийные устройства',
+				hidden: true
+			},
+			{
+				link: 'Накопители',
+				hidden: true
+			},
+			{
+				link: 'Сетевые оборудования',
+				hidden: true
+			},
+			{
+				link: 'Аксессуары',
+				hidden: true
+			},
+			{
+				link: 'Игры и програмное обеспечение',
+				hidden: true
+			}
+		]
+	}
+] %}
+
+{% set categoryDropdown = [
+	'Экшн камеры',
+	'Цифровые камеры',
+	'Камеры с HHD',
+	'Камеры с CD'
+] %}
+
+{% set news = [
+	{
+		date: '26 сент. 2016 г.',
+		title: 'Старт продаж iPhone 7. <br>Как это было',
+		text: 'Первые покупатели забрали свои девайсы уже в ночь с 22 на 23 сентября.',
+		info: [
+			{
+				icon: 'view',
+				text: '12'
+			},
+			{
+				icons: 'heart-sm',
+				text: '3'
+			},
+			{
+				icons: 'comment',
+				text: '1'
+			}
+		]
+	},
+	{
+		date: '21 июня 2016 г.',
+		title: 'Купи смартфон Xiaomi прямо сейчас',
+		text: 'Официально в России и только в Shopping Skidka.com.',
+		info: [
+			{
+				icon: 'view',
+				text: '12'
+			},
+			{
+				icons: 'heart-sm',
+				text: '4'
+			}
+		]
+	}
+] %}
+
+{% set reviews = [
+	{
+		img: 'review1.jpg',
+		title: 'Meizu MX6: металлический смартфон с 5,5-дюймовым экраном',
+		category: 'Новинки'
+	},
+	{
+		img: 'review2.jpg',
+		title: 'Как прокачать камеру в смартфоне'
+	},
+	{
+		img: 'review1.jpg',
+		title: 'JBL Charge 3 и JBL Clip 2: музыка, которая всегда с тобой',
+		category: 'Обзор'
+	}
+] %}
+
+{% set filterList = [
+	{
+		checkbox: true,
+		title: 'Производители',
+		list: [
+			{
+				text: 'Электронника',
+				attrs: 'checked'
+			},
+			{
+				text: 'Одежда'
+			},
+			{
+				text: 'Парфимерия',
+				attrs: 'checked'
+			},
+			{
+				text: 'Продукты'
+			},
+			{
+				text: 'Химия'
+			},
+			{
+				text: 'Одежда'
+			},
+			{
+				text: 'Парфимерия'
+			},
+			{
+				text: 'Продукты'
+			},
+			{
+				text: 'Химия'
+			}
+		]
+	},
+	{
+		checkbox: true,
+		title: 'По алфавиту <small>(0-9)</small>',
+		list: [
+			{
+				text: '1',
+				attrs: 'checked'
+			},
+			{
+				text: '3'
+			},
+			{
+				text: '4',
+				attrs: 'checked'
+			},
+			{
+				text: '8'
+			}
+		]
+	},
+	{
+		title: 'По алфавиту <small>(А-Я)</small>',
+		radio: true,
+		list: [
+			{
+				text: '(А-Я)',
+				name: 'ru-alphabet',
+				attrs: 'checked'
+			},
+			{
+				text: '(Я-А)',
+				name: 'ru-alphabet'
+			}
+		]
+	},
+	{
+		title: 'По алфавиту <small>(А-Z)</small>',
+		radio: true,
+		list: [
+			{
+				text: '(А-Z)',
+				name: 'en-alphabet',
+				attrs: 'checked'
+			},
+			{
+				text: '(Z-А)',
+				name: 'en-alphabet'
+			}
+		]
+	}
+] %}

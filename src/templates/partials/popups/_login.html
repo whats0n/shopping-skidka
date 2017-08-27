@@ -1,0 +1,41 @@
+<!-- begin popup  -->
+<div class="popup js-popup" data-modal="login">
+	<div class="popup__container popup__container_xs js-popup-container">
+		<button class="btn-close btn-close_lg popup__close js-popup-close">
+			{{mixins.icon('close')}}
+		</button>
+		<div class="popup__form">
+			<form action="/">
+				<div class="popup__title">Вход</div>
+				<div class="popup__field">
+					{{mixins.input({
+						type: 'email',
+						attrs: 'placeholder="Email"'
+					})}}
+				</div>
+				<div class="popup__field">
+					{{mixins.input({
+						type: 'password',
+						attrs: 'placeholder="Пароль"'
+					})}}
+				</div>
+				<div class="popup__forgot">
+					<a href="#" class="popup__link">Забыли пароль?</a>
+				</div>
+				<div class="popup__submit">
+					<button class="btn btn_extra btn_lg">Войти</button>
+				</div>
+				<div class="popup__slash">
+					<span>или</span>
+				</div>
+				{{mixins.socials({
+					class: 'popup__social'
+				})}}
+			</form>
+		</div>
+		<div class="popup__footer">
+			<a href="#" class="popup__link js-popup-open" data-target="registration">Регистрация нового пользователя</a>
+		</div>
+	</div>
+</div>
+<!-- end popup -->

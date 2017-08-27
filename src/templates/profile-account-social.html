@@ -1,0 +1,32 @@
+---
+title: Profile-account-social
+activeNavItem: 0
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<!-- BEGIN inner -->
+	<div class="inner">
+
+		{% include "partials/components/_page-head.html" %}
+
+		<!-- BEGIN profile -->
+		<div class="profile">
+			<div class="profile__row">
+
+				<div class="profile__sidebar">
+					{% include "partials/profile/_nav-list.html" %}
+				</div>
+
+				<div class="profile__content">
+					{% include "partials/profile/_main-form_have-user.html" %}
+				</div>
+
+			</div>
+		</div>
+		<!-- END profile -->
+	</div>
+	<!-- END inner -->
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers()}}
+{% endblock %}

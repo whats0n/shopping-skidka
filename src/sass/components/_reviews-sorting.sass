@@ -1,0 +1,39 @@
+.reviews-sorting
+	padding: 16px 0
+	border-bottom: 1px solid rgba($dark, 0.1)
+	+clr
+	+md
+		padding: 16px 0
+	+sm
+		padding: 8px 0 16px
+	&__amount
+		float: left
+		+md
+			padding: 4px 0
+		+sm
+			padding: 28px 0 4px
+			width: 128px
+	&__label
+		float: left
+		padding: 8px 0
+		width: 100px
+		color: $text
+		+sreg
+		+f(12, 16)
+		+sm
+			float: none
+			padding: 0 0 8px
+			width: 100%
+	&__filter
+		float: right
+		width: 348px
+		+clr
+		+sm
+			float: none
+			padding-left: 128px
+			width: auto
+		.select
+			float: right
+			width: 248px
+			+sm
+				width: 100%

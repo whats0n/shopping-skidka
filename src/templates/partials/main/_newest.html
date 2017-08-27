@@ -1,0 +1,52 @@
+<div class="heading">
+	<h2 class="title-h2 heading__title heading__title_xs-lg">Новинки этого месяца</h2>
+	<div class="heading__tabs-list tabs__scroll js-scrollbar scrollbar">
+		<ul class="tabs__list tabs__list_right heading__tabs-list-in">
+			{% for tab in newest %}
+				<li>
+					{% if tab.active %}
+						<a href="{{tab.id}}" class="js-tabs-open is-active">{{tab.text}}</a>
+					{% else %}
+						<a href="{{tab.id}}" class="js-tabs-open">{{tab.text}}</a>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="newest">
+	<div class="tabs__container">
+		{% for tab in newest %}
+			{% if tab.active %}
+			<div class="tabs__content js-tabs-content is-active" data-id="{{tab.id}}">
+			{% else %}
+			<div class="tabs__content js-tabs-content" data-id="{{tab.id}}">
+			{% endif %}
+				{% for item in range(0, 2) %}
+					<div class="newest__row">
+						{% for item in range(0, newestItems) %}
+							<div class="newest__col {{newestItemsClass}}">
+								{{mixins.item({
+									title: 'Hartan Racer GT',
+									category: 'Детские коляски',
+									discount: '-18%',
+									sales: true,
+									images: [
+										'item1.jpg',
+										'item2.jpg',
+										'item3.jpg',
+										'item4.jpg'
+									],
+									price: {
+										current: '91 730 руб.',
+										old: '98 763 руб.'
+									}
+								})}}
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
+		{% endfor %}
+	</div>
+</div>

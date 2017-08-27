@@ -1,0 +1,12 @@
+<!-- begin text  -->
+<div class="text">
+	<div class="heading">
+		<h2 class="title-h2 heading__title">{{blockText.title | safe}}</h2>
+	</div>
+	<div class="text__content">
+		{% for item in blockText.content %}
+			<p>{{item.p | safe}}</p>
+		{% endfor %}
+	</div>
+</div>
+<!-- end text -->

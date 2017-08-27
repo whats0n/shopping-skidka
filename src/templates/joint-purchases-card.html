@@ -1,0 +1,196 @@
+---
+title: Joint Purchases/Card
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main">
+	<div class="section inner">
+		<div class="page">
+			{% set breadcrumbs = [
+				'Главная',
+				'Совместные покупки',
+				'При покупке стиральной машины LG F-12U1HBS4 вы получаете в подарок хлебопечку!'
+			] %}
+
+			{% include "partials/components/_breadcrumbs.html" %}
+			<div class="page__row">
+				<div class="page__content page-intro">
+					<h1 class="title-h1">При покупке стиральной машины LG F-12U1HBS4 вы получаете в подарок хлебопечку!</h1>
+					<div class="page-intro__header">
+						<div class="page-intro__meta">
+							<span>Категория:</span>
+							<a href="#">Стиральные машины</a>
+						</div>
+						<ul class="page-intro__info">
+							<li>
+								<span>Участников:</span>
+								<strong class="page-intro__info-blue">8</strong>
+							</li>
+							<li><span>Осталось:</span>
+								<strong class="page-intro__info-red">5 дней</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="page__row">
+				{% include "partials/sidebars/_purchases-card.html" %}
+				<div class="page__content page__content_non-top">
+					<div class="overview-article">
+						<article class="article">
+							<div class="article-item">
+								<div class="article-item__img">
+									<img src="img/article-img.jpg" alt="">
+								</div>
+								<div class="article__text">
+									<p>Man's technological ascent began in earnest in what is known as the Neolithic period ("New stone age"). The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms. Agriculture fed larger populations, and the transition to sedentism allowed simultaneously.</p>
+								</div>
+							</div>
+							<h2 class="title-h2">Лучшая стиральная машина</h2>
+							<div class="article__text">
+								<p>Optimistic assumptions are made by proponents of ideologies such as transhumanism and singularitarianism, which view technological development as generally having beneficial effects for the society and the human condition. In these ideologies, technological development is morally good. Some critics see these ideologies as examples of scientism and techno-utopianism and fear the notion of human enhancement and technological singularity which they support.</p>
+							</div>
+							<figure class="article-figure">
+								<img src="img/article-figure4.jpg" alt="">
+								<div class="article-figure__info">
+									<div class="article-figure__title">
+										<a href="#">LG F-12U1HBS4</a>
+										<span>(35 991 руб.)</span>
+									</div>
+									<div class="article-figure__rating">
+										{{mixins.ratingSMStatic(4.7, 'md')}}
+									</div>
+								</div>
+							</figure>
+							<div class="article__text">
+								<p>Infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy. The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms.</p>
+							</div>
+						</article>
+					</div>
+
+					<div class="page-shares page-shares_bottom">
+						{{mixins.shares({
+							title: 'Поделиться',
+							part: true,
+							items: [
+								{
+									class: 'vk',
+									icon: 'vk',
+									text: '72'
+								},
+								{
+									class: 'fb',
+									icon: 'fb',
+									text: '18'
+								},
+								{
+									class: 'google',
+									icon: 'google',
+									text: '11'
+								}
+							]
+						})}}
+					</div>
+
+					{% import "partials/_layout-content.html" as purchases %}
+
+					{{purchases.content({
+						item: 'product',
+						class: 'product',
+						itemClass: 'l-content__col_product-slide',
+						classJS: 'js-similar',
+						containerClass: 'js-similar-slider l-content__container_product-slider',
+						header: true,
+						title: 'Похожее',
+						prev: 'js-similar-prev',
+						next: 'js-similar-next',
+						items: [
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col',
+									img: 'review1.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col',
+									img: 'review2.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col',
+									img: 'review1.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col',
+									img: 'review2.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col',
+									img: 'review1.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col',
+									img: 'review2.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							}
+						]
+					})}}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers()}}
+</div>
+{% endblock %}

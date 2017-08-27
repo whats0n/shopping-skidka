@@ -1,0 +1,46 @@
+<div class="card-main tabs js-tabs">
+	{% set cardTabs = [
+		{
+			id: 'card-description',
+			title: 'Описание'
+		},
+		{
+			id: 'card-characteristics',
+			title: 'Характеристики'
+		},
+		{
+			id: 'card-price',
+			title: 'Цены <small>(67)</small>'
+		},
+		{
+			id: 'card-reviews',
+			title: 'Отзывы <small>(84)</small>'
+		},
+		{
+			id: 'card-overview',
+			title: 'Обзоры <small>(12)</small>'
+		}
+	] %}
+	<div class="card-main__tabs">
+		<div class="tabs__scroll card-main__tabs-list js-scrollbar">
+			<ul class="tabs__list tabs__list_subtitle">
+				{% for item in cardTabs %}
+					<li>
+						{% if loop.first %}
+							<a href="{{item.id}}" class="js-tabs-open is-active">{{item.title | safe}}</a>
+						{% else %}
+							<a href="{{item.id}}" class="js-tabs-open">{{item.title | safe}}</a>
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="tabs__container">
+		{% include "partials/card/_card-description.html" %}
+		{% include "partials/card/_card-characteristics.html" %}
+		{% include "partials/card/_card-price.html" %}
+		{% include "partials/card/_card-reviews.html" %}
+		{% include "partials/card/_card-overview.html" %}
+	</div>
+</div>

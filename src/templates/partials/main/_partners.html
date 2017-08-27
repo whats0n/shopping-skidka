@@ -1,0 +1,57 @@
+<div class="heading">
+	<div class="heading__tabs-title">
+		{% set tabs = [
+			{
+				id: 'partners-1',
+				text: 'Бренды',
+				active: true
+			},
+			{
+				id: 'partners-2',
+				text: 'Магазины'
+			}
+		] %}
+		<ul class="tabs__list tabs__list_title heading__tabs-title-in">
+			{% for tab in tabs %}
+				<li>
+					{% if tab.active %}
+						<a href="{{tab.id}}" class="js-tabs-open is-active">{{tab.text}}</a>
+					{% else %}
+						<a href="{{tab.id}}" class="js-tabs-open">{{tab.text}}</a>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="heading__more">
+		<div class="no-mobile">
+			<button class="btn">Смотреть все</button>
+		</div>
+		<div class="only-mobile">
+			<button class="btn">Все</button>
+		</div>
+	</div>
+</div>
+<div class="partners">
+	<div class="tabs__container">
+		{% for tab in tabs %}
+			{% if tab.active %}
+			<div class="tabs__content js-tabs-content is-active" data-id="{{tab.id}}">
+			{% else %}
+			<div class="tabs__content js-tabs-content" data-id="{{tab.id}}">
+			{% endif %}
+				<div class="partners__row">
+					{% for item in range(0, 18) %}
+						<div class="partners__col">
+							<a href="#" class="partner {{partnerClass}}">
+								<div class="partner__inner">
+									<img src="img/partner1.png" alt="">
+								</div>
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

@@ -1,0 +1,62 @@
+---
+title: Profile-favorite
+activeNavItem: 1
+login: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<!-- BEGIN inner -->
+	<div class="inner">
+
+		{% include "partials/components/_page-head.html" %}
+
+		<!-- BEGIN profile -->
+		<div class="profile">
+			<div class="profile__row">
+
+				<div class="profile__sidebar">
+					{% include "partials/profile/_nav-list.html" %}
+				</div>
+
+				<div class="profile__content">
+					<div class="profile__items">
+						{% import "data/items.html" as list %}
+						{% for data in list.items %}
+						<div class="profile__col profile__col_sm">
+							{{mixins.item({
+								title: data.title,
+								category: data.subtitle,
+								discount: data.discount,
+								favorite: data.discount,
+								sales: data.heart,
+								images: data.picture,
+								price: {
+									current: data.price,
+									old: data.oldPrice
+								}
+							})}}
+						</div>
+						{% endfor %}
+					</div>
+					{{mixins.paginationLG({
+						class: 'pagination_lg'
+					})}}
+				</div>
+
+				<aside class="sidebar profile__filter js-filter">
+					{% import "data/sidebars/catalog.html" as sidebar %}
+					{% include "partials/sidebars/_sidebar-filter.html" %}
+				</aside>
+
+			</div>
+		</div>
+		<!-- END profile -->
+
+	</div>
+	<!-- END inner -->
+	{% include "partials/components/_subscribe.html" %}
+
+	{{mixins.controllers(true)}}
+
+{% endblock %}

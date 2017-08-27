@@ -1,0 +1,47 @@
+.sm-rating
+	position: relative
+	padding-left: 20px
+	.icon
+		position: absolute
+		// top: 1px
+		top: 0
+		left: 0
+		fill: $blue
+		font-size: 13px
+	&__value
+		color: $dark
+		+reg
+		+f(15, 16, 1)
+
+	//mod
+	&_md
+		padding-left: 25px
+		+md
+			padding-left: 23px
+		.icon
+			// top: 2px
+			top: 0
+			opacity: 0.1
+			font-size: 19px
+			+md
+				// opacity: 0.1
+				font-size: 17px
+		.sm-rating__value
+			color: $blue
+			+f(15, 24, 1)
+			+md
+				+f(13, 24, 1)
+	&_lg
+		padding-left: 25px
+		+md
+			padding-left: 23px
+		.icon
+			top: 1px
+			font-size: 19px
+			+md
+				top: 5px
+				font-size: 13px
+		.sm-rating__value
+			+f(22, 24, 1)
+			+md
+				+f(20, 24, 1)

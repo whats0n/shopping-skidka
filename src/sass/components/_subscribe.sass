@@ -1,0 +1,74 @@
+.subscribe
+	background: #e4e7ec
+	padding: 16px 0
+	+md
+		padding: 24px 0
+	&__inner
+		+clr
+	.icon-subscribe
+		position: absolute
+		top: 3px
+		left: 0
+
+		color: $blue-light
+		fill: $dark
+
+		font-size: 34px
+		+md
+			top: -1px
+	&__title
+		position: relative
+		float: left
+		overflow: hidden
+		padding: 1px 0 7px 42px
+		color: $dark
+		+reg
+		+f(26, 32, 0.47)
+		+md
+			padding: 0 0 0 42px
+			+f(24, 32, 0.44)
+		+sm
+			margin-bottom: 16px
+			+f(18, 32, 0.33)
+		span
+			display: block
+			line-height: 32px
+	&__label
+		float: left
+		padding: 5px 0 3px 16px
+		+sreg
+		+f(13, 16)
+		+md
+			display: none
+		strong, span
+			display: block
+		strong
+			color: $dark
+		span
+			color: $text
+	&__form
+		float: right
+		width: 515px
+		+md
+			float: none
+			overflow: hidden
+			padding-left: 40px
+			width: auto
+		+sm
+			clear: both
+			padding: 0
+	&__field
+		overflow: hidden
+		padding-right: 16px
+		// width: 370px
+		+md
+			width: auto
+	&__btn
+		float: right
+		+sm
+			display: none
+	&__next
+		display: none
+		float: right
+		+sm
+			display: block

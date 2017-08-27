@@ -1,0 +1,285 @@
+.page
+	padding-bottom: 40px
+	+md
+		padding-bottom: 24px
+	&__heading
+		position: relative
+		padding-bottom: 16px
+		border-bottom: 1px solid rgba($dark, 0.1)
+		&_top
+			padding-top: 16px
+			+sm
+				padding-top: 8px
+		&_border-none-md
+			+md
+				padding-bottom: 8px
+				border-bottom: none
+	&__row
+		margin: 0 -8px
+		+clr
+		+md
+			overflow: hidden
+		+sm
+			overflow: visible
+	&__sidebar
+		float: left
+		padding: 20px 8px 0
+		width: 25%
+		+filterOpened
+			+md
+				opacity: 1
+				transform: translate3d(0,0,0)
+		+md
+			padding: 12px 8px 0
+			width: 33.33%
+			opacity: 0
+			transform: translate3d(-100%,0,0)
+			transition: opacity 0.35s ease, transform 0.35s ease
+		+sm
+			position: fixed
+			z-index: 1000
+			top: 0
+			left: 0
+			bottom: 0
+			overflow: auto
+			padding: 12px 0
+			width: 248px
+			opacity: 1
+			background: whitesmoke
+		&_non-top
+			padding-top: 0
+			margin-top: -16px
+			+md
+				margin-top: 0
+			+md
+				padding-top: 0
+			+sm
+				padding-top: 0
+	&__content
+		float: right
+		padding: 24px 8px 0
+		width: 75%
+		+filterOpened
+			+md
+				transform: translate3d(33.33%,0,0)
+			+sm
+				+gpu
+		+md
+			padding-top: 16px
+			margin-left: -33.33%
+			width: 100%
+			+gpu
+			transition: transform 0.35s ease
+		+sm
+			margin-left: 0
+		&_non-top
+			padding-top: 0
+			+md
+				margin-top: 0
+			+md
+				padding-top: 0
+			+sm
+				padding-top: 0
+	&__sorting
+		float: right
+		padding: 16px 8px 0
+		margin-bottom: -8px
+		width: 75%
+		+md
+			margin-bottom: 0
+			width: 100%
+	&__partners
+		padding-bottom: 8px
+	&__breadcrumbs
+		padding-bottom: 8px
+	&__pagination
+		margin-bottom: 24px
+		+sm
+			margin-bottom: 40px
+	&__item
+		border-bottom: 1px solid rgba($dark, 0.1)
+
+.page-title
+	&__list
+		margin-bottom: -16px
+		font-size: 0
+		white-space: nowrap
+		li
+			display: inline-block
+			vertical-align: top
+			padding-right: 40px
+			+sm
+				padding-right: 24px
+	&__link
+		position: relative
+		display: block
+		padding-bottom: 16px
+		color: $dark
+		+reg
+		+f(32, 40, 1)
+		+t(color)
+		+md
+			+f(24, 32, 0)
+		+sm
+			+f(18, 32)
+		+hover
+			color: $blue
+		&.is-active
+			color: $blue
+			&:before
+				transform: translate3d(0,0,0) scaleX(1)
+		.ps-active-x &
+			&:before
+				display: none
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			border-bottom: 2px solid $blue
+			transform: translate3d(0,0,0) scaleX(0)
+			+t(transform)
+
+.page-intro
+	padding-top: 8px
+	+md
+		padding-top: 8px
+	h1,
+	.title-h1
+		margin-bottom: 8px
+		+md
+			margin-bottom: 0
+		+sm
+			margin-bottom: 8px
+			+f(24, 32, 1)
+	&__header
+		padding-bottom: 16px
+		+clr
+		// +md
+			// margin-top: -8px
+		// +sm
+		// 	margin: 0
+	&__meta
+		float: left
+		padding: 8px 0
+		color: $text
+		+sreg
+		+f(13, 16)
+		+md
+			+f(12, 16)
+		+sm
+			padding: 0
+			width: 41%
+		a
+			color: $blue
+			+t(color)
+			+hover
+				color: $blue-light
+			+active
+				color: $blue-dark
+		span
+			+sm
+				display: block
+	&__action
+		float: right
+		font-size: 0
+		+sm
+			width: 59%
+			text-align: right
+		li
+			display: inline-block
+			vertical-align: top
+			&:not(:first-child)
+				padding-left: 16px
+	&__info
+		float: right
+		padding: 8px 0
+		font-size: 0
+		+sm
+			padding: 0
+			width: 59%
+			text-align: right
+		li
+			display: inline-block
+			vertical-align: top
+			color: $text
+			+sreg
+			+f(13, 16)
+			+sm
+				display: block
+				+f(12, 16)
+			&:not(:first-child)
+				padding-left: 12px
+		span,
+		strong
+			display: inline-block
+			vertical-align: top
+		strong
+			+ss
+		&-blue
+			color: $blue
+		&-red
+			color: $red
+
+.page-shares
+	border-bottom: 1px solid rgba($dark, 0.1)
+	&_bottom
+		margin-bottom: 24px
+
+.grid
+	&__row
+		margin: 0 -8px
+		+clr
+	&__col
+		float: left
+		width: 100%
+		padding: 0 8px
+		min-height: 1px
+		&_xs
+			width: 25%
+		&_sm
+			width: 33.33%
+		&_md
+			width: 50%
+		&_lg
+			width: 75%
+
+.l-content
+	&__container
+		margin: 0 -8px
+		+clr
+		+md
+			margin: 0 -6px
+		&_review,
+		&_news,
+		&_product-slider
+			padding-top: 16px
+			+sm
+				margin: 0 -16px
+		&_product
+			+md
+				padding-bottom: 8px
+			+sm
+				padding-bottom: 16px
+	&__col
+		float: left
+		padding: 0 8px 16px
+		+md
+			padding: 0 6px 16px
+		&_sm
+			width: 33.33%
+		&_lg
+			width: 66.66%
+		&_review
+			+sm
+				width: 244px
+		&_news
+			+sm
+				width: 242px
+		&_product
+			+sm
+				width: 50%
+		&_product-slide
+			+sm
+				width: 264px

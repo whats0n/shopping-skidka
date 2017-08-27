@@ -1,0 +1,15 @@
+<!-- begin popup  -->
+<div class="popup js-popup" data-modal="add-social">
+	<div class="popup__container popup__container_md popup__container_social js-popup-container">
+		<button class="btn-close btn-close_lg popup__close js-popup-close">
+			{{mixins.icon('close')}}
+		</button>
+		<div class="popup__add-social">
+			<div class="popup__title">Добавить социальную сеть</div>
+			{{mixins.socials({
+				class: 'social_lg popup__social-lg'
+			})}}
+		</div>
+	</div>
+</div>
+<!-- end popup -->

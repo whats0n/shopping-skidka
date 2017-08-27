@@ -1,0 +1,323 @@
+---
+title: Blog
+
+activeTitleTabs: 2
+pageTitleTabs: [
+	'Новости',
+	'Обзоры',
+	'Блог'
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main">
+	<div class="section inner">
+		<div class="page">
+			<div class="page__heading js-scrollbar">
+				<ul class="page-title__list">
+					{% for item in pageTitleTabs %}
+						<li>
+							{% if loop.index0 == activeTitleTabs %}
+								<a href="#" class="page-title__link is-active">{{item}}</a>
+							{% else %}
+								<a href="#" class="page-title__link">{{item}}</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="page__row">
+				{% include "partials/sidebars/_overview-main.html" %}
+				<div class="page__content">
+					{% include "partials/overview/_overview-item.html" %}
+
+					{% import "partials/_layout-content.html" as overview %}
+
+					{{overview.content({
+						classJS: 'js-reviews',
+						containerClass: 'js-reviews-slider',
+						item: 'newsBox',
+						class: 'news',
+						items: [
+							{
+								size: 'sm',
+								item: {
+									title: 'Старт продаж iPhone 7. <br>Как это было',
+									text: 'Первые покупатели забрали свои девайсы уже в ночь с 22 на 23 сентября.',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'heart-sm',
+											text: '3'
+										},
+										{
+											icons: 'comment',
+											text: '1'
+										}
+									]
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									title: 'Купи смартфон Xiaomi прямо сейчас',
+									text: 'Официально в России и только в Shopping Skidka.com.',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'comment',
+											text: '2'
+										}
+									]
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									title: 'Пройди квест банка «Тинькофф» и выиграй план…',
+									text: 'А пятеро победителей разделят между собой миллион',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'comment',
+											text: '2'
+										}
+									]
+								}
+							},
+							{
+								size: 'lg',
+								item: {
+									img: 'img/blog.jpg',
+									title: 'Все, что известно о MacBook Pro нового поколения за четыре дня до официальной презентации',
+									text: '27 октября Apple официально представит новые MacBook Pro, которые получат самое радикальное обновление за последние четыре года. Полностью переработанные компьютеры из «профессиональной» серии Mac-ноутбуков …',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'heart-sm',
+											text: '3'
+										},
+										{
+											icons: 'comment',
+											text: '1'
+										}
+									]
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									title: 'Целый танк в подарок!',
+									text: 'Сюрприз для покупателей планшета Prestigio Visconte.',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'comment',
+											text: '2'
+										}
+									]
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									title: 'Старт продаж iPhone 7. <br>Как это было',
+									text: 'Первые покупатели забрали свои девайсы уже в ночь с 22 на 23 сентября.',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'heart-sm',
+											text: '3'
+										},
+										{
+											icons: 'comment',
+											text: '1'
+										}
+									]
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									title: 'Купи смартфон Xiaomi прямо сейчас',
+									text: 'Официально в России и только в Shopping Skidka.com.',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'comment',
+											text: '2'
+										}
+									]
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									title: 'Пройди квест банка «Тинькофф» и выиграй план…',
+									text: 'А пятеро победителей разделят между собой миллион',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'comment',
+											text: '2'
+										}
+									]
+								}
+							}
+						]
+					})}}
+
+					{% include "partials/overview/_overview-review-boxes.html" %}
+
+					{{overview.content({
+						classJS: 'js-reviews',
+						containerClass: 'js-reviews-slider',
+						item: 'newsBox',
+						class: 'news',
+						items: [
+							{
+								size: 'sm',
+								item: {
+									title: 'Целый танк в подарок!',
+									text: 'Сюрприз для покупателей планшета Prestigio Visconte.',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'comment',
+											text: '2'
+										}
+									]
+								}
+							},
+							{
+								size: 'lg',
+								item: {
+									img: 'img/blog.jpg',
+									title: 'Все, что известно о MacBook Pro нового поколения за четыре дня до официальной презентации',
+									text: '27 октября Apple официально представит новые MacBook Pro, которые получат самое радикальное обновление за последние четыре года. Полностью переработанные компьютеры из «профессиональной» серии Mac-ноутбуков …',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'heart-sm',
+											text: '3'
+										},
+										{
+											icons: 'comment',
+											text: '1'
+										}
+									]
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									title: 'Старт продаж iPhone 7. <br>Как это было',
+									text: 'Первые покупатели забрали свои девайсы уже в ночь с 22 на 23 сентября.',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'heart-sm',
+											text: '3'
+										},
+										{
+											icons: 'comment',
+											text: '1'
+										}
+									]
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									title: 'Купи смартфон Xiaomi прямо сейчас',
+									text: 'Официально в России и только в Shopping Skidka.com.',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'comment',
+											text: '2'
+										}
+									]
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									title: 'Пройди квест банка «Тинькофф» и выиграй план…',
+									text: 'А пятеро победителей разделят между собой миллион',
+									class: 'news-box_white',
+									info: [
+										{
+											icon: 'view',
+											text: '12'
+										},
+										{
+											icons: 'comment',
+											text: '2'
+										}
+									]
+								}
+							}
+						]
+					})}}
+
+					{{mixins.paginationLG({
+						class: 'pagination_lg'
+					})}}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers(true, 'Категории')}}
+</div>
+{% endblock %}

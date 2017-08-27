@@ -1,0 +1,122 @@
+---
+title: Catalog/Product
+navActive: 2
+breadcrumbsClass: 'page__breadcrumbs'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main main_in">
+	<div class="section inner">
+		<div class="page">
+			{% set breadcrumbs = [
+				'Главная',
+				'Электроника',
+				'Аудио-видео техника',
+				'Телевизоры'
+			] %}
+
+			{% include "partials/components/_breadcrumbs.html" %}
+
+			<div class="page__heading">
+				<h1>Телевизоры <span>(207)</span></h1>
+			</div>
+			<div class="page__row">
+				<div class="page__sorting">
+					{% include "partials/components/_sorting.html" %}
+				</div>
+				{% include "partials/sidebars/_catalog-product.html" %}
+				<div class="page__content">
+					<div class="items-catalog">
+						<div class="items-catalog__row">
+							{% for item in range(0, 15) %}
+								<div class="items-catalog__col">
+									{{mixins.item({
+										title: 'Hartan Racer GT',
+										category: 'Детские коляски',
+										discount: '-25%',
+										sales: true,
+										images: [
+											'item1.jpg',
+											'item2.jpg',
+											'item3.jpg',
+											'item4.jpg',
+											'item5.jpg',
+											'item6.jpg'
+										],
+										price: {
+											current: '91 730 руб.',
+											old: '98 763 руб.'
+										}
+									})}}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+					{{mixins.paginationLG({
+						class: 'pagination_lg page__pagination'
+					})}}
+
+					{% set lookingFor = {
+						title: 'Популярное в категории',
+						btn: {
+							text: 'Смотреть все'
+						},
+						list: [
+							[
+								'32 дюйма',
+								'Smart TV',
+								'4K телевизоры',
+								'телевизоры с Wi-Fi',
+								'3D-телевизоры LG'
+							],
+							[
+								'ultra hd',
+								'3D',
+								'sony bravia',
+								'uHD-телевизоры',
+								'телевизоры Samsung 40 дюймов'
+							],
+							[
+								'на стену',
+								'samsung 40',
+								'за 6000000 рублей',
+								'dVB-T2-телевизоры',
+								'sony 4k'
+							]
+						]
+					} %}
+					{% include "partials/components/_looking-for.html" %}
+
+					{% set blockText = {
+						title: 'Телевизоры',
+						content: [
+							{
+								p: 'Модельный ряд современных телевизоров широк и разнообразен. Это функциональные плоские панели, друг от друга отличающиеся размером, качеством изображения и техническим оснащением.'
+							},
+							{
+								p: 'Устройства классифицируют на четыре основных вида. LCD – модели, экран которых создан на основе матрицы жидких кристаллов. Для них характерны: низкое энергопотребление, небольшой вес, средняя толщина корпуса.'
+							},
+							{
+								p: 'LED-телевизоры – куда практичней. Использование светодиодной подсветки позволило существенно увеличить качество картинки (контрастность, цветопередачу) и ещё больше снизить потребление электроэнергии (до 40%). Толщина таких дисплеев достигает менее 3 см.'
+							},
+							{
+								p: 'Плазменные модели отличает высокая контрастность и максимальный угол обзора (до 190 градусов). Изображение таких экранов «мягкое», картинка обновляется с высокой скоростью, вследствие чего достигается особая реалистичность.'
+							},
+							{
+								p: 'В последнее время популярная новая технология OLED, основанная на применении органических светодиодов. Такие устройства были представлены только в 2012 году. Они обладают повышенной контрастностью, цветопередачей, мгновенным откликом и абсолютным чёрным цветом.'
+							},
+							{
+								p: 'Современные телевизоры представлены техникой от 15 до 80 дюймов. Разрешение их экранов обычно достигает 1024x768pix, 1366х768pix (HD Ready) и 1920х1080pix (Full HD). В числе стандартных разъёмов – HDMI, SCART, VGA, DVI и USB. Многие модели оснащены медиаплеерами, цифровыми тюнерами и видеорекордерами. Флагманские модели поддерживают функции Smart TV (доступ к Internet-сервисам, службам и web-сайтам) и 3D (воспроизведение трёхмерных видео).'
+							}
+						]
+					} %}
+					{% include "partials/components/_text.html" %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers(true)}}
+</div>
+{% endblock %}

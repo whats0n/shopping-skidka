@@ -1,0 +1,167 @@
+---
+title: Overview/Main
+
+activeTitleTabs: 1
+pageTitleTabs: [
+	'Новости',
+	'Обзоры',
+	'Блог'
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main">
+	<div class="section inner">
+		<div class="page">
+			<div class="page__heading js-scrollbar">
+				<ul class="page-title__list">
+					{% for item in pageTitleTabs %}
+						<li>
+							{% if loop.index0 == activeTitleTabs %}
+								<a href="#" class="page-title__link is-active">{{item}}</a>
+							{% else %}
+								<a href="#" class="page-title__link">{{item}}</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="page__row">
+				{% include "partials/sidebars/_overview-main.html" %}
+				<div class="page__content">
+					{% include "partials/overview/_overview-item.html" %}
+
+					{% import "partials/_layout-content.html" as overview %}
+
+					{{overview.content({
+						classJS: 'js-reviews',
+						containerClass: 'js-reviews-slider',
+						item: 'review',
+						class: 'review',
+						items: [
+							{
+								size: 'sm',
+								item: {
+									img: 'review1.jpg',
+									title: 'Meizu MX6: металлический смартфон с 5,5-дюймовым экраном',
+									sticker: 'Новинки'
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									img: 'review2.jpg',
+									title: 'Как прокачать камеру в&nbsp;смартфоне'
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									img: 'review1.jpg',
+									title: 'JBL Charge 3 и JBL Clip 2: музыка, которая всегда с тобой',
+									sticker: 'Обзор'
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									img: 'review2.jpg',
+									title: 'Различия и&nbsp;преимущества мобильных процессоров',
+									sticker: 'Техника'
+								}
+							},
+							{
+								size: 'lg',
+								item: {
+									img: 'review3.jpg',
+									title: '6 интересных беспроводных наушников'
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									img: 'review1.jpg',
+									title: 'Meizu MX6: металлический смартфон с 5,5-дюймовым экраном',
+									sticker: 'Новинки'
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									img: 'review2.jpg',
+									title: 'Как прокачать камеру в&nbsp;смартфоне'
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									img: 'review1.jpg',
+									title: 'JBL Charge 3 и JBL Clip 2: музыка, которая всегда с тобой',
+									sticker: 'Обзор'
+								}
+							}
+						]
+					})}}
+
+					{% include "partials/overview/_overview-review-boxes.html" %}
+
+					{{overview.content({
+						classJS: 'js-reviews',
+						containerClass: 'js-reviews-slider',
+						item: 'review',
+						class: 'review',
+						items: [
+							{
+								size: 'sm',
+								item: {
+									img: 'review2.jpg',
+									title: 'Различия и&nbsp;преимущества мобильных процессоров',
+									sticker: 'Техника'
+								}
+							},
+							{
+								size: 'lg',
+								item: {
+									img: 'review3.jpg',
+									title: 'Быстрые и надежные роутеры до 2 000 рублей',
+									sticker: 'Техника'
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									img: 'review1.jpg',
+									title: 'Meizu MX6: металлический смартфон с 5,5-дюймовым экраном',
+									sticker: 'Новинки'
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									img: 'review2.jpg',
+									title: 'Как прокачать камеру в&nbsp;смартфоне'
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									img: 'review1.jpg',
+									title: 'JBL Charge 3 и JBL Clip 2: музыка, которая всегда с тобой',
+									sticker: 'Обзор'
+								}
+							}
+						]
+					})}}
+
+					{{mixins.paginationLG({
+						class: 'pagination_lg'
+					})}}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers(true, 'Категории')}}
+</div>
+{% endblock %}

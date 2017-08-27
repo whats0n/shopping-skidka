@@ -1,0 +1,98 @@
+<!-- begin score-contacts  -->
+<div class="score-contacts tabs js-tabs">
+	{% set tabs = [
+		{
+			id: 'score-contacts-list',
+			title: 'Списком',
+			active: 'is-active',
+			list: {
+				header: {
+					address: 'Адрес магазина',
+					time: 'Режим работы'
+				},
+				body: [
+					{
+						address: '800-летия Москвы ул, дом 24, стр. 1. Алтуфьево, Отрадное',
+						time: [
+							'Пн-Вс (09:00-22:00)'
+						]
+					},
+					{
+						address: 'Автозаводская ул, дом 13/1. Автозаводская',
+						time: [
+							'Пн-Пт (09:00-22:00),',
+							'Сб-Вс (10:00-21:00)'
+						]
+					},
+					{
+						address: 'Городецкая ул, дом № 5. Новокосино',
+						time: [
+							'Пн-Вс (09:00-21:00)'
+						]
+					},
+					{
+						address: 'Кронштадтский б-р, дом № 3, стр.13. Водный стадион',
+						time: [
+							'Пн-Вс (09:00-21:00)'
+						]
+					},
+					{
+						address: 'Правобережная ул, дом 1 Б, ТЦ Капитолий. Планерная',
+						time: [
+							'Пн-Вс (09:00-22:00)'
+						]
+					}
+				]
+			}
+		},
+		{
+			id: 'score-contacts-map',
+			title: 'На карте',
+			map: true
+		}
+	] %}
+	<div class="score-contacts__header">
+		<div class="tabs__scroll js-scrollbar">
+			<ul class="tabs__list score-tabs tabs__list_subtitle">
+				{% for item in tabs %}
+					<li>
+						<a href="{{item.id}}" class="js-tabs-open {{item.active}}">{{item.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="score-contacts__container tabs__container">
+		{% for tab in tabs %}
+			<div class="score-contacts__content tabs__content js-tabs-content {{tab.active}}" data-id="{{tab.id}}">
+				{% if tab.list %}
+					<div class="score-schedule">
+						<div class="score-schedule__header">
+							<div class="score-schedule__title-address">{{tab.list.header.address}}</div>
+							<div class="score-schedule__title-time">{{tab.list.header.time}}</div>
+						</div>
+						<ul class="score-schedule__list">
+							{% for item in tab.list.body %}
+								<li class="score-schedule__row">
+									<div class="score-schedule__address">
+										<div>{{item.address}}</div>
+									</div>
+									<div class="score-schedule__time">
+										<div>
+											{% for time in item.time %}
+												<span>{{time}}</span>
+											{% endfor %}
+										</div>
+									</div>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% elif tab.map %}
+					<div class="score-map" id="score-map" data-items="json/score-map.json" data-center-lat="55.7494733" data-center-lng="37.6237166"></div>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<!-- end score-contacts -->

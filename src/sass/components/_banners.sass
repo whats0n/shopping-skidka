@@ -1,0 +1,106 @@
+.banners
+	&__row
+		padding-bottom: 8px
+		margin: 0 -8px
+		+clr
+		+md
+			margin: 0 -6px
+		+sm
+			padding-bottom: 24px
+			margin: 0 -16px
+	&__col
+		float: left
+		width: 33.33%
+		+sm
+			width: 260px
+	&__item
+		padding: 0 8px 16px
+		+md
+			padding: 0 6px 16px
+		+sm
+			padding: 0 14px 16px
+
+.banner
+	position: relative
+	+gpu
+	+hover
+		.banner__box
+			&:before
+				opacity: 1
+
+	&_sm
+		height: 200px
+		+md
+			height: 184px
+		.banner
+			&__content
+				top: 24px
+	&_lg
+		height: 416px
+		+md
+			height: 384px
+		.banner
+			&__content
+				bottom: 32px
+	&_blue
+		.banner__box
+			background: #9cb3e7
+	&_pink
+		.banner__box
+			background: #f8bcc8
+	&_orange
+		.banner__box
+			background: #f3bf98
+	&_gray
+		.banner__box
+			background: #e2e6ea
+	&_green
+		.banner__box
+			background: #d2f0c2
+	&__box
+		display: block
+		position: relative
+		z-index: 1
+		width: 100%
+		height: 100%
+		border-radius: 2px
+		&:before
+			content: ""
+			position: absolute
+			z-index: 5
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border-radius: 2px
+			opacity: 0
+			background: rgba($white, 0.3)
+			box-shadow: 0 8px 16px rgba(7, 20, 39, 0.1)
+			+t(opacity)
+	img
+		position: relative
+		border-radius: 2px
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__content
+		position: absolute
+		z-index: 2
+		left: 16px
+		right: 16px
+
+		color: $dark
+
+		text-align: center
+	&__title
+		padding-bottom: 8px
+		+reg
+		+f(18, 24, 0.27)
+		+md
+			+f(16, 24, 0.27)
+	&__text
+		opacity: 0.6
+		+sreg
+		+f(13, 24)
+		+md
+			+f(12, 16)

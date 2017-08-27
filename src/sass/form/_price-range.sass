@@ -1,0 +1,40 @@
+.price-range
+	&__controller
+		padding: 15px 0 23px
+	&__fields
+		position: relative
+		padding-right: 24px
+		font-size: 0
+	&__currency
+		position: absolute
+		top: 0
+		right: 0
+		padding: 4px 0
+		width: 24px
+		text-align: center
+	&__field,
+	&__slash
+		display: inline-block
+		vertical-align: top
+	&__field
+		width: 42%
+	&__slash
+		width: 16%
+		height: 32px
+		color: $darkGray
+		+sreg
+		font-size: 13px
+		line-height: 32px
+		text-align: center
+	&__label
+		padding-top: 8px
+		color: $text
+		+sreg
+		+f(13, 16)
+	.input
+		text-align: center
+		padding-left: 8px
+		padding-right: 8px
+		+md
+			padding-left: 8px
+			padding-right: 8px

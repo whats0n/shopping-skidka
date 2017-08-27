@@ -1,0 +1,69 @@
+<div class="overview-intro tabs js-tabs">
+	{% set overviewTabs = [
+		{
+			id: 'overview-tab1',
+			title: 'ZenFone 3: новое поколение смартфонов ASUS',
+			active: 'is-active'
+		},
+		{
+			id: 'overview-tab2',
+			title: 'Meizu MX6: металлический смартфон с 5,5-дюймовым экраном'
+		},
+		{
+			id: 'overview-tab3',
+			title: 'JBL Charge 3 и JBL Clip 2: музыка, которая всегда с тобой'
+		}
+	] %}
+	<div class="tabs__container">
+		{% for tab in overviewTabs %}
+			<div class="overview-item tabs__content js-tabs-content {{tab.active}}" data-id="{{tab.id}}">
+				<a href="#" class="overview-item__img">
+					<img src="img/card-overview.jpg" alt="">
+				</a>
+				<div class="overview-item__content">
+					<div class="sticker-text overview-item__sticker">Новинки</div>
+					<h4 class="overview-item__title js-cut-text">
+						<a href="#">{{tab.title}}</a>
+					</h4>
+					<div class="overview-item__description js-cut-text">Знакомимся с ASUS ZenFone 3, ASUS ZenFone 3 Laser и ASUS ZenFone 3 Max.</div>
+					{% set overviewActions = [
+						{
+							icon: 'view',
+							text: '12'
+						},
+						{
+							icons: 'heart-sm',
+							text: '3'
+						},
+						{
+							icons: 'comment',
+							text: '1'
+						}
+					] %}
+					<ul class="overview-item__actions">
+						{% for item in overviewActions %}
+							<li>
+								{{mixins.btnAction(item)}}
+							</li>
+						{% endfor %}
+					</ul>
+					<div class="overview-item__more">
+						<a href="#" class="btn btn_full-lg">Подробнее</a>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="overview-intro__list tabs__scroll js-scrollbar">
+		<ul class="tabs__btns">
+			{% for btn in overviewTabs %}
+				<li>
+					<a href="{{btn.id}}" class="tabs__btn js-tabs-open {{btn.active}}">
+						<span class="tabs__btn-number">0{{loop.index}}</span>
+						<span class="tabs__btn-text js-cut-text">{{btn.title}}</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

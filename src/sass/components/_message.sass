@@ -1,0 +1,43 @@
+.message
+	padding-bottom: 16px
+	&_answer
+		padding-left: 56px
+		+sm
+			padding-left: 16px
+	&__header
+		position: relative
+		padding: 8px 0 8px 56px
+		min-height: 40px
+		+clr
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		img
+			border-radius: 50%
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__title
+		float: left
+	&__date
+		float: right
+		color: $text
+		+sreg
+		+f(12, 24)
+	&__body
+		padding: 8px 0 8px 56px
+		+sm
+			padding-left: 0
+	&__action
+		padding-left: 56px
+		font-size: 0
+		+sm
+			padding-left: 0
+		li
+			display: inline-block
+			vertical-align: top
+			padding-right: 24px

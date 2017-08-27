@@ -1,0 +1,28 @@
+<!-- begin looking-for  -->
+<div class="looking-for">
+	<div class="heading">
+		<h2 class="title-h2 heading__title">{{lookingFor.title | safe}}</h2>
+		<div class="heading__more">
+			<div class="no-mobile">
+				<button class="btn">Смотреть все</button>
+			</div>
+			<div class="only-mobile">
+				<button class="btn">Все</button>
+			</div>
+		</div>
+	</div>
+	<div class="looking-for__row">
+		{% for col in lookingFor.list %}
+		<div class="looking-for__col">
+			<ul>
+				{% for item in col %}
+					<li>
+						<a href="#">{{item}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+<!-- end looking-for -->

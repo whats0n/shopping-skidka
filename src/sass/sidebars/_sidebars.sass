@@ -1,0 +1,17 @@
+@import category
+@import sm-filter
+
+.sidebar
+	&__news-boxes,
+	&__sm-reviews,
+	&__only-desktop
+		+md
+			display: none
+
+.sidebar-box
+	&__container
+		padding: 16px 0 0
+		margin: 0 -8px
+		+clr
+	&__col
+		padding: 0 8px 34px

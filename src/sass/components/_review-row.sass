@@ -1,0 +1,46 @@
+.review-row
+	position: relative
+	+hover
+		&:before
+			opacity: 1
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		border-radius: 2px
+		opacity: 0
+		background: $white
+		box-shadow: 0 8px 16px rgba(7, 20, 39, 0.1)
+		+gpu
+		+t(opacity)
+		+sm
+			opacity: 1
+	&__inner
+		position: relative
+		z-index: 2
+		padding: 16px
+	&__sticker
+		margin-bottom: 8px
+	&__title
+		margin-bottom: 8px
+		height: 48px
+		overflow: hidden
+		color: $dark
+		+reg
+		+f(15, 24, 1)
+		a
+			display: block
+			height: 100%
+			color: inherit
+			+t(color)
+			+hover
+				color: $blue
+	&__meta
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: top
+			padding-right: 16px

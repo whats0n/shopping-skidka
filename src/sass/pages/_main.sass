@@ -1,0 +1,61 @@
+@import main/stock
+@import main/recommended
+@import main/popular
+@import main/reviews
+@import main/newest
+@import main/news-list
+@import main/partners
+@import main/about
+@import main/product-list
+
+.main
+	padding-top: 24px
+	&_in
+		padding-top: 8px
+	+sm
+		overflow: hidden
+		padding-top: 16px
+
+.heading
+	position: relative
+	border-bottom: 1px solid rgba($dark, 0.1)
+	+clr
+	&__title
+		float: left
+		padding: 16px 0
+		// width: 60%
+		+md
+			padding: 0 0 16px
+		+sm
+			padding: 4px 0 20px
+		+xs
+			max-width: 160px
+		&_xs-lg
+			+xs
+				max-width: 100%
+				width: 100%
+	&__more, &__navigation
+		position: absolute
+		right: 0
+		bottom: 0
+		padding: 0 0 16px
+		// width: 30%
+		font-size: 0
+		text-align: right
+	&__tabs-list
+		float: right
+		padding: 16px 8px 0 0
+		+md
+			float: none
+			clear: both
+			margin: 0 -16px
+			padding: 0 4px
+	&__tabs-list-in
+		li
+			+md
+				padding: 0 12px
+	&__tabs-title-in
+		li
+			padding-right: 32px
+	&__arrow
+		margin-left: 8px

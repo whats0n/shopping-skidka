@@ -1,0 +1,115 @@
+{% set cardComments = [
+	{
+		img: 'img/Tanya.jpg',
+		name: 'Таня',
+		info: '7 июля, Москва',
+		evaluation: 4,
+		like: '12',
+		dislike: '3',
+		title: 'Советую эту модель всем, кто еще не определился с выбором!',
+		message: [
+			{
+				subtitle: 'Достоинста:',
+				list: [
+					'обалденный экран',
+					'классный тачпад',
+					'малый вес'
+				]
+			},
+			{
+				subtitle: 'Недостатки:',
+				list: [
+					'Один разъем'
+				]
+			},
+			{
+				subtitle: 'Комментарий:',
+				text: [
+					'Производительность нормальная, хватает и на интернеты и на pycharm погонять. Брал в первую очередь ради экрана, а прошку носить не хотел, после TN-ок для глаз просто сказка.',
+					'При длительных серьезных нагрузках (конвертация видео) сбрасывает частоту до 1.8ГГц и дальше держит ее.',
+					'Клавиатура необычная, но даже после ThinkPad показалось нормальной.'
+				]
+			}
+		]
+	},
+	{
+		img: 'img/Katya.jpg',
+		name: 'Екатерина',
+		info: '6 июля, Саратов',
+		evaluation: 1,
+		like: '2',
+		dislike: '24',
+		title: 'Ужасная модель',
+		message: [
+			{
+				subtitle: 'Достоинста:',
+				list: [
+					'дизайн',
+					'эргономичность'
+				]
+			},
+			{
+				subtitle: 'Недостатки:',
+				list: [
+					'мошности не хватает и ощущается очень часто'
+				]
+			},
+			{
+				subtitle: 'Комментарий:',
+				text: [
+					'Получил красивую машинку для печати и серфинга в интернете. Лучше бы взял ipad pro и клавиатуру.'
+				]
+			}
+		]
+	}
+] %}
+
+{% for comment in cardComments %}
+	<div class="comment">
+		<div class="comment__header">
+			<a href="#" class="comment__img">
+				<img src="{{comment.img}}" alt="">
+			</a>
+			<div class="comment__meta">
+				<div class="comment__name">{{comment.name}}</div>
+				<div class="comment__info">{{comment.info}}</div>
+			</div>
+			<div class="comment__rating">
+				{{mixins.ratingList({
+					size: 'md',
+					evaluation: comment.evaluation
+				})}}
+			</div>
+			<div class="comment__reaction">
+				{{mixins.btnReaction({
+					type: 'like',
+					number: comment.like
+				})}}
+				{{mixins.btnReaction({
+					type: 'dislike',
+					number: comment.dislike
+				})}}
+			</div>
+		</div>
+		<div class="comment__body">
+			<h3 class="title-h3 title-h3_sm comment__title">{{comment.title}}</h3>
+			{% for item in comment.message %}
+				<h4 class="comment__subtitle">{{item.subtitle}}</h4>
+				{% if item.list %}
+					<ul class="comment__list">
+						{% for li in item.list %}
+							<li>{{li}}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				{% if item.text %}
+					<div class="comment__message">
+						{% for p in item.text %}
+							<p>{{p}}</p>
+						{% endfor %}
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+{% endfor %}

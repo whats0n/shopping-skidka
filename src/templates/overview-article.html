@@ -1,0 +1,184 @@
+---
+title: Overview/Article
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main">
+	<div class="section inner">
+		<div class="page">
+			{% set breadcrumbs = [
+				'Главная',
+				'Обзор',
+				'Аудио-видео техника',
+				'Гид по выбору умных часов'
+			] %}
+
+			{% include "partials/components/_breadcrumbs.html" %}
+			<div class="page__row">
+				<div class="page__content page-intro">
+					<h1 class="title-h1">Гид по выбору умных часов</h1>
+					<div class="page-intro__header">
+						<div class="page-intro__meta">
+							<span>Категория:</span>
+							<a href="#">Аудио-видео техника</a>
+						</div>
+						{% set articleAction = [
+							{
+								icon: 'view',
+								text: '12'
+							},
+							{
+								icons: 'heart-sm',
+								text: '3'
+							},
+							{
+								icons: 'comment',
+								text: '1'
+							}
+						] %}
+						<ul class="page-intro__action">
+							{% for item in articleAction %}
+								<li>
+									{{mixins.btnAction(item)}}
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="page__row">
+				{% include "partials/sidebars/_overview-article.html" %}
+				<div class="page__content page__content_non-top">
+					<div class="overview-article">
+						<article class="article">
+							<div class="article-item">
+								<div class="article-item__img">
+									<img src="img/article-img.jpg" alt="">
+								</div>
+								<div class="article__text">
+									<p>Выбрать умные часы не так уж и просто. Одни привлекают благородством и стилем, другие берут отличным функционалом, третьи впечатляют уровнем защиты или спортивными возможностями. Мы поможем тебе разобраться и решить, какой гаджет идеально подойдет именно тебе!</p>
+								</div>
+							</div>
+							<h2 class="title-h2">Huawei Watch Classic</h2>
+							<div class="article__text">
+								<p>Если ты достиг высокого социального статуса, большую часть времени проводишь в деловом костюме, то и часы на руке должны быть соответствующими. Основным трендом у бизнес-элиты десятилетиями остается стрелочная классика. Но теперь, с появлением Huawei Watch Classic, ты можешь позволить себе умные часы, внешне почти не отличимые от премиальных механических моделей.</p>
+							</div>
+							<figure class="article-figure">
+								<img src="img/article-figure.jpg" alt="">
+								<div class="article-figure__info">
+									<div class="article-figure__title">
+										<a href="#">Huawei Watch Classic</a>
+										<span>(29 990 руб.)</span>
+									</div>
+									<div class="article-figure__rating">
+										{{mixins.ratingSMStatic(4.7, 'md')}}
+									</div>
+								</div>
+							</figure>
+							<blockquote class="blockquote">
+								{{mixins.icon('quotes-open')}}
+								{{mixins.icon('quotes-close')}}
+								<p>Всегда был за яблочную продукцию. Но при сравнении понял что те проиграли на порядок и по цене и по качеству. У яблока нет нормальных циферблатов. Все какое то детское. Хувы похожи на реальные часы на столько, что люди далеко не всегда понимают что они не аналоговые. Большой косяк когда паришь их с айфоном. Мочь то могут, только функций 2/3 не работаю, приложения не установишь, карты не посмотри и еще много чего нету. Может быть со временем софт обновят и что то поменяется, но не факт и надо ждать. Подключив их к андроиду, узнал много нового и приятного о них. В сухом остатке - вещ! Вещ хорошая! Всем советую!</p>
+							</blockquote>
+							<div class="article__text">
+								<p>Диаметр круглого сенсорного экрана устройства составляет 1,4 дюйма. Яркая и контрастная AMOLED-матрица прикрыта высокопрочным сапфировым стеклом с олеофобным покрытием. Оно не подвержено появлению царапин и мелких повреждений. Корпус из ювелирной стали марки  выглядит богато и соответствует стандарту IP67. Имитирующая заводную головку механических часов кнопка включения и управления расположена на уровне «два часа». Приятная деталь: с Huawei Watch Classic можно использовать металлический браслет или ремешок, так что выбирай, что больше нравится.</p>
+								<p>Со смартфоном гаджет общается по Bluetooth, выводя на дисплей уведомления о вызовах, СМС, электронных письмах и других приложений, включая социальные сети и календарь. Кроме того, часы собирают сведения о твоем здоровье: пульс, физическая активность, количество сожженных калорий, пройденное расстояние и так далее.</p>
+								<p>Часы совместимы со смартфонами на базе ОС Android (4.3 и выше) и iOS (8.2 и выше), батареи хватает на 1,5 дня работы без подзарядки. Также предусмотрено голосовое управление и поддерживается работа помощника Google Now.</p>
+							</div>
+							<h2 class="title-h2">Moto 360</h2>
+							<div class="article__text">
+								<p>Ты требователен и к людям, и к гаджетам, используешь функции своих электронных помощников по максимуму? Тогда смарт-часы Moto 360 тебе точно понравятся. Гибкая система настроек, различные режимы использования и множество приложений добавят драйва в твою жизнь.</p>
+							</div>
+							<figure class="article-figure">
+								<img src="img/article-figure2.jpg" alt="">
+								<div class="article-figure__info">
+									<div class="article-figure__title">
+										<a href="#">Moto 360 42mm</a>
+										<span>(26 4900 руб.)</span>
+									</div>
+									<div class="article-figure__rating">
+										{{mixins.ratingSMStatic(4.6, 'md')}}
+									</div>
+								</div>
+							</figure>
+							<div class="article__text">
+								<p>Корпус умных часов изготовлен из авиационной нержавеющей стали и соответствует стандарту защиты IP67. Доступны три цвета: «розовое золото», черный и серебристый. Дисплей классической круглой формы, но ты можешь выбрать любой из множества доступных программных циферблатов.</p>
+								<p>Проверить электронную почту и календарь встреч, читать сообщения Google Hangouts, ориентироваться на местности с помощью Google Maps – все это теперь возможно делать с помощью смарт-часов благодаря интеграции с приложениями Google. Утилита Live Dials даст тебе возможность быстро открывать часто используемые приложения. Виджет Shazam позволит узнать, что за музыка играет рядом. При этом получать уведомления можно и без смартфона благодаря встроенному модулю Wi-Fi.</p>
+								<p>Часы совместимы со смартфонами на ОС Android (4.3 и выше) и iOS (8 и выше). Но ты можешь слушать музыку из Сети или записанную на внутреннюю память часов даже вдали от смартфона, используя подключенные по Bluetooth наушники. Отдельного упоминания заслуживает беспроводная зарядка. Просто положи Moto 360 на миниатюрную подставку, и они начнут заряжаться.</p>
+							</div>
+							<h2 class="title-h2">ASUS ZenWatch 2</h2>
+							<div class="article__text">
+								<p>Ты молод, полон сил и идей? Тогда по достоинству оценишь ASUS ZenWatch 2: стальной прямоугольный корпус, яркую AMOLED-матрицу дисплея и множество вариантов ремешков и браслетов.</p>
+							</div>
+							<figure class="article-figure">
+								<img src="img/article-figure3.jpg" alt="">
+								<div class="article-figure__info">
+									<div class="article-figure__title">
+										<a href="#">ASUS ZenWatch 2</a>
+										<span>(14 990 руб.)</span>
+									</div>
+									<div class="article-figure__rating">
+										{{mixins.ratingSMStatic(4.3, 'md')}}
+									</div>
+								</div>
+							</figure>
+							<blockquote class="blockquote">
+								{{mixins.icon('quotes-open')}}
+								{{mixins.icon('quotes-close')}}
+								<p>Очень крутые часы. Выбирал именно с металлическим ремешком, так они выглядят более солидно. При регулярном использовании никаких проблем не возникает, часы очень удобные и не громоздкие. Покрытие ремешка устойчиво в царапинам.</p>
+							</blockquote>
+							<div class="article__text">
+								<p>Совместимые с любым смартфоном, оснащенным Android (4.3 и выше), умные часы и сами полны множеством полезных приложений. Традиционный набор: более 50 стилей циферблата, сообщения, новостная лента, погода и т.д. – дополнен небольшими игрушками, так что скучать не придется. Еще отметим поддержку голосовых команд и очень интересную магнитную зарядку, восстанавливающую половину емкости батареи за 36 минут.</p>
+								<p>Но и о здоровье ZenWatch 2 не забывает: подсчитает сожженные калории и подскажет, что пора на тренировку, а шагомер сообщит, сколько ты прошел за день.</p>
+							</div>
+						</article>
+					</div>
+					<div class="page-shares">
+						{{mixins.shares({
+							title: 'Комментарии <small>(3)</small>',
+							items: [
+								{
+									class: 'like',
+									icon: 'heart-active',
+									text: 'Нравится'
+								},
+								{
+									class: 'vk',
+									icon: 'vk',
+									text: '72'
+								},
+								{
+									class: 'fb',
+									icon: 'fb',
+									text: '18'
+								},
+								{
+									class: 'google',
+									icon: 'google',
+									text: '11'
+								}
+							]
+						})}}
+					</div>
+					<div class="overview-comments">
+						{% include "partials/components/_comments.html" %}
+					</div>
+					<div class="overview-form">
+						{% import "partials/components/_form-comment.html" as form %}
+
+						{{form.formComment({
+							login: true,
+							img: 'Katya.jpg'
+						})}}
+
+						{{form.formComment()}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers()}}
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+.sorting
+	&_in
+		.sorting
+			&__row
+				+sm
+					margin: 0 -4px
+			&__field
+				+sm
+					padding: 0 4px
+					width: 168px
+				&_xs
+					+sm
+						width: 96px
+	&__row
+		margin: 0 -8px
+		+clr
+		+md
+			margin: 0 -6px
+		+sm
+			margin: 0 -8px
+	&__field
+		float: left
+		width: 33.33%
+		max-width: 264px
+		+sm
+			width: 200px
+		&_xs
+			width: 15%
+			max-width: 104px
+			+sm
+				width: 104px
+	&__navigation
+		float: right
+	&__field,
+	&__navigation
+		padding: 0 8px
+		+md
+			padding: 0 6px
+		+sm
+			padding: 0 8px
+	&__navigation
+		margin-top: 24px
+		width: 33.33%
+		max-width: 264px
+		+md
+			width: 264px
+		+sm
+			display: none
+		&-in
+			position: relative
+			padding: 0 32px
+			text-align: center
+	&__prev,
+	&__next
+		position: absolute
+		top: 0
+	&__prev
+		left: 0
+	&__next
+		right: 0

@@ -1,0 +1,12 @@
+{% include "partials/popups/_login.html" %}
+{% include "partials/popups/_registration.html" %}
+{% include "partials/popups/_logout.html" %}
+{% include "partials/popups/_add-social.html" %}
+
+{% if popupGallery %}
+	{% include "partials/popups/_gallery.html" %}
+{% endif %}
+
+{% if popupBrandAbout %}
+	{% include "partials/popups/_brand-about.html" %}
+{% endif %}

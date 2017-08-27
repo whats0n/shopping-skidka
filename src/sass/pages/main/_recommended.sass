@@ -1,0 +1,32 @@
+.recommended
+	padding: 8px 0 16px
+	&__row
+		margin: 0 -8px
+		+clr
+		+md
+			margin: 0 -6px
+	&__col
+		float: left
+		padding: 8px
+		+md
+			padding: 8px 6px
+		&_xs
+			width: 25%
+			&:last-child
+				+md
+					display: none
+			&:nth-child(3)
+				+sm
+					display: none
+			+md
+				width: 33.33%
+			+sm
+				width: 50%
+		&_sm
+			width: 33.33%
+			&:nth-child(3),
+			&:nth-child(4)
+				+sm
+					display: none
+			+sm
+				width: 50%

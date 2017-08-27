@@ -1,0 +1,68 @@
+{% import "data/sidebars/purchases-card.html" as sidebar %}
+
+<!-- begin sidebar  -->
+<aside class="sidebar page__sidebar page__sidebar_non-top">
+	<div class="sidebar__only-desktop">
+
+		{% for partner in sidebar.partners %}
+			<div class="sidebar-box partner-item">
+				<div class="heading partner-item__heading">
+					<h2 class="title-h2 heading__title">{{partner.title}}</h2>
+				</div>
+				<a href="#" class="partner-item__inner">
+					<div class="partner-item__img">
+						<img src="img/{{partner.img}}" alt="">
+					</div>
+					<ul class="statistics partner-item__statistics">
+						{% for item in partner.statistics %}
+							<li class="statistics__row">
+								<span class="statistics__label">{{item.label}}</span>
+								<div class="statistics__rating">
+									{{mixins.ratingStatic({
+										size: 'sm',
+										number: 4.7
+									})}}
+								</div>
+							</li>
+						{% endfor %}
+					</ul>
+				</a>
+			</div>
+		{% endfor %}
+
+		<div class="sidebar-box js-box">
+			<div class="heading">
+				<h2 class="title-h2 heading__title">Товар</h2>
+				<div class="heading__navigation">
+					{{mixins.btnDirection({
+						classes: 'btn-direction_prev popular-arrows js-box-prev',
+						icon: 'prev'
+					})}}
+					{{mixins.btnDirection({
+						classes: 'btn-direction_next popular-arrows js-box-next',
+						icon: 'next'
+					})}}
+				</div>
+			</div>
+			<div class="sidebar-box__container js-box-slider">
+				{% for data in sidebar.similar %}
+					<div class="sidebar-box__col">
+						{{mixins.item({
+							title: data.title,
+							category: data.subtitle,
+							discount: data.discount,
+							favorite: data.discount,
+							sales: data.heart,
+							images: data.picture,
+							price: {
+								current: data.price,
+								old: data.oldPrice
+							}
+						})}}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</aside>
+<!-- end sidebar -->

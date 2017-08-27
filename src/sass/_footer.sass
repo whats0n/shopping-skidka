@@ -1,0 +1,125 @@
+.footer
+	font-size: 0
+	padding: 24px 0 16px
+	+md
+		padding: 8px 0 16px
+	&__row
+		+md
+			padding-bottom: 16px
+	&__col
+		display: inline-block
+		vertical-align: top
+		width: 25%
+		+md
+			display: block
+			width: 100%
+		&:last-child
+			.footer__nav
+				+md
+					border: none
+	&__nav
+		padding-bottom: 24px
+		+md
+			padding-bottom: 0
+			border-bottom: 1px solid rgba($dark, 0.3)
+	&__title
+		position: relative
+		padding: 8px 0
+		color: $dark
+		+reg
+		+f(15, 24, 0.27)
+		+md
+			cursor: pointer
+			user-select: none
+		&.is-active
+			.icon
+				transform: translate3d(0,0,0) rotate(180deg)
+		.icon
+			position: absolute
+			top: 16px
+			right: 7px
+			display: none
+			fill: $dark
+			font-size: 6px
+			+gpu
+			+t(transform)
+			+md
+				display: block
+	&__list
+		+md
+			display: none
+			padding-bottom: 16px
+		a
+			color: $text
+			+sreg
+			+f(13, 24, null)
+			+t(color)
+			+hover
+				color: $blue
+	&__bottom
+		padding: 12px 0 0
+		border-top: 1px solid rgba($dark, 0.1)
+		+clr
+		+md
+			padding: 16px 0 0
+			border-top-color: rgba($dark, 0.3)
+	&__logo
+		float: left
+		overflow: hidden
+		margin-right: 26px
+	&__copy
+		float: left
+		padding: 2px 0 1px
+		color: $text
+		+sreg
+		+f(13, 24, null)
+		+sm
+			float: right
+	&__social
+		float: right
+		padding-top: 3px
+		width: 25%
+		+md
+			width: 100%
+			max-width: 300px
+			text-align: right
+		+sm
+			float: none
+			padding: 0 0 22px
+			max-width: 100%
+			text-align: center
+		li,
+		a
+			display: inline-block
+			vertical-align: top
+		li
+			padding-right: 16px
+			&:last-child
+				padding-right: 0
+		a
+			overflow: hidden
+			width: 24px
+			height: 24px
+			+vertical
+			white-space: nowrap
+			+hover
+				.icon
+					fill: $blue
+			+active
+				.icon
+					fill: $blue-dark
+		.icon
+			display: inline-block
+			vertical-align: middle
+		.icon-vk
+			font-size: 12px
+		.icon-fb
+			font-size: 16px
+		.icon-od
+			font-size: 17px
+		.icon-youtube
+			font-size: 14px
+		.icon-insta
+			font-size: 20px
+		.icon-google
+			font-size: 15px

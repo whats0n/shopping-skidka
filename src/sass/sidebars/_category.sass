@@ -1,0 +1,87 @@
+.category
+	margin-bottom: 110px
+	&__box
+		padding-bottom: 8px
+		margin-bottom: 12px
+		border-bottom: 1px solid rgba($dark, 0.1)
+		+sm
+			padding: 0 8px 8px
+	&__title
+		position: relative
+
+		display: block
+		padding: 4px 32px 4px 8px
+		margin: 0 -8px 4px
+		border-radius: 2px
+
+		color: $dark
+
+		+reg
+		+f(15, 24, 0.27)
+		transition: color 0.25s ease, background 0.25s ease
+		+md
+			padding: 4px 30px 4px 6px
+			margin: 0 -6px 4px
+		+sm
+			padding: 4px 32px 4px 8px
+			margin: 0 0 4px
+		&.is-active
+			.icon-down
+				transform: translate3d(0,0,0) rotate(180deg)
+		+hover
+			color: $blue
+			background: rgba($dark, 0.1)
+	.icon-down
+		position: absolute
+		top: 50%
+		right: 15px
+		margin-top: -3px
+		color: $dark
+		font-size: 6px
+		+gpu
+		+t(transform)
+		+md
+			right: 13px
+		+sm
+			right: 7px
+	&__link
+		position: relative
+		padding-right: 24px
+		&.is-active
+			.icon-down
+				transform: translate3d(0,0,0) rotate(180deg)
+	&__block
+		display: none
+		padding-bottom: 8px
+		a
+			display: block
+			padding: 0 8px
+			margin: 0 -8px
+			border-radius: 2px
+
+			color: $text
+
+			+sreg
+			+f(13, 24)
+			transition: color 0.2s ease, background 0.2s ease
+			+md
+				padding: 0 6px
+				margin: 0 -6px
+			+sm
+				padding: 0 8px
+				margin: 0
+			+hover
+				color: $blue
+				background: rgba($dark, 0.1)
+	&__item
+		&:last-child
+			.category
+				&__dropdown
+					border-bottom: none
+					margin-bottom: 0
+	&__dropdown
+		display: none
+		padding: 8px 0
+		margin: 8px 0 8px 16px
+		border-top: 1px solid rgba($dark, 0.1)
+		border-bottom: 1px solid rgba($dark, 0.1)

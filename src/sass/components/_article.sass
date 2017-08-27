@@ -1,0 +1,184 @@
+.article
+	&__text
+		overflow: hidden
+		padding-bottom: 8px
+		p
+			margin-bottom: 16px
+	&__text_indent
+		padding: 0 0 16px 32px
+		+sm
+			padding: 0
+	&__row
+		margin: 0 -24px
+		+clr
+		+md
+			margin: 0 -16px
+	&__col
+		float: left
+		padding: 0 24px
+		width: 50%
+		+md
+			padding: 0 16px
+		+sm
+			width: 100%
+	h1,
+	.title-h1
+		margin-bottom: 8px
+		+sm
+			+f(24, 32, 1)
+	h2,
+	.title-h2
+		margin-bottom: 16px
+		+md
+			+f(15, 24, 1)
+	.blockquote
+		margin-bottom: 24px
+
+.article-item
+	img
+		display: block
+		border: 1px solid rgba(28, 46, 73, 0.1)
+		border-radius: 2px
+		width: 100%
+		height: 296px
+		object-fit: cover
+		+md
+			height: 274px
+	&__img
+		margin-bottom: 24px
+		+sm
+			margin: 0 -16px 24px
+
+.article-figure
+	margin-bottom: 24px
+	&__info
+		font-size: 0
+		text-align: center
+		+clr
+	&__title,
+	&__rating
+		display: inline-block
+		vertical-align: top
+		padding: 0 4px
+		+md
+			padding: 0 7px
+	&__title
+		color: $text
+		+reg
+		+f(15, 24, 1)
+		+md
+			+f(13, 24, 1)
+		a
+			color: $blue
+			+t(color)
+			+hover
+				color: $blue-light
+			+active
+				color: $blue-dark
+	img
+		display: block
+		margin: 0 auto 24px
+		width: 100%
+		max-width: 288px
+		height: 288px
+		object-fit: scale-down
+		+md
+			height: 280px
+		+sm
+			height: 288px
+
+//text
+
+h1, h2, h3, h4, h5, h6, strong, b, em, i, th, cite
+	font-weight: normal
+	font-style: normal
+
+h1,
+h2,
+h3,
+.title-h1,
+.title-h2,
+.title-h3
+	color: $dark
+	+reg
+
+h1,
+.title-h1
+	+f(32, 40, 0.58)
+	+md
+		+f(24, 32, 0.44)
+	+sm
+		+f(18, 32, 0.4)
+	span
+		color: $darkGray
+
+h2,
+.title-h2
+	+f(26, 32, 0.47)
+	+md
+		+f(24, 32, 0.44)
+	+sm
+		+f(18, 24, 0.4)
+.title-h2
+	&_sm
+		+f(22, 32, 1)
+		+md
+			+f(20, 24, 1)
+		+sm
+			+f(16, 24, 1)
+
+h3,
+.title-h3
+	+f(18, 24, 0.27)
+	+md
+		+f(16, 24, 0.27)
+	small
+		color: $text
+.title-h3
+	&_sm
+		+f(18, 32, 1)
+		+md
+			+f(15, 24, 1)
+
+
+p, ul, ol
+	&:not([class])
+		color: $text
+		+f(14, 24)
+		+md
+			+f(12, 24)
+		a
+			color: $blue
+			+t(color)
+			+hover
+				color: $blue-light
+			+active
+				color: $blue-dark
+
+
+a
+	text-decoration: none
+
+.rub
+	position: relative
+	display: inline-block
+	vertical-align: bottom
+	+reg
+	+f(15, 24, 1)
+	&:before
+		content: ""
+		position: absolute
+		bottom: 37%
+		left: 0
+		right: 0.15em
+		border-bottom: 1px solid currentColor
+
+.label
+	display: block
+	color: $text
+	+sreg
+	+f(12, 16)
+	&_bottom
+		padding-bottom: 8px
+	&_light
+		color: #f5f5f5

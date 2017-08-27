@@ -1,0 +1,38 @@
+.rating-steps
+	&__item
+		+clr
+	&__label
+		float: left
+		width: 72px
+		color: $dark
+		+reg
+		+f(15, 24, 1)
+		text-align: left
+	&__value
+		float: right
+		width: 24px
+		color: $text
+		+sreg
+		+f(12, 24)
+		text-align: right
+	&__bar
+		position: relative
+		top: 8px
+		overflow: hidden
+		height: 8px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			border: 1px solid rgba($dark, 0.1)
+			border-radius: 2px
+		&-in
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			border-radius: 2px
+			background: $blue

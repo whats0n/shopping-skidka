@@ -1,0 +1,661 @@
+{% macro icon(i) %}
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro icons(i) %}
+<span class="icon-wrapper icon-wrapper-{{i}}">
+	<svg class="icon icon-{{i}}-default"><use xlink:href="img/sprite.svg#icon-{{i}}-default"></use></svg>
+	<svg class="icon icon-{{i}}-active"><use xlink:href="img/sprite.svg#icon-{{i}}-active"></use></svg>
+</span>
+{% endmacro %}
+
+{# FILTER BUTTON #}
+{% macro btnFilter(text) %}
+<!-- begin btn-filter -->
+<button class="btn-filter js-filter-open">
+	{{icon('filter')}}
+	{{icon('close')}}
+	<span class="btn-filter_track">
+		<span class="btn-filter_visible">{{text or 'Фильтр' }}</span>
+		<span class="btn-filter_hidden">Закрыть</span>
+	</span>
+</button>
+<!-- end btn-filter -->
+{% endmacro %}
+
+{% macro controllers(filter, text) %}
+<!-- BEGIN controllers -->
+<div class="controllers">
+	<div class="inner">
+		<div class="controllers__right">
+			{{btnDirection({
+				classes: 'btn-direction_lg btn-direction_up js-up',
+				icon: 'up'
+			})}}
+			{% if filter %}
+				{{btnFilter(text)}}
+			{% endif %}
+		</div>
+	</div>
+</div>
+<!-- END controllers -->
+{% endmacro %}
+
+{# BUTTON DIRECTION #}
+{% macro btnDirection(config) %}
+	{% if config.link %}
+<a href="#" class="btn-direction {{config.classes}}" {{config.attrs}}>
+	{% else %}
+<button class="btn-direction {{config.classes}}" {{config.attrs}}>
+	{% endif %}
+
+	{% if config.icon == 'prev' %}
+		<svg class="icon icon-prev" version="1.1" x="0px" y="0px" viewBox="-300 391 8 14" enable-background="new -300 391 8 14" xml:space="preserve">
+			<path d="M-299.7,397.3c-0.4,0.4-0.4,1,0,1.4l6,6c0.4,0.4,1,0.4,1.4,0c0.4-0.4,0.4-1,0-1.4l-5.2-5.3c0,0,3.4-3.5,5.2-5.3c0.4-0.4,0.4-1,0-1.4c-0.4-0.4-1-0.4-1.4,0L-299.7,397.3z"/>
+		</svg>
+	{% elif config.icon == 'next' %}
+		<svg class="icon icon-next" version="1.1" x="0px" y="0px" viewBox="-300 391 8 14" enable-background="new -300 391 8 14" xml:space="preserve">
+			<path d="M-299.7,403.3c-0.4,0.4-0.4,1,0,1.4c0.4,0.4,1,0.4,1.4,0l6-6c0.4-0.4,0.4-1,0-1.4l-6-6c-0.4-0.4-1-0.4-1.4,0c-0.4,0.4-0.4,1,0,1.4c1.8,1.8,5.2,5.3,5.2,5.3L-299.7,403.3z"/>
+		</svg>
+	{% elif config.icon == 'up' %}
+		{{icon(config.icon)}}
+	{% endif %}
+
+	{% if config.link %}
+</a>
+	{% else %}
+</button>
+	{% endif %}
+{% endmacro %}
+
+{# CHECKBOX #}
+{% macro checkbox(config) %}
+<label class="checkbox {{config.class}}">
+	<input type="checkbox" {{config.attrs | safe}}>
+	<span class="checkbox__icon">
+		{{icon('checkbox')}}
+	</span>
+	<span class="checkbox__text">
+		{% if config.text %}
+			{{config.text | safe}}
+		{% else %}
+			Checkbox
+		{% endif %}
+	</span>
+</label>
+{% endmacro %}
+
+{# RADIO #}
+{% macro radio(config) %}
+<label class="radio {{config.class}}">
+	<input type="radio" name="{{config.name}}" {{config.attrs | safe}}>
+	<span class="radio__icon"></span>
+	<span class="radio__text">
+		{% if config.text %}
+			{{config.text}}
+		{% else %}
+			Radio
+		{% endif %}
+	</span>
+</label>
+{% endmacro %}
+
+{# INPUT #}
+{% macro input(config) %}
+<input type="{{config.type | safe}}" class="input {{config.class | safe}}" {{config.attrs | safe}}>
+{% endmacro %}
+
+{# TEXTAREA #}
+{% macro textarea(config) %}
+<textarea class="textarea {{config.class | safe}}" {{config.attrs | safe}}></textarea>
+{% endmacro %}
+
+{# WARNING #}
+{% macro warning(config) %}
+<div class="warning">
+	{% if config.circle %}
+	<div class="warning__circle">
+		{{icon('i')}}
+	</div>
+	{% elif config.triangle %}
+	<div class="warning__triangle">
+		{{icon('triangle')}}
+		{{icon('exclamation')}}
+	</div>
+	{% endif %}
+	<div class="warning__title">{{config.title}}</div>
+	<div class="warning__text">{{config.text}}</div>
+	{% if config.btn %}
+	<div class="warning__btn">
+		<button class="btn">Сообщить о проблеме</button>
+	</div>
+	{% endif %}
+</div>
+{% endmacro %}
+
+{# ALERT #}
+{% macro alert(config) %}
+<div class="alert {{config.class}}">
+	{% if config.success %}
+	<div class="alert__circle">
+		{{icon('check')}}
+	</div>
+	{% elif config.error %}
+	<div class="alert__triangle">
+		{{icon('triangle')}}
+		{{icon('exclamation')}}
+	</div>
+	{% endif %}
+	<div class="alert__text">{{config.text}}</div>
+	<button class="alert__close">
+		{{icon('close')}}
+	</button>
+</div>
+{% endmacro %}
+
+
+{# SELECT #}
+{% macro select(config) %}
+<div class="select {{config.class}}">
+	<select class="js-select" style="width: 100%;">
+		{% for option in config.options %}
+		<option value="{{option}}">{{option}}</option>
+		{% endfor %}
+	</select>
+</div>
+{% endmacro %}
+
+{# RANGE #}
+{% macro range(config) %}
+<div class="js-range-input"
+	data-start="{{config.start}}"
+	data-end="{{config.end}}"
+	data-min="{{config.min}}"
+	data-max="{{config.max}}"></div>
+{% endmacro %}
+
+{# SMALL SEARCH #}
+{% macro smSearch(config) %}
+<!-- begin sm-search -->
+<div class="sm-search {{config.mod}} js-search-box">
+	<form action="/">
+		<div class="sm-search__field">
+			{{icon('search-default')}}
+			<input type="text" class="input input_xlg sm-search__input js-search-input" placeholder="Название товара">
+			<button class="sm-search__close js-search-clear" type="button">
+				{{icon('close')}}
+			</button>
+		</div>
+		{% if config.submit %}
+			<button class="btn btn_lg sm-search__btn" type="submit">Найти</button>
+		{% endif %}
+	</form>
+</div>
+<!-- end sm-search -->
+{% endmacro %}
+
+{# ITEM #}
+{% macro item(config) %}
+<!-- begin item -->
+<div class="item js-item">
+
+	{% if config.discount %}
+	<div class="sticker-text item__discount">{{config.discount}}</div>
+	{% endif %}
+
+	{% if config.favorite %}
+	<div class="sticker-favorite item__favorite">
+		{{icon('heart')}}
+	</div>
+	{% endif %}
+
+	<a href="#" class="item__inner">
+		<div class="item__figure">
+			<div class="item__image">
+				<img src="" alt="" data-img="img/{{config.images[0]}}" class="js-lazyload">
+			</div>
+			<div class="item__images">
+				{% for img in config.images %}
+				<img src="" alt="" data-img="img/{{img}}" class="js-lazyload js-item-img">
+				{% endfor %}
+			</div>
+			<div class="item__pagination js-item-pagination"></div>
+		</div>
+		<div class="item__info">
+			<div class="item__title">{{config.title}}</div>
+			<div class="item__category">{{config.category}}</div>
+		</div>
+	</a>
+
+	<div class="item__footer">
+		<div class="item__price">
+			<div class="item__current">{{config.price.current}}</div>
+			{% if config.price.old %}
+			<div class="item__old">{{config.price.old}}</div>
+			{% endif %}
+		</div>
+		<div class="item__btns">
+			{% if config.sales %}
+			<div class="item__col item__col_lg">
+				<button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+					{# <svg class="icon icon-percent" viewBox="0 0 14.5 12.8" enable-background="new 0 0 14.5 12.8">
+						<path d="M8.5,9.5c0-1.7,1.3-3,3-3s3,1.3,3,3s-1.3,3-3,3S8.5,11.2,8.5,9.5z M0,3c0-1.7,1.3-3,3-3s3,1.3,3,3S4.7,6,3,6S0,4.7,0,3z M11.5,11c0.8,0,1.5-0.7,1.5-1.5S12.3,8,11.5,8S10,8.7,10,9.5S10.7,11,11.5,11z M3,4.5c0.8,0,1.5-0.7,1.5-1.5S3.8,1.5,3,1.5S1.5,2.2,1.5,3S2.2,4.5,3,4.5z"/>
+						<path d="M9.9,0.6c0.3-0.5,0.9-0.6,1.4-0.2l0,0c0.5,0.3,0.6,0.9,0.2,1.4L4,12.4c-0.3,0.5-0.9,0.6-1.4,0.2l0,0c-0.5-0.3-0.6-0.9-0.2-1.4L9.9,0.6z"/>
+						<path fill="currentColor" d="M11.5,11c0.8,0,1.5-0.7,1.5-1.5S12.3,8,11.5,8S10,8.7,10,9.5S10.7,11,11.5,11z"/>
+						<path fill="currentColor" d="M3,4.5c0.8,0,1.5-0.7,1.5-1.5S3.8,1.5,3,1.5S1.5,2.2,1.5,3S2.2,4.5,3,4.5z"/>
+					</svg> #}
+					{{icon('percent')}}
+					<span>Сообщить о скидке</span>
+				</button>
+			</div>
+			{% endif %}
+
+			<div class="item__col item__col_sm">
+				<button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+					{# <svg class="icon icon-cooperative" viewBox="1 0 23 19" enable-background="new 1 0 23 19">
+						<path d="M3.2,17.3c0.2-0.6,0.4-1.2,0.8-1.8C4.9,13.9,6.5,13,9,13s4.1,0.9,5.1,2.5c0.3,0.6,0.7,1.5,0.7,1.5S9.6,17,7,17c-0.6,0-1,0.5-1,1s0.4,1,1,1h9c0.6,0,1.1-0.5,1-1.1c-0.1-0.9-0.4-2.2-1.2-3.5C14.4,12.3,12.2,11,9,11s-5.4,1.3-6.8,3.5C1.4,15.8,1.1,17,1,17.9c0,0.5,0.4,1,0.9,1.1c0.5,0,1-0.4,1.1-0.9C3,18,3.1,17.7,3.2,17.3zM9,10c2.8,0,5-2.2,5-5s-2.2-5-5-5S4,2.2,4,5S6.2,10,9,10z M9,8C7.3,8,6,6.7,6,5s1.3-3,3-3s3,1.3,3,3S10.7,8,9,8z M21,13v-3h3V8h-3V5h-2v3h-3v2h3v3H21z"/>
+					</svg> #}
+					{{icon('cooperative')}}
+				</button>
+			</div>
+
+			<div class="item__col item__col_sm">
+				<button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+					{# <svg class="icon icon-heart-active" viewBox="-295 387 20 19" enable-background="new -295 387 20 19">
+						<path fill="currentColor" d="M-283.6,390.2c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-1.8-1.2-2.8-1.2c-2.1,0-3.8,1.7-3.8,3.9c0,1.4,0.6,2.7,1.9,4.4c1.1,1.4,6.1,6,6.1,6s5-4.6,6.1-6c1.3-1.7,1.9-3.1,1.9-4.4c0-2.2-1.6-3.9-3.8-3.9C-281.8,389-282.8,389.4-283.6,390.2z"/>
+						<path d="M-283.6,390.2c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-1.8-1.2-2.8-1.2c-2.1,0-3.8,1.7-3.8,3.9c0,1.4,0.6,2.7,1.9,4.4c1.1,1.4,6.1,6,6.1,6s5-4.6,6.1-6c1.3-1.7,1.9-3.1,1.9-4.4c0-2.2-1.6-3.9-3.8-3.9C-281.8,389-282.8,389.4-283.6,390.2z M-275,392.9c0,1.9-0.8,3.7-2.4,5.7c-1.4,1.7-3.3,3.5-5.9,5.9l-1.3,1.3c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2l-1.3-1.3c-2.6-2.4-4.5-4.1-5.9-5.9c-1.6-2-2.3-3.8-2.3-5.7c0-3.3,2.5-5.9,5.8-5.9c1.6,0,3.1,0.6,4.2,1.8c1.1-1.1,2.7-1.8,4.2-1.8C-277.5,387-275,389.6-275,392.9z"/>
+					</svg> #}
+					{{icon('heart-active')}}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end item -->
+{% endmacro %}
+
+{# PRODUCT ITEM #}
+{% macro product(config) %}
+<!-- begin product  -->
+<div class="product {{config.classes}}">
+	<a href="#" class="product__img">
+		<img alt="" data-img="img/{{config.img}}" class="js-lazyload">
+	</a>
+	<div class="product__box">
+		<div class="product__content">
+			{% if config.new %}
+			<div class="sticker-text product__sticker">Новинки</div>
+			{% endif %}
+			<div class="product__content-in">
+				<h3 class="title-h3 product__title">
+					<a href="#" class="js-cut-text">{{config.title | safe}}</a>
+				</h3>
+				<ul class="product__meta">
+					<li class="product__participant">
+						<span>Участников:</span>
+						<strong>{{config.meta.participant}}</strong>
+					</li>
+					<li class="product__time">
+						<span>Осталось:</span>
+						{% if config.meta.timeout %}
+						<strong class="is-timeout">{{config.meta.time}}</strong>
+						{% else %}
+						<strong>{{config.meta.time}}</strong>
+						{% endif %}
+					</li>
+				</ul>
+				<div class="product__footer">
+					<div class="product__footer-in">
+						<h4 class="product__more">
+							<a href="#">Подробнее</a>
+						</h4>
+						<button class="btn btn_lg btn_extra btn_participate">
+							{{icon('cooperative')}}
+							<span>Участвовать</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end product -->
+{% endmacro %}
+
+{# REVIEW ITEM #}
+{% macro review(config) %}
+<!-- begin review  -->
+<div class="review">
+	<a href="#" class="review__img">
+		<img alt="" data-img="img/{{config.img}}" class="js-lazyload">
+	</a>
+	<div class="review__box">
+		<div class="review__content">
+			{% if config.sticker %}
+				<div class="sticker-text review__sticker">{{config.sticker}}</div>
+			{% endif %}
+			<h3 class="review__title"><a href="#">{{config.title | safe}}</a></h3>
+		</div>
+	</div>
+</div>
+<!-- end review -->
+{% endmacro %}
+
+{% macro reviewRow(config) %}
+<!-- begin review-row  -->
+<div class="review-row">
+	<div class="review-row__inner">
+		<div class="sticker-text review-row__sticker">{{config.sticker}}</div>
+		<h4 class="review-row__title">
+			<a href="#" class="js-cut-text">{{config.title}}</a>
+		</h4>
+		<ul class="review-row__meta">
+			{% for item in config.meta %}
+				<li>
+					{{btnAction(item)}}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end review-row -->
+{% endmacro %}
+
+{# BANNER #}
+{% macro banner(config) %}
+<!-- begin banner  -->
+<div class="banner {{config.class}}">
+	<a href="#" class="banner__box">
+		<img src="img/{{config.img}}" alt="">
+		<div class="banner__content">
+			<div class="banner__title">{{config.title}}</div>
+			<div class="banner__text">{{config.text}}</div>
+		</div>
+	</a>
+</div>
+<!-- end banner -->
+{% endmacro %}
+
+{# NEWS BOX #}
+{% macro newsBox(item) %}
+<!-- begin news-box  -->
+<div class="news-box {{item.class}}">
+	<a href="#" class="news-box__img">
+		{% if item.img %}
+			<img src="" alt="" data-img="{{item.img}}" class="js-lazyload">
+		{% else %}
+			<img src="" alt="" data-img="img/news-item1.jpg" class="js-lazyload">
+		{% endif %}
+	</a>
+	<div class="news-box__content">
+		{% if item.date %}
+			<div class="news-box__date">{{item.date}}</div>
+		{% endif %}
+		<h4 class="news-box__title">
+			<a href="#" class="js-cut-text">{{item.title | safe}}</a>
+		</h4>
+		<div class="news-box__text js-cut-text">{{item.text}}</div>
+		<ul class="news-box__info">
+			{% for item in item.info %}
+				<li>
+					{{btnAction(item)}}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end news-box -->
+{% endmacro %}
+
+{# NEWS ITEM #}
+{% macro newsItem(item) %}
+<!-- begin news-item  -->
+<div class="news-item">
+	<a href="#" class="news-item__img">
+		<img src="" alt="" data-img="img/news-item1.jpg" class="js-lazyload">
+	</a>
+	<div class="news-item__content">
+		<div class="news-item__date">{{item.date}}</div>
+		<h4 class="news-item__title">
+			<a href="#">{{item.title | safe}}</a>
+		</h4>
+		<div class="news-item__text">{{item.text}}</div>
+		<ul class="news-item__info">
+			{% for item in item.info %}
+				<li>
+					{{btnAction(item)}}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end news-item -->
+{% endmacro %}
+
+{# PAGINATION #}
+{% macro pagination(config) %}
+<!-- begin pagination -->
+<div class="pagination {{config.class}}">
+	<ul class="pagination__list">
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#" class="is-active">3</a></li>
+		<li><span>...</span></li>
+		<li><a href="#">16</a></li>
+	</ul>
+</div>
+<!-- end pagination -->
+{% endmacro %}
+
+{# PAGINATION #}
+{% macro paginationLG(config) %}
+<!-- begin pagination -->
+<div class="pagination {{config.class}}">
+	{{btnDirection({
+		classes: 'pagination__prev',
+		icon: 'prev'
+	})}}
+	{{btnDirection({
+		classes: 'pagination__next',
+		icon: 'next'
+	})}}
+	<ul class="pagination__list">
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#" class="is-active">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><span>...</span></li>
+		<li><a href="#">16</a></li>
+	</ul>
+</div>
+<!-- end pagination -->
+{% endmacro %}
+
+{% macro socials(config) %}
+<!-- begin social  -->
+<div class="social {{config.class}}">
+	{% set socialList = [
+		'vk',
+		'fb',
+		'google',
+		'od'
+	] %}
+	<ul class="social__list">
+		{% for item in socialList %}
+			<li class="social__item">
+				<a href="#" class="social__link social__link_{{item}}">
+					{{icon(item)}}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+<!-- end social -->
+{% endmacro %}
+
+{# ================RATING=============== #}
+
+{% macro ratingSMStatic(number, size) %}
+<!-- begin sm-rating  -->
+<div class="sm-rating sm-rating_{{size}}">
+	{{icon('star')}}
+	<div class="sm-rating__value">{{number}}</div>
+</div>
+<!-- end sm-rating -->
+{% endmacro %}
+
+{% macro ratingStatic(config) %}
+<!-- begin lg-rating  -->
+<div class="rating-static rating-static_{{config.size}}">
+	<div class="rating-static__bar">
+		<div class="rating-static__disabled">{{icon('stars')}}</div>
+		<div class="rating-static__active" style="width: {{config.number / 0.05}}%;">{{icon('stars')}}</div>
+	</div>
+	{% if config.value %}
+		<div class="rating-static__value">{{config.value}}</div>
+	{% endif %}
+</div>
+<!-- end lg-rating -->
+{% endmacro %}
+
+{% macro ratingList(config) %}
+<!-- begin rating-list  -->
+<div class="rating-list">
+	{% set ratingListCounter = ['','','','',''] %}
+	<ul class="rating-list__container">
+		{% for item in ratingListCounter %}
+			{% if loop.index <= config.evaluation %}
+			<li class="is-active">
+			{% else %}
+			<li>
+			{% endif %}
+				{{icon('star')}}
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+<!-- end rating-list -->
+{% endmacro %}
+
+{% macro rating(config) %}
+<!-- begin rating  -->
+<div class="rating js-rating">
+	{% set evaluations = ['1', '2', '3', '4', '5'] %}
+	<ul class="rating__list">
+		{% for evaluation in evaluations %}
+			<li class="rating__item">
+				<label class="js-rating-item">
+					{{icon('star')}}
+					<input type="radio" class="js-rating-radio" name="{{config.name}}" value="{{evaluation}}">
+				</label>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+<!-- end rating -->
+{% endmacro %}
+
+{# ================RATING=============== #}
+
+{% macro itemRow(config) %}
+<!-- begin row-item  -->
+<div class="row-item">
+	<div class="row-item__figure">
+		{% if config.discount %}
+		<div class="sticker-text row-item__discount">{{config.discount}}</div>
+		{% endif %}
+		<a href="#" class="row-item__img">
+			<img src="{{config.img}}" alt="">
+		</a>
+	</div>
+	<div class="row-item__right">
+		<div class="row-item__price">
+			<div class="row-item__current">{{config.price.current}}</div>
+			<div class="row-item__old">{{config.price.old}}</div>
+		</div>
+		<div class="row-item__btn-wrapper">
+			<a href="#" class="btn btn_xlg btn_extra row-item__btn">В магазин</a>
+		</div>
+	</div>
+	<div class="row-item__body">
+		<h4 class="row-item__title">{{config.title}}</h4>
+		<div class="row-item__text">{{config.text}}</div>
+		<div class="row-item__info">
+			<div class="row-item__shop">
+				<div class="row-item__label">Магазин:</div>
+				<div class="row-item__value">{{config.info.shop}}</div>
+			</div>
+			<div class="row-item__rating">
+				{{ratingSMStatic(config.info.rating)}}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end row-item -->
+{% endmacro %}
+
+{% macro btnReaction(config) %}
+<button class="btn-reaction btn-reaction_{{config.type}}">
+	{{icons(config.type)}}
+	<span class="btn-reaction__text">{{config.number}}</span>
+</button>
+{% endmacro %}
+
+{% macro btnAction(config) %}
+<button class="btn-action {{config.class}}">
+	{% if config.icon %}
+		{{icon(config.icon)}}
+	{% elif config.icons %}
+		{{icons(config.icons)}}
+	{% endif %}
+	<span class="btn-action__text">{{config.text}}</span>
+</button>
+{% endmacro %}
+
+{% macro shares(config) %}
+<div class="shares">
+	{% if config.part %}
+		<div class="shares__inner">
+			<h3 class="title-h3 shares__title">{{config.title | safe}}</h3>
+			<ul class="shares__btns">
+				{% for item in config.items %}
+					<li>
+						<button class="btn-share btn-share_{{item.class}}">
+							{{icon(item.icon)}}
+							<span class="btn-share__text">{{item.text}}</span>
+						</button>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<button class="btn btn_lg btn_extra btn_participate shares__btn">
+			{{icon('cooperative')}}
+			<span>Участвовать</span>
+		</button>
+	{% else %}
+		<ul class="shares__btns">
+			{% for item in config.items %}
+				<li>
+					<button class="btn-share btn-share_{{item.class}}">
+						{{icon(item.icon)}}
+						<span class="btn-share__text">{{item.text}}</span>
+					</button>
+				</li>
+			{% endfor %}
+		</ul>
+		<h3 class="title-h3 shares__title">{{config.title | safe}}</h3>
+		<button class="btn-edit shares__edit">
+			{{icons('pen')}}
+		</button>
+	{% endif %}
+</div>
+{% endmacro %}
+
+{% macro brand(config) %}
+<div class="brand-box">
+	<a href="#" class="brand-box__inner">
+		<img src="img/{{config.img}}" alt="">
+		{{ratingSMStatic(config.rating, 'sm')}}
+	</a>
+</div>
+{% endmacro %}

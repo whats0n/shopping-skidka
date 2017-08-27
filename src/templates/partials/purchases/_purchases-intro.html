@@ -1,0 +1,47 @@
+<!-- begin purchases-intro  -->
+<div class="purchases-intro tabs js-tabs js-purchases-intro">
+	{% set purchasesIntro = [
+		{
+			id: 'purchases-tab1',
+			title: 'Мягкие игрушки Orange&nbsp;Toys 3 по цене 2',
+			active: 'is-active'
+		},
+		{
+			id: 'purchases-tab2',
+			title: 'Моноблок Dell Inspiron со скидкой 40%'
+		},
+		{
+			id: 'purchases-tab3',
+			title: 'При покупке стиральной машины LG F-12U1HBS4 blablablabla bla bla'
+		}
+	] %}
+	<div class="tabs__container js-purchases-intro-slider">
+		{% for tab in purchasesIntro %}
+			<div class="purchases-intro__item tabs__content js-tabs-content {{tab.active}}" data-id="{{tab.id}}">
+				{{mixins.product({
+					classes: 'product_extra product_side-right',
+					img: 'lg.jpg',
+					title: tab.title,
+					meta: {
+						participant: '16',
+						timeout: true,
+						time: '2 часа'
+					}
+				})}}
+			</div>
+		{% endfor %}
+	</div>
+	<div class="purchases-intro__list tabs__scroll js-scrollbar">
+		<ul class="tabs__btns">
+			{% for btn in purchasesIntro %}
+				<li>
+					<a href="{{btn.id}}" class="tabs__btn js-tabs-open {{btn.active}}">
+						<span class="tabs__btn-number">0{{loop.index}}</span>
+						<span class="tabs__btn-text js-cut-text">{{btn.title | safe}}</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end purchases-intro -->

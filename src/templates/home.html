@@ -1,0 +1,69 @@
+---
+title: Home
+recommendedItems: 4
+recommendedItemsClass: 'recommended__col_xs'
+newestItems: 4
+newestItemsClass: 'newest__col_xs'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main">
+	{% include "partials/main/_stock.html" %}
+
+	<!-- begin section -->
+	<div class="section inner">
+		{% include "partials/main/_recommended.html" %}
+	</div>
+	<!-- end section -->
+
+	<!-- begin section  -->
+	<div class="section inner js-popular">
+		{% include "partials/main/_popular.html" %}
+	</div>
+	<!-- end section -->
+	{% include "partials/main/_reviews.html" %}
+
+	<!-- begin section -->
+	<div class="section inner tabs js-tabs">
+		{% set newest = [
+			{
+				id: 'tab-1',
+				text: 'Сумки и чемоданы',
+				active: true
+			},
+			{
+				id: 'tab-2',
+				text: 'Встраиваемая техника'
+			},
+			{
+				id: 'tab-3',
+				text: 'Товары для собак'
+			},
+			{
+				id: 'tab-4',
+				text: 'GPS-навигация'
+			},
+			{
+				id: 'tab-5',
+				text: 'Мебель'
+			}
+		] %}
+		{% include "partials/main/_newest.html" %}
+	</div>
+	<!-- end section -->
+
+	{% include "partials/main/_news-list.html" %}
+
+	<!-- begin partners  -->
+	<div class="section inner tabs js-tabs">
+		{% include "partials/main/_partners.html" %}
+	</div>
+	<!-- end partners -->
+
+	{% include "partials/main/_about.html" %}
+	{% include "partials/main/_product-list.html" %}
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers()}}
+</div>
+{% endblock %}

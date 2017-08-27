@@ -1,0 +1,48 @@
+@import card/card-item
+@import card/card-gallery
+@import card/card-info
+@import card/card-main
+
+.card-sliders
+	padding-bottom: 8px
+	+md
+		padding-bottom: 0
+
+.card
+	&__container
+		padding: 31px 15px 15px
+		margin: 16px 0 40px
+		border: 1px solid rgba(28, 46, 73, 0.1)
+		border-radius: 2px
+		background: #ffffff
+		+clr
+		+md
+			padding: 23px 15px 15px
+			margin-bottom: 24px
+	&__col
+		padding: 0 16px
+		+md
+			padding: 0
+		&_item,
+		&_info
+			float: left
+			width: 52.38%
+		&_gallery
+			float: right
+			width: 47.62%
+		&_item,
+		&_info,
+		&_gallery
+			+md
+				float: none
+				width: 100%
+		&_item
+			+md
+				padding-right: 72px
+			+sm
+				padding: 0
+		&_gallery
+			+md
+				padding: 0 72px
+			+sm
+				padding: 0

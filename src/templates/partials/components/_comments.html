@@ -1,0 +1,79 @@
+<!-- begin comments  -->
+{% set messages = [
+	{
+		img: 'Katya.jpg',
+		title: 'Екатерина',
+		date: '3 часа',
+		text: [
+			'Man&#39;s technological ascent began in earnest in what is known as the Neolithic period ("New stone age"). The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms. Agriculture fed larger populations, and the transition to sedentism allowed simultaneously raising more children, as infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy.'
+		],
+		action: [
+			{
+				icons: 'heart-sm',
+				text: '3'
+			},
+			{
+				icons: 'comment',
+				text: 'Ответить'
+			}
+		]
+	},
+	{
+		class: 'message_answer',
+		img: 'Tanya.jpg',
+		title: 'Антонина',
+		date: 'Вчера',
+		text: [
+			'Infants no longer needed to be carried, as nomadic ones must. Additionally, children could contribute labor to the raising of crops more readily than they could to the hunter-gatherer economy. The invention of polished stone axes was a major advance that allowed forest clearance on a large scale to create farms.'
+		],
+		action: [
+			{
+				class: 'is-active',
+				icons: 'heart-sm',
+				text: '3'
+			}
+		]
+	},
+	{
+		img: 'Samanta.jpg',
+		title: 'Саманта',
+		date: '21.06.16',
+		text: [
+			'Optimistic assumptions are made by proponents of ideologies such as transhumanism and singularitarianism, which view technological development as generally having beneficial effects for the society and the human condition. In these ideologies, technological development is morally good. Some critics see these ideologies as examples of scientism and techno-utopianism and fear the notion of human enhancement and technological singularity which they support. Some have described Karl Marx as a techno-optimist.'
+		],
+		action: [
+			{
+				icons: 'heart-sm',
+				text: '3'
+			},
+			{
+				icons: 'comment',
+				text: 'Ответить'
+			}
+		]
+	}
+] %}
+{% for item in messages %}
+	<div class="message {{item.class}}">
+		<div class="message__header">
+			<div class="message__img">
+				<img src="img/{{item.img}}" alt="">
+			</div>
+			<h3 class="title-h3 message__title">{{item.title}}</h3>
+			<div class="message__date">{{item.date}}</div>
+		</div>
+		<div class="message__body">
+			{% for p in item.text %}
+				<p>{{p | safe}}</p>
+			{% endfor %}
+		</div>
+		<ul class="message__action">
+			{% for item in item.action %}
+				<li>
+					{{mixins.btnAction(item)}}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endfor %}
+<!-- end comments -->

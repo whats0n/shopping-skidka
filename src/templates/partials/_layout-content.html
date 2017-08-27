@@ -1,0 +1,30 @@
+{% import "partials/_mixins.html" as mixins %}
+
+{% macro content(config) %}
+<!-- begin overview-content  -->
+<div class="l-content {{config.classJS}}">
+	{% if config.header %}
+		<div class="heading">
+			<h2 class="title-h2 heading__title">{{config.title}}</h2>
+			<div class="heading__navigation">
+				{{mixins.btnDirection({
+					classes: 'btn-direction_prev heading__arrow ' + config.prev,
+					icon: 'prev'
+				})}}
+				{{mixins.btnDirection({
+					classes: 'btn-direction_next heading__arrow ' + config.next,
+					icon: 'next'
+				})}}
+			</div>
+		</div>
+	{% endif %}
+	<div class="l-content__container {{config.containerClass}} l-content__container_{{config.class}}">
+		{% for col in config.items %}
+			<div class="l-content__col l-content__col_{{col.size}} l-content__col_{{config.class}} {{config.itemClass}}">
+				{{mixins[config.item](col.item)}}
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<!-- end overview-content -->
+{% endmacro %}

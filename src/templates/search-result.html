@@ -1,0 +1,97 @@
+---
+title: Search Result
+navActive: 2
+breadcrumbsClass: 'page__breadcrumbs'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main main_in">
+	<div class="section inner">
+		<div class="page">
+			{% set breadcrumbs = [
+				'Главная',
+				'Электроника',
+				'Аудио-видео техника',
+				'Телевизоры'
+			] %}
+
+			{% include "partials/components/_breadcrumbs.html" %}
+
+			<div class="page__heading">
+				<h1>Результаты поиска <span>(207)</span></h1>
+			</div>
+			<div class="page__row">
+				<div class="page__sorting">
+					{% include "partials/components/_sorting.html" %}
+				</div>
+				{% include "partials/sidebars/_catalog-product.html" %}
+				<div class="page__content">
+					<div class="items-catalog">
+						<div class="items-catalog__row">
+							{% for item in range(0, 15) %}
+								<div class="items-catalog__col">
+									{{mixins.item({
+										title: 'Hartan Racer GT',
+										category: 'Детские коляски',
+										discount: '-25%',
+										sales: true,
+										images: [
+											'item1.jpg',
+											'item2.jpg',
+											'item3.jpg',
+											'item4.jpg',
+											'item5.jpg',
+											'item6.jpg'
+										],
+										price: {
+											current: '91 730 руб.',
+											old: '98 763 руб.'
+										}
+									})}}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+					{{mixins.paginationLG({
+						class: 'pagination_lg page__pagination'
+					})}}
+
+					{% set lookingFor = {
+						title: 'Популярное в категории',
+						btn: {
+							text: 'Смотреть все'
+						},
+						list: [
+							[
+								'32 дюйма',
+								'Smart TV',
+								'4K телевизоры',
+								'телевизоры с Wi-Fi',
+								'3D-телевизоры LG'
+							],
+							[
+								'ultra hd',
+								'3D',
+								'sony bravia',
+								'uHD-телевизоры',
+								'телевизоры Samsung 40 дюймов'
+							],
+							[
+								'на стену',
+								'samsung 40',
+								'за 6000000 рублей',
+								'dVB-T2-телевизоры',
+								'sony 4k'
+							]
+						]
+					} %}
+					{% include "partials/components/_looking-for.html" %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers(true)}}
+</div>
+{% endblock %}

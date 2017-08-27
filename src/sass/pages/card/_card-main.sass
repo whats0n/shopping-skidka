@@ -1,0 +1,220 @@
+.card-main
+	margin-bottom: 40px
+	border: 1px solid rgba(28, 46, 73, 0.1)
+	border-radius: 2px
+	background: $white
+	&__tabs
+		position: relative
+		&:after
+			content: ""
+			display: block
+			margin: -1px 32px  0
+			border-bottom: 1px solid rgba($dark, 0.1)
+			+md
+				margin: -1px 16px 0
+		li
+			&:not(:last-child)
+				padding-right: 40px
+				+sm
+					padding-right: 24px
+			&:last-child
+				+sm
+					padding-right: 16px
+		&-list
+			position: relative
+			padding: 32px 32px 0
+			+md
+				padding: 24px 16px 0
+			+sm
+				padding: 16px 16px 0
+
+
+.card-description
+	padding: 32px 32px 16px
+	+md
+		padding: 24px 16px 8px
+	&__title
+		margin-bottom: 16px
+	&__subtitle
+		margin-bottom: 8px
+	&__article
+		margin-bottom: 24px
+		+md
+			margin-bottom: 16px
+
+.card-characteristics
+	padding: 32px 32px 8px
+	+clr
+	+md
+		padding: 24px 16px 0
+	&__title
+		margin-bottom: 16px
+	&__box
+		margin-bottom: 32px
+		+md
+			margin-bottom: 24px
+	&__list
+		border-top: 1px solid rgba($dark, 0.1)
+	&__item
+		padding: 8px 0
+		border-bottom: 1px solid rgba($dark, 0.1)
+		+clr
+	&__label
+		float: left
+		width: 54%
+		color: $text
+	&__value
+		float: right
+		width: 46%
+		color: $dark
+	&__label,
+	&__value
+		padding-right: 16px
+		+sreg
+		+f(14, 24)
+		+md
+			width: 50%
+			+f(12, 24)
+		+sm
+			padding: 4px 0
+			width: 100%
+			+f(12, 16)
+
+.card-price
+	padding: 32px 15px 40px
+	+md
+		padding: 24px 15px
+	&__header
+		margin-bottom: 16px
+	&__item
+		margin-bottom: 16px
+		&:last-child
+			+sm
+				border-bottom: 1px solid rgba(28, 46, 73, 0.1)
+
+.card-reviews
+	&__header
+		padding: 16px 32px 24px
+		+md
+			padding: 24px 16px 16px
+
+	&__sorting
+		padding: 0 32px
+		+clr
+		+md
+			padding: 0 16px
+
+	&__comments
+		margin: 0 32px
+		border-top: 1px solid rgba($dark, 0.1)
+		+md
+			margin: 0 16px
+
+	&__nav
+		padding: 0 32px
+		+clr
+		+md
+			padding: 0 16px
+
+	&__form
+		padding: 0 32px 40px
+		+md
+			padding: 0 16px 24px
+		+sm
+			padding: 8px 16px 28px
+
+.card-overview
+	padding: 32px 32px 16px
+	+md
+		padding: 24px 16px 0
+	+sm
+		padding: 24px 16px 8px
+	&__item
+		margin-bottom: 32px
+		max-width: 760px
+		+clr
+		+md
+			margin-bottom: 24px
+	&__img
+		float: left
+		overflow: hidden
+		border-radius: 2px
+		width: 67%
+		height: 296px
+		font-size: 0
+		+md
+			width: 68.5%
+			height: 272px
+		+sm
+			width: 100%
+			height: auto
+		img
+			border-radius: 2px
+			width: 100%
+			height: 100%
+			object-fit: cover
+			+sm
+				height: auto
+	&__info
+		float: right
+		padding: 16px 0 0 32px
+		width: 33%
+		+md
+			padding-left: 16px
+			width: 31.5%
+		+sm
+			width: 100%
+			padding: 16px 28px 0
+	&__sticker
+		margin-bottom: 8px
+	&__subtitle
+		margin-bottom: 8px
+		color: $dark
+		+reg
+		+f(15, 24, 1)
+	&__description
+		margin-bottom: 32px
+		color: $text
+		+sreg
+		+f(13, 16)
+		+md
+			margin-bottom: 24px
+	&__meta
+		padding-bottom: 15px
+		border-bottom: 1px solid rgba($dark, 0.1)
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: top
+			padding-right: 16px
+	&__more
+		padding: 16px 0 0
+		text-align: center
+		.btn
+			+md
+				width: 100%
+	&__product
+		margin-bottom: 24px
+		+sm
+			margin-bottom: 16px
+		&-in
+			display: block
+			+hover
+				.card-overview
+					&__title,
+					&__link
+						color: $blue
+	&__title
+		+t(color)
+		+sm
+			padding-bottom: 8px
+			+f(14, 24, 0)
+	&__link
+		color: $text
+		+sreg
+		+f(14, 24)
+		+t(color)
+		+md
+			+f(12, 24)
+		+sm
+			+f(12, 16)

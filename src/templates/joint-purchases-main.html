@@ -1,0 +1,193 @@
+---
+title: Joint Purchases/Main
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main">
+	<div class="section inner">
+		<div class="page">
+			<div class="page__heading">
+				<h1>Совместные покупки</h1>
+			</div>
+			<div class="page__row">
+				{% include "partials/sidebars/_overview-main.html" %}
+				<div class="page__content">
+					{% include "partials/purchases/_purchases-intro.html" %}
+
+					{% import "partials/_layout-content.html" as purchases %}
+
+					{{purchases.content({
+						item: 'product',
+						class: 'product',
+						items: [
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review1.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review2.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review1.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review2.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review1.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review2.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review1.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review2.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review1.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review2.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review1.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							},
+							{
+								size: 'sm',
+								item: {
+									classes: 'product_col product_sm',
+									img: 'review2.jpg',
+									title: 'Моноблок Dell Inspiron со скидкой 40%',
+									meta: {
+										participant: '16',
+										timeout: true,
+										time: '2 часа'
+									}
+								}
+							}
+						]
+					})}}
+
+					{{mixins.paginationLG({
+						class: 'pagination_lg'
+					})}}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers(true, 'Категории')}}
+</div>
+{% endblock %}

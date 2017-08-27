@@ -1,0 +1,91 @@
+<!-- begin card-characteristics  -->
+<div class="card-characteristics tabs__content js-tabs-content" data-id="card-characteristics">
+	{% set cardCharacteristics = [
+		{
+			title: 'Процессор',
+			list: [
+				{
+					label: 'Процессор',
+					value: 'Intel® Core™ M3'
+				},
+				{
+					label: 'Частота (МГц)',
+					value: '1100'
+				},
+				{
+					label: 'Количество ядер',
+					value: '2'
+				},
+				{
+					label: 'Кэш L3 (Кб)',
+					value: '4096'
+				}
+			]
+		},
+		{
+			title: 'Память',
+			list: [
+				{
+					label: 'Тип оперативной памяти',
+					value: 'LPDDR3'
+				},
+				{
+					label: 'Оперативная память (Мб)',
+					value: '8192'
+				},
+				{
+					label: 'Частота оперативной памяти (МГц)',
+					value: '1866'
+				},
+				{
+					label: 'Емкость SSD (Гб)',
+					value: '256'
+				}
+			]
+		},
+		{
+			title: 'Экран и видеокарта',
+			list: [
+				{
+					label: 'Диагональ дисплея (дюйм)',
+					value: '12'
+				},
+				{
+					label: 'Разрешение дисплея',
+					value: '2304x1440'
+				},
+				{
+					label: 'Видеоадаптер',
+					value: 'встроенный'
+				},
+				{
+					label: 'Видеокарта',
+					value: 'Intel® HD Graphics 515'
+				},
+				{
+					label: 'Веб-камера (Мп)',
+					value: 'да'
+				},
+				{
+					label: 'Тип дисплея',
+					value: 'TFT IPS'
+				}
+			]
+		}
+	] %}
+
+	{% for item in cardCharacteristics %}
+		<div class="card-characteristics__box">
+			<h3 class="title-h3 title-h3_sm card-characteristics__title">{{item.title}}</h3>
+			<ul class="card-characteristics__list">
+				{% for li in item.list %}
+					<li class="card-characteristics__item">
+						<div class="card-characteristics__label">{{li.label}}</div>
+						<div class="card-characteristics__value">{{li.value}}</div>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	{% endfor %}
+</div>
+<!-- end card-characteristics -->

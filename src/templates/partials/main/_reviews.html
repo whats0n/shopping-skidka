@@ -1,0 +1,33 @@
+<!-- begin section  -->
+<div class="section inner js-reviews">
+	<div class="heading">
+		<h2 class="title-h2 heading__title">Обзоры и статьи</h2>
+		<div class="heading__more">
+			<button class="btn">Ещё</button>
+		</div>
+	</div>
+	<!-- begin reviews  -->
+	<div class="reviews">
+		<div class="reviews__container">
+			<div class="reviews__row js-reviews-slider">
+				{% for item in range(0, 2) %}
+				<div class="reviews__col">
+					{{mixins.review({
+						img: 'review1.jpg',
+						sticker: 'Новости',
+						title: 'Meizu MX6: металлический смартфон с 5,5-дюймовым экраном'
+					})}}
+				</div>
+				<div class="reviews__col">
+					{{mixins.review({
+						img: 'review2.jpg',
+						title: 'Как прокачать камеру в смартфоне'
+					})}}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- end reviews -->
+</div>
+<!-- end section -->

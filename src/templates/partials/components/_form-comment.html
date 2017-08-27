@@ -1,0 +1,51 @@
+{% import "partials/_mixins.html" as mixins %}
+
+{% macro formComment(config) %}
+<!-- begin form-comment  -->
+<div class="form-comment">
+	<h3 class="title-h3 form-comment__title">Ваш комментарий</h3>
+	<div class="form-comment__body">
+		{% if config.login %}
+			<div class="form-comment__img">
+				<img src="img/{{config.img}}" alt="">
+			</div>
+		{% else %}
+			<div class="form-comment__img">
+				{{mixins.icon('user-default')}}
+			</div>
+			<div class="form-comment__header">
+				<div class="form-comment__row">
+					<div class="form-comment__col">
+						{{mixins.input({
+							type: 'text',
+							class: 'input_xlg',
+							attrs: 'placeholder="Ваше имя"'
+						})}}
+					</div>
+					<div class="form-comment__col">
+						{{mixins.input({
+							type: 'email',
+							class: 'input_xlg',
+							attrs: 'placeholder="Ваш email"'
+						})}}
+					</div>
+					<div class="form-comment__slash">или</div>
+					<div class="form-comment__btn">
+						<button class="btn btn_full-lg btn_extra" type="button">Авторизируйтесь</button>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+		<div class="form-comment__message">
+			{{mixins.textarea({
+				class: 'textarea_xlg',
+				attrs: 'placeholder="Введите текст"'
+			})}}
+		</div>
+		<div class="form-comment__submit">
+			<button class="btn btn_full-lg btn_extra" type="submit">Комментировать</button>
+		</div>
+	</div>
+</div>
+<!-- end form-comment -->
+{% endmacro %}

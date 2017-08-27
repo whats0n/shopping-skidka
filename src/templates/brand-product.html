@@ -1,0 +1,86 @@
+---
+title: Brand/Product
+breadcrumbsClass: 'page__breadcrumbs'
+popupBrandAbout: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main main_in">
+	<div class="section inner">
+		<div class="page">
+			{% set breadcrumbs = [
+				'Главная',
+				'Бренды',
+				'Samsung'
+			] %}
+
+			{% include "partials/components/_breadcrumbs.html" %}
+
+			<div class="page__heading">
+				<h1>Samsung</h1>
+			</div>
+			<div class="page__row">
+				<div class="page__item">
+					<div class="brand-item">
+						<div class="brand-item__img">
+							<a href="#" class="brand-item__box">
+								<img src="img/samsung.png" alt="">
+								{{mixins.ratingSMStatic(4.7, 'lg')}}
+							</a>
+						</div>
+						<div class="brand-item__content">
+							<div class="brand-item__text js-cut-text">
+								<p>Корпорация Samsung прошла значительный путь с  1938 года от небольшой экспортной корейской фирмы  до ведущего мирового вендора, профессионального разработчика компьютерных, цифровых технологий, производителя мега популярных устройств, полупроводников, высококачественных модулей памяти. Сегодня компания по праву признана в мире лидером рынка благодаря своим  инновационным технологиям и продуктам.</p>
+								<p>Корпорация Samsung прошла значительный путь с  1938 года от небольшой экспортной корейской фирмы  до ведущего мирового вендора, профессионального разработчика компьютерных, цифровых технологий, производителя мега популярных устройств, полупроводников, высококачественных модулей памяти. Сегодня компания по праву признана в мире лидером рынка благодаря своим  инновационным технологиям и продуктам.</p>
+							</div>
+							<div class="brand-item__more">
+								<a href="#" class="btn js-popup-open" data-target="brand-about">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__row">
+				<div class="page__sorting">
+					{% include "partials/components/_sorting.html" %}
+				</div>
+				{% include "partials/sidebars/_catalog-product.html" %}
+				<div class="page__content">
+					<div class="items-catalog">
+						<div class="items-catalog__row">
+							{% for item in range(0, 15) %}
+								<div class="items-catalog__col">
+									{{mixins.item({
+										title: 'Hartan Racer GT',
+										category: 'Детские коляски',
+										discount: '-25%',
+										sales: true,
+										images: [
+											'item1.jpg',
+											'item2.jpg',
+											'item3.jpg',
+											'item4.jpg',
+											'item5.jpg',
+											'item6.jpg'
+										],
+										price: {
+											current: '91 730 руб.',
+											old: '98 763 руб.'
+										}
+									})}}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+					{{mixins.paginationLG({
+						class: 'pagination_lg'
+					})}}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers(true)}}
+</div>
+{% endblock %}

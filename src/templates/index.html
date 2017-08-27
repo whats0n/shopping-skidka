@@ -1,0 +1,39 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% set pages = [
+		'tech',
+		'popups',
+		'home',
+		'profile-account-social',
+		'profile-spam',
+		'profile-favorite',
+		'catalog-main',
+		'catalog-product',
+		'card',
+		'overview-main',
+		'overview-article',
+		'blog',
+		'news',
+		'joint-purchases-main',
+		'joint-purchases-card',
+		'search-result',
+		'brand-main',
+		'brand-product',
+		'score-main',
+		'score-about',
+		'score-pay-and-delivery',
+		'score-contacts',
+		'score-reviews'
+	] %}
+
+	<ul style="max-width: 1080px; padding: 20px; margin: 0 auto; list-style: square outside">
+		{% for page in pages %}
+		<li><a href="{{page}}.html" target="_blank">{{page}}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

@@ -1,0 +1,40 @@
+<div class="category js-accordion-lg" data-accordion-parent="category">
+	{% for category in sidebar.category %}
+		<div class="category__box">
+			<a href="#" class="category__title js-accordion-lg-open" data-accordion-child="category">
+				<span>{{category.title}}</span>
+				{{mixins.icon('down')}}
+			</a>
+			<div class="category__block js-accordion-lg-content js-show-more" data-accordion-child="category" data-show-parent="category">
+				<ul class="category__list js-accordion-lg" data-accordion-parent="sub-category">
+					{% for item in category.list %}
+						<li class="category__item js-show-more-item" data-show-child="category">
+							{% if item.dropdown %}
+								<a href="#" class="category__link js-accordion-lg-open" data-accordion-child="sub-category">
+									<span>{{item.link}}</span>
+									{{mixins.icon('down')}}
+								</a>
+								<ul class="category__dropdown js-accordion-lg-content" data-accordion-child="sub-category">
+									{% for item in sidebar.categoryDropdown %}
+										<li>
+											<a href="#">{{item}}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							{% else %}
+								<a href="#" class="category__link">
+									<span>{{item.link}}</span>
+								</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+				<a href="#" class="category__link btn-more js-show-more-open" data-show-child="category">
+					<span class="btn-more__show">Еще</span>
+					<span class="btn-more__hide">Свернуть</span>
+					{{mixins.icon('down')}}
+				</a>
+			</div>
+		</div>
+	{% endfor %}
+</div>

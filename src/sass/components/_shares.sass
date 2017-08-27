@@ -1,0 +1,57 @@
+.shares
+	position: relative
+	padding: 16px 0
+	+clr
+	+sm
+		text-align: center
+	&__title,
+	&__edit
+		float: left
+		+sm
+			float: none
+			display: inline-block
+			vertical-align: top
+	&__title
+		padding: 8px 8px 8px 0
+	&__btns
+		float: right
+		font-size: 0
+		+sm
+			float: none
+			padding-bottom: 16px
+		li
+			display: inline-block
+			vertical-align: top
+			padding-left: 24px
+			+md
+				padding-left: 16px
+			+sm
+				padding: 0 16px
+	&__btn
+		float: left
+		max-width: 216px
+		+sm
+			float: none
+	&__inner
+		float: right
+		padding-left: 240px
+		margin-left: -216px
+		width: 100%
+		text-align: right
+		+sm
+			float: none
+			padding-left: 0
+			margin-left: 0
+			text-align: center
+		.shares
+			&__title,
+			&__btns
+				float: none
+				display: inline-block
+				vertical-align: top
+				+sm
+					display: block
+			&__title
+				padding-right: 0
+				+sm
+					padding-top: 0

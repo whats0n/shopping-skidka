@@ -1,0 +1,60 @@
+<!-- begin product-review  -->
+<div class="product-review {{prodReviewClass}}">
+	<h3 class="title-h3 title-h3_sm product-review__title">Отзывы</h3>
+	<div class="product-review__body">
+		<div class="product-review__rating">
+			{{mixins.ratingStatic({
+				value: '4,2',
+				number: 4.2,
+				size: 'md'
+			})}}
+		</div>
+		<div class="product-review__steps">
+			<div class="rating-steps product-review__steps-in">
+				{% set ratingSteps = [
+					{
+						label: '5 звезд',
+						value: '(9)',
+						progress: '68.54%'
+					},
+					{
+						label: '4 звезды',
+						value: '(3)',
+						progress: '36.29%'
+					},
+					{
+						label: '3 звезды',
+						value: '(2)',
+						progress: '24.19%'
+					},
+					{
+						label: '2 звезды',
+						value: '(1)',
+						progress: '12.09%'
+					},
+					{
+						label: '1 звезда',
+						value: '(0)',
+						progress: '0%'
+					}
+				] %}
+
+				{% for step in ratingSteps %}
+					<div class="rating-steps__item">
+						<div class="rating-steps__label">{{step.label}}</div>
+						<div class="rating-steps__value">{{step.value}}</div>
+						<div class="rating-steps__bar">
+							<div class="rating-steps__bar-in" style="width: {{step.progress}};"></div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="product-review__info">
+			<div class="product-review__label">Оставьте свой отзыв о товаре:</div>
+			<div class="product-review__value">{{prodReviewsTitle or 'Ноутбук Apple MacBook 12" Retina (MLHF2RU/A) (золотой)'}}</div>
+			<button class="btn btn_full-lg">Оставить свой отзыв</button>
+		</div>
+	</div>
+</div>
+<!-- end product-review -->

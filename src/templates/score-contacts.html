@@ -1,0 +1,51 @@
+---
+title: Score/Contacts
+activeNavItem: 1
+breadcrumbsClass: 'page__breadcrumbs'
+popularTitle: 'Вам может понравиться'
+map: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main main_in">
+	<div class="section inner">
+		<div class="page">
+
+			{% set breadcrumbs = [
+				'Главная',
+				'Магазины',
+				'Связной'
+			] %}
+
+			{% include "partials/components/_breadcrumbs.html" %}
+
+			<div class="page__heading page__heading_border-none-md">
+				<h1 class="title-h1">Связной</h1>
+			</div>
+
+			<!-- BEGIN profile -->
+			<div class="score">
+				<div class="score__row">
+
+					<aside class="score__sidebar">
+						{% include "partials/score/_nav-list.html" %}
+					</aside>
+
+					<div class="score__content">
+						<div class="score__box">
+							{% include "partials/score/_score-contacts.html" %}
+						</div>
+
+						{% include "partials/score/_score-popular.html" %}
+					</div>
+
+				</div>
+			</div>
+			<!-- END profile -->
+		</div>
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers()}}
+</div>
+{% endblock %}

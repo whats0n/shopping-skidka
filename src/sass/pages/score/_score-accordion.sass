@@ -1,0 +1,73 @@
+.score-accordion
+	border-bottom: 1px solid rgba($dark, 0.1)
+	&__header
+		padding: 16px 16px 16px 0
+		+md
+			padding-right: 0
+	&__title,
+	&__subtitle
+		display: block
+		color: $dark
+		+reg
+		+f(15, 24, 1)
+	&__title,
+	&__description
+		padding-left: 32px
+	&__title
+		position: relative
+		margin-bottom: 8px
+		+sm
+			letter-spacing: 0
+		+hover
+			color: $blue
+			.icon-down
+				fill: $blue
+		+active
+			color: $blue-dark
+			.icon-down
+				fill: $blue-dark
+		&.is-active
+			.icon-down
+				transform: translate3d(0,0,0) rotate(-180deg)
+		.icon-down
+			position: absolute
+			top: 9px
+			left: 7px
+			fill: $dark
+			font-size: 6px
+			+gpu
+			transition: transform 0.25s ease, color 0.25s ease
+	&__subtitle
+		margin-bottom: 16px
+		+md
+			+f(14, 24, 1)
+	&__description
+		+sm
+			padding-left: 0
+		p
+			margin-bottom: 0
+	&__content
+		display: none
+		padding: 0 16px 0 32px
+		+md
+			padding-right: 0
+		+sm
+			padding-left: 0
+		p
+			margin-bottom: 8px
+		ul
+			margin-bottom: 24px
+		li
+			position: relative
+			padding-left: 16px
+			&:before
+				content: ""
+				position: absolute
+				top: 10px
+				left: 0
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: $blue
+	&__text
+		padding-bottom: 8px

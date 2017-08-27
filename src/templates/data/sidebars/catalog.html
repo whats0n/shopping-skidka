@@ -1,0 +1,314 @@
+{% set category = [
+	{
+		title: 'Электроника, фото, связь',
+		list: [
+			{
+				link: 'Телефоны',
+				dropdown: true
+			},
+			{
+				link: 'Навигация'
+			},
+			{
+				link: 'Фотоаппараты и аксессуары'
+			},
+			{
+				link: 'Электронные книги',
+				dropdown: true
+			},
+			{
+				link: 'Оптические приборы'
+			},
+			{
+				link: 'Накопители',
+				hidden: true
+			},
+			{
+				link: 'Сетевые оборудования',
+				hidden: true
+			},
+			{
+				link: 'Аксессуары',
+				hidden: true
+			},
+			{
+				link: 'Игры и програмное обеспечение',
+				hidden: true
+			}
+		]
+	},
+	{
+		title: 'Аудио-видео техника',
+		list: [
+			{
+				link: 'Телевизоры'
+			},
+			{
+				link: 'Видеокамеры',
+				dropdown: true
+			},
+			{
+				link: 'Домашние кинотеатры',
+				dropdown: true
+			},
+			{
+				link: 'Портативная аудиотехника'
+			},
+			{
+				link: 'Игровые приставки и аксессуары',
+				dropdown: true
+			},
+			{
+				link: 'Накопители',
+				hidden: true
+			},
+			{
+				link: 'Сетевые оборудования',
+				hidden: true
+			},
+			{
+				link: 'Аксессуары',
+				hidden: true
+			},
+			{
+				link: 'Игры и програмное обеспечение',
+				hidden: true
+			}
+		]
+	},
+	{
+		title: 'Компьютеры',
+		list: [
+			{
+				link: 'Ноутбуки и компьютеры'
+			},
+			{
+				link: 'Оргтехника и периферия'
+			},
+			{
+				link: 'Комплектующие'
+			},
+			{
+				link: 'Сетевое оборудование'
+			},
+			{
+				link: 'Расходные материалы'
+			},
+			{
+				link: 'Периферийные устройства',
+				hidden: true
+			},
+			{
+				link: 'Накопители',
+				hidden: true
+			},
+			{
+				link: 'Сетевые оборудования',
+				hidden: true
+			},
+			{
+				link: 'Аксессуары',
+				hidden: true
+			},
+			{
+				link: 'Игры и програмное обеспечение',
+				hidden: true
+			}
+		]
+	},
+	{
+		title: 'Компьютеры',
+		list: [
+			{
+				link: 'Ноутбуки и компьютеры'
+			},
+			{
+				link: 'Оргтехника и периферия'
+			},
+			{
+				link: 'Комплектующие'
+			},
+			{
+				link: 'Сетевое оборудование'
+			},
+			{
+				link: 'Расходные материалы'
+			},
+			{
+				link: 'Периферийные устройства',
+				hidden: true
+			},
+			{
+				link: 'Накопители',
+				hidden: true
+			},
+			{
+				link: 'Сетевые оборудования',
+				hidden: true
+			},
+			{
+				link: 'Аксессуары',
+				hidden: true
+			},
+			{
+				link: 'Игры и програмное обеспечение',
+				hidden: true
+			}
+		]
+	}
+] %}
+
+{% set categoryDropdown = [
+	'Экшн камеры',
+	'Цифровые камеры',
+	'Камеры с HHD',
+	'Камеры с CD'
+] %}
+
+{% set news = [
+	{
+		date: '26 сент. 2016 г.',
+		title: 'Старт продаж iPhone 7. <br>Как это было',
+		text: 'Первые покупатели забрали свои девайсы уже в ночь с 22 на 23 сентября.',
+		info: [
+			{
+				icon: 'view',
+				text: '12'
+			},
+			{
+				icons: 'heart-sm',
+				text: '3'
+			},
+			{
+				icons: 'comment',
+				text: '1'
+			}
+		]
+	},
+	{
+		date: '21 июня 2016 г.',
+		title: 'Купи смартфон Xiaomi прямо сейчас',
+		text: 'Официально в России и только в Shopping Skidka.com.',
+		info: [
+			{
+				icon: 'view',
+				text: '12'
+			},
+			{
+				icons: 'heart-sm',
+				text: '4'
+			}
+		]
+	}
+] %}
+
+{% set reviews = [
+	{
+		img: 'review1.jpg',
+		title: 'Meizu MX6: металлический смартфон с 5,5-дюймовым экраном',
+		category: 'Новинки'
+	},
+	{
+		img: 'review2.jpg',
+		title: 'Как прокачать камеру в смартфоне'
+	},
+	{
+		img: 'review1.jpg',
+		title: 'JBL Charge 3 и JBL Clip 2: музыка, которая всегда с тобой',
+		category: 'Обзор'
+	}
+] %}
+
+{% set filterList = [
+	{
+		checkbox: true,
+		title: 'Производители',
+		list: [
+			{
+				text: 'Samsung',
+				attrs: 'checked'
+			},
+			{
+				text: 'LG'
+			},
+			{
+				text: 'Sony',
+				attrs: 'checked'
+			},
+			{
+				text: 'Philips'
+			},
+			{
+				text: 'Mystery'
+			},
+			{
+				text: 'Sony',
+				attrs: 'checked'
+			},
+			{
+				text: 'Philips'
+			},
+			{
+				text: 'Mystery'
+			}
+		]
+	},
+	{
+		checkbox: true,
+		title: 'Разрешение',
+		list: [
+			{
+				text: '4K UHD',
+				attrs: 'checked'
+			},
+			{
+				text: '720p HD'
+			},
+			{
+				text: '1080i HD',
+				attrs: 'checked'
+			},
+			{
+				text: '1080p Full HD'
+			}
+		]
+	},
+	{
+		title: 'Поддержка 3D',
+		radio: true,
+		list: [
+			{
+				text: 'Да',
+				name: '3d'
+			},
+			{
+				text: 'Нет',
+				name: '3d'
+			},
+			{
+				text: 'Не важно',
+				name: '3d',
+				attrs: 'checked'
+			}
+		]
+	},
+	{
+		title: 'Поддержка Wi-Fi',
+		radio: true,
+		list: [
+			{
+				text: 'Да',
+				name: 'wifi'
+			},
+			{
+				text: 'Нет',
+				name: 'wifi'
+			},
+			{
+				text: 'Не важно',
+				name: 'wifi',
+				attrs: 'checked'
+			}
+		]
+	}
+] %}

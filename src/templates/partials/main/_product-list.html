@@ -1,0 +1,32 @@
+<!-- begin product-list  -->
+<div class="section inner">
+	<div class="heading">
+		<h2 class="title-h2 heading__title">У нас покупают</h2>
+	</div>
+	<div class="product-list">
+		<div class="product-list__row js-accordion-sm" data-accordion-parent="product-list">
+			{% import "data/product-list.html" as productList %}
+			{% for item in productList.items %}
+				<div class="product-list__col">
+					<div class="product-list__item">
+						<div class="product-list__title js-accordion-sm-open" data-accordion-child="product-list">
+							<div class="product-list__icon">
+								{{mixins.icon(item.icon)}}
+							</div>
+							{{mixins.icon('down')}}
+							<span>{{item.title}}</span>
+						</div>
+						<ul class="product-list__content js-accordion-sm-content" data-accordion-child="product-list">
+							{% for item in item.list %}
+								<li>
+									<a href="#">{{item}}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end product-list -->

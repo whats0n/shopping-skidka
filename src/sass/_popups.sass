@@ -1,0 +1,290 @@
+.popup
+	position: fixed
+	z-index: 1000
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	overflow: auto
+	padding: 72px
+	opacity: 0
+	visibility: hidden
+	background: rgba($dark, 0.7)
+	transition: opacity 0.3s ease, visibility 0.3s ease
+	+vertical
+	white-space: nowrap
+	+md
+		padding: 20px 16px
+	&.is-active
+		opacity: 1
+		visibility: visible
+		.popup
+			&__container
+				+gpu
+	&__container
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		border-radius: 2px
+		width: 100%
+		min-width: 288px
+		background: #fff
+		box-shadow: 0 8px 16px rgba(7, 20, 39, 0.1)
+		white-space: normal
+		&_xs
+			max-width: 288px
+		&_sm
+			max-width: 368px
+		&_md
+			max-width: 512px
+		&_lg
+			max-width: 672px
+			+md
+				max-width: 368px
+		&_xlg
+			max-width: 896px
+			+md
+				max-width: 672px
+			+sm
+				max-width: 368px
+		&_social
+			+sm
+				max-width: 288px
+		&_gallery
+			border-radius: 0
+			background: none
+			box-shadow: none
+	&__close
+		position: absolute
+		z-index: 100
+		top: -56px
+		right: -56px
+		+md
+			top: 0
+			right: 0
+			background: none
+		+hover
+			+md
+				background: none
+				.icon
+					fill: $blue
+		+active
+			+md
+				background: none
+				.icon
+					fill: $blue-dark
+		.icon
+			+md
+				fill: $blue-light
+
+	//login & registration
+	&__form
+		padding: 32px
+	&__field,
+	&__slash
+		padding: 8px 0
+	&__slash
+		overflow: hidden
+		span
+			position: relative
+			display: inline-block
+			vertical-align: top
+			padding: 0 12px
+			color: $text
+			+sreg
+			+f(14, 24)
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 50%
+				border-bottom: 1px solid rgba($dark, 0.1)
+				width: 200px
+			&:before
+				right: 100%
+			&:after
+				left: 100%
+	&__checkbox
+		padding: 4px 0 12px
+		font-size: 0
+		text-align: left
+	&__forgot
+		padding-bottom: 8px
+		text-align: right
+	&__social,
+	&__submit
+		padding-top: 8px
+	&__footer
+		border-top: 1px solid rgba($dark, 0.1)
+		padding: 16px 32px
+		text-align: center
+
+	&__title
+		padding-bottom: 8px
+		color: $dark
+		+reg
+		+f(18, 32, 1)
+	&__link
+		display: inline-block
+		vertical-align: top
+		color: $blue
+		+sreg
+		+f(14, 24)
+		+t(color)
+		+hover
+			color: $dark
+	&__text
+		color: $text
+		+sreg
+		+f(14, 24)
+	//end login & registration
+
+	//logout
+	&__notice
+		padding: 32px 32px 24px
+	&__info
+		padding: 8px 0 16px
+	&__btn
+		padding: 8px 0 0
+		margin: 0 auto
+		max-width: 224px
+
+	//end logout
+
+	&__add-social
+		padding: 32px
+		+sm
+			padding: 32px 16px
+	&__social-lg
+		padding: 24px 0 0
+		+sm
+			margin: 0 auto
+			max-width: 224px
+
+	//start gallery
+	&__gallery
+		+clr
+	//end gallery
+
+.gallery
+	position: relative
+	&__slideshow
+		border-radius: 2px
+		background: #fff
+		box-shadow: 0 8px 16px rgba(7, 20, 39, 0.1)
+	&__thumbnails
+		padding: 32px 0 0
+		margin: 0 auto
+		max-width: 560px
+		+clr
+	&__slide,
+	&__thumbnail-in
+		border: 1px solid rgba(28, 46, 73, 0.1)
+		border-radius: 2px
+		background: $white
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%
+			max-height: 100%
+	&__slide
+		padding: 24px
+		height: 672px
+		+md
+			padding: 40px 40px 24px
+			height: 288px
+	&__thumbnail
+		float: left
+		padding: 0 8px 16px
+		width: 20%
+		+hover
+			.gallery
+				&__thumbnail-in
+					border-color: rgba($blue, 0.5)
+					+sm
+						border-color: $blue
+					&:after
+						opacity: 1
+		&-in
+			position: relative
+			padding: 7px
+			height: 64px
+			cursor: pointer
+			+t(border-color)
+			+sm
+				height: 40px
+			&.is-active
+				border-color: rgba($blue, 0.5)
+				+sm
+					border-color: rgba($blue, 0.5)
+				&:after
+					opacity: 1
+					background: rgba($blue, 0.5)
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				border-radius: 1px
+				opacity: 0
+				box-shadow: 0 8px 16px rgba(7, 20, 39, 0.1)
+				+gpu
+				transition: opacity 0.25s ease, background 0.25s ease
+				+sm
+					box-shadow: none
+	&__prev
+		left: -56px
+		+md
+			left: 0
+	&__next
+		right: -56px
+		+md
+			right: 0
+	&__prev,
+	&__next
+		position: absolute
+		z-index: 100
+		top: 50%
+		margin-top: -20px
+		+md
+			background: none
+		+hover
+			+md
+				background: none
+				.icon
+					fill: $blue
+		+active
+			+md
+				background: none
+				.icon
+					fill: $blue-dark
+		.icon
+			+md
+				fill: $blue-light
+	&__main
+		position: relative
+		+clr
+
+.brand-about
+	text-align: left
+	padding: 24px 24px 12px
+	&__title
+		padding-bottom: 16px
+		margin-bottom: 16px
+		border-bottom: 1px solid rgba($dark, 0.1)
+	&__content
+		position: relative
+		overflow: auto
+		padding: 0 24px
+		margin: 0 -24px
+		height: 648px
+		p
+			margin-bottom: 24px
+			+md
+				margin-bottom: 16px
+		h2,
+		.title-h2
+			margin-bottom: 16px

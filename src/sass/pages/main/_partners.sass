@@ -1,0 +1,70 @@
+.partners
+	&__row
+		padding: 8px 0
+		margin: 0 -8px
+		+clr
+		+md
+			margin: 0 -13px
+		+sm
+			margin: 0 -12px
+	&__col
+		float: left
+		padding: 8px
+		width: (100%/6)
+		+md
+			padding: 8px 13px
+			width: 25%
+		+sm
+			padding: 8px 20px
+			width: 50%
+
+.partner
+	position: relative
+	display: block
+	margin: 0 auto
+	border: 1px solid rgba(28, 46, 73, 0.1)
+	border-radius: 2px
+	height: 128px
+	padding-bottom:
+
+	background: #fff
+	+sm
+		height: 96px
+	+hover
+		&:before
+			opacity: 1
+		img
+			opacity: 1
+			+gray-zero
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0
+		box-shadow: 0 8px 16px rgba(7, 20, 39, 0.1)
+		+t(opacity)
+	&_sm
+		height: 96px
+		+md
+			height: 128px
+		+sm
+			height: 96px
+	&__inner
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 10px
+		+vertical
+	img
+		display: inline-block
+		vertical-align: middle
+		max-width: 90%
+		max-height: 90%
+		opacity: 0.3
+		+gray
+		transition: filter 0.25s ease, opacity 0.25s ease

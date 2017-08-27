@@ -1,0 +1,54 @@
+<!-- begin popup  -->
+<div class="popup js-popup" data-modal="card-gallery">
+	<div class="popup__container popup__container_gallery popup__container_lg js-popup-container">
+		<button class="btn-close btn-close_lg popup__close js-popup-close">
+			{{mixins.icon('close')}}
+		</button>
+		<div class="popup__gallery">
+			<div class="gallery js-gallery">
+				<div class="gallery__main">
+					{{mixins.btnDirection({
+						classes: 'btn-direction_lg gallery__prev js-gallery-prev',
+						icon: 'prev'
+					})}}
+					{{mixins.btnDirection({
+						classes: 'btn-direction_lg gallery__next js-gallery-next',
+						icon: 'next'
+					})}}
+					<div class="gallery__slideshow js-gallery-slider">
+						{% for item in range(0, 8) %}
+							{% if loop.index0 % 2 === 0 %}
+								<div class="gallery__slide">
+									<img src="img/card-slide1.png" alt="">
+								</div>
+							{% else %}
+								<div class="gallery__slide">
+									<img src="img/card-slide2.jpg" alt="">
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+				<div class="gallery__thumbnails js-gallery-thumbnails">
+					{% for item in range(0, 8) %}
+						{% if loop.index0 % 2 === 0 %}
+							<div class="gallery__thumbnail">
+								<div class="gallery__thumbnail-in js-gallery-thumbnail" data-index="{{loop.index0}}">
+									<img src="img/card-slide1.png" alt="">
+								</div>
+							</div>
+						{% else %}
+							<div class="gallery__thumbnail">
+								<div class="gallery__thumbnail-in js-gallery-thumbnail" data-index="{{loop.index0}}">
+									<img src="img/card-slide2.jpg" alt="">
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- end popup -->

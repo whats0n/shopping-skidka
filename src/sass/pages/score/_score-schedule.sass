@@ -1,0 +1,60 @@
+.score-schedule
+	padding: 8px 0 16px
+	+md
+		padding-bottom: 8px
+	+sm
+		padding: 0 0 8px
+		border-top: 1px solid rgba($dark, 0.1)
+	&__header,
+	&__row
+		+clr
+		border-bottom: 1px solid rgba($dark, 0.1)
+	&__header
+		+sm
+			display: none
+	&__row
+		padding: 4px 0
+		+sm
+			padding: 12px 0
+	&__title-address,
+	&__title-time,
+	&__address div,
+	&__time div
+		+sreg
+		+f(14, 24)
+		+md
+			+f(12, 24)
+		+sm
+			+f(12, 16)
+	&__title-address,
+	&__title-time
+		padding-bottom: 8px
+		color: $darkGray
+	&__title-address,
+	&__address
+		float: left
+		width: 70%
+	&__title-time,
+	&__time
+		float: left
+		width: 30%
+	&__address,
+	&__time
+		color: $text
+		line-height: 48px
+		+sm
+			width: 100%
+			line-height: normal
+		div
+			display: inline-block
+			vertical-align: middle
+			+sm
+				display: block
+	&__address
+		+sm
+			margin-bottom: 8px
+	&__time
+		span
+			display: block
+			+sm
+				display: inline-block

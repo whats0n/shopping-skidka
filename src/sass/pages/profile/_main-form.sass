@@ -1,0 +1,78 @@
+.main-form
+	padding: 16px 16px 8px
+	border: 1px solid rgba(28, 46, 73, 0.1)
+	border-radius: 2px
+	background: $white
+
+	//layout
+	&__container,
+	&__section,
+	&__row,
+	&__save
+		+clr
+	&__section
+		overflow: hidden
+		padding-bottom: 24px
+	&__row,
+	&__save
+		margin: 0 -24px
+	&__row
+		&_first
+			padding-bottom: 8px
+		&_last
+			padding-top: 16px
+		&_items
+			margin: 0 -8px
+			+sm
+				margin: 0 -24px
+	&__save
+		padding: 8px 0 0
+	&__col
+		float: left
+		width: 100%
+		padding: 16px 24px 0
+		&_sm
+			width: 33.33%
+			+sm
+				width: 100%
+		&_pull-sm
+			margin-left: 33.33%
+			+sm
+				margin-left: 0
+	&__header
+		padding-bottom: 16px
+		margin-bottom: 8px
+		border-bottom: 1px solid rgba($dark, 0.1)
+
+	//content
+	&__title
+		+f(18, 32, 1)
+	&__label,
+	&__value,
+	&__meta
+		+sreg
+		+f(14, 24)
+	&__label,
+	&__value
+		padding: 8px 16px
+		+md
+			padding: 4px 16px
+		+sm
+			padding: 0
+	&__label,
+	&__meta
+		color: $text
+	&__value
+		color: $dark
+	&__meta
+		padding: 0 16px
+		+sm
+			padding: 0
+	&__user-social
+		margin-bottom: 16px
+		+sm
+			margin: 0
+	&__list
+		font-size: 0
+	&__item
+		padding-bottom: 8px

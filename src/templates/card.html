@@ -1,0 +1,31 @@
+---
+title: Card
+navActive: 2
+breadcrumbsClass: 'page__breadcrumbs'
+popupGallery: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="main main_in">
+	<div class="section inner">
+		<div class="card">
+			{% set breadcrumbs = [
+				'Главная',
+				'Электроника',
+				'Ноутбуки',
+				'Ноутбук Apple MacBook 12" Retina (MLHF2RU/A) (золотой)'
+			] %}
+
+			{% include "partials/components/_breadcrumbs.html" %}
+			{% include "partials/card/_card-container.html" %}
+			{% include "partials/card/_card-tabs.html" %}
+		</div>
+	</div>
+	<div class="card-sliders">
+		{% include "partials/card/_card-sliders.html" %}
+	</div>
+	{% include "partials/components/_subscribe.html" %}
+	{{mixins.controllers()}}
+</div>
+{% endblock %}

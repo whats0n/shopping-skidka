@@ -1,0 +1,306 @@
+{% import "data/mobile-nav.html" as menu %}
+{% set searchList = [
+	'samsung',
+	'samsung galaxy',
+	'мобильные телефоны samsung',
+	'телевизоры и плазменные панели samsung',
+	'samsung galaxy s7',
+	'samsung galaxy s5',
+	'samsung galaxy s3',
+	'samsung galaxy s1'
+] %}
+
+<!-- begin header -->
+<header class="header">
+	<div class="header__top js-menu-close">
+		<div class="inner">
+			<button class="btn-nav js-nav-open">
+				<span></span>
+			</button>
+			<a href="#" class="logo header__logo">
+				{{mixins.icon('logo')}}
+				<div class="logo__text">
+					<span>Shopping</span>
+					<strong>Skidka.com</strong>
+				</div>
+			</a>
+			{{mixins.smSearch({
+				mod: 'header__search',
+				submit: true
+			})}}
+
+			{% set headerList = [
+				{
+					icon: 'plane',
+					text: 'Москва'
+				},
+				{
+					icon: 'percent',
+					text: 'Скидки',
+					single: true
+				},
+				{
+					icon: 'heart',
+					text: 'Избранное'
+				},
+				{
+					icon: 'user',
+					text: 'Личный кабинет'
+				}
+			] %}
+
+			<ul class="header__list">
+				{#<li>
+					<a href="#" class="header__link header__link_search js-search-button">
+						{{mixins.icons('search')}}
+					</a>
+				</li>#}
+				{% for li in headerList %}
+					{% if loop.index0 == 3 %}
+						{% if login %}
+							<li>
+								<a href="#" class="header__link header__link_{{li.icon}} js-popup-open" data-target="login">
+									{% if li.single %}
+									{{mixins.icon('user')}}
+									{% else %}
+									{{mixins.icons('user')}}
+									{% endif %}
+									<span class="header__link-text">Войти</span>
+								</a>
+							</li>
+						{% else %}
+							<li class="js-dropdown dropdown-parent">
+								<a href="#" class="header__link header__link_{{li.icon}} js-dropdown-open">
+									{% if li.single %}
+									{{mixins.icon(li.icon)}}
+									{% else %}
+									{{mixins.icons(li.icon)}}
+									{% endif %}
+									<span class="header__link-text">{{li.text}}</span>
+								</a>
+								<div class="dropdown js-dropdown-container">
+									<ul class="dropdown__list">
+										<li>
+											<a href="#" class="dropdown__link">Мои данные</a>
+										</li>
+										<li>
+											<a href="#" class="dropdown__link">Избранное</a>
+										</li>
+										<li>
+											<a href="#" class="dropdown__link">Подписки</a>
+										</li>
+									</ul>
+									<div class="dropdown__logout">
+										<a href="#" class="dropdown__link js-popup-open" data-target="logout">Выйти</a>
+									</div>
+								</div>
+							</li>
+						{% endif %}
+					{% else %}
+						<li>
+							<a href="#" class="header__link header__link_{{li.icon}}">
+								{% if li.single %}
+								{{mixins.icon(li.icon)}}
+								{% else %}
+								{{mixins.icons(li.icon)}}
+								{% endif %}
+								<span class="header__link-text">{{li.text}}</span>
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="header__bottom js-menu-close">
+		<div class="inner">
+			<nav class="nav">
+				{% set nav = [
+					{
+						text: 'Совместные <br>покупки'
+					},
+					{
+						text: 'Бытовая <br>техника',
+						menu: '0'
+					},
+					{
+						text: 'Электроника',
+						menu: '1'
+					},
+					{
+						text: 'Мебель',
+						menu: '2'
+					},
+					{
+						text: 'Одежда <br>и аксессуары',
+						menu: '3'
+					},
+					{
+						text: 'Красота <br>и здоровье',
+						menu: '4'
+					},
+					{
+						text: 'Товары <br>для детей',
+						menu: '5'
+					},
+					{
+						text: 'Спорт <br>и отдых',
+						menu: '6'
+					},
+					{
+						text: 'Зоотовары',
+						menu: '7'
+					},
+					{
+						text: 'Авто <br>и мото',
+						menu: '8'
+					},
+					{
+						text: 'Дом <br>и дача',
+						menu: '9'
+					},
+					{
+						text: 'Строительство <br>и ремонт',
+						menu: '10'
+					},
+					{
+						text: 'Другие <br>категории'
+					}
+				] %}
+
+				<ul class="nav__list">
+					{% for navItem in nav %}
+					<li class="nav__item">
+						{% if loop.index0 === navActive %}
+							{% if navItem.menu %}
+						<a href="#" class="nav__link js-menu-link is-active" data-menu="menu-{{navItem.menu}}">
+							{% else %}
+						<a href="#" class="nav__link js-menu-link is-active">
+							{% endif %}
+						{% else %}
+							{% if navItem.menu %}
+						<a href="#" class="nav__link js-menu-link" data-menu="menu-{{navItem.menu}}">
+							{% else %}
+						<a href="#" class="nav__link js-menu-link">
+							{% endif %}
+						{% endif %}
+							<span>{{navItem.text | safe}}</span>
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</div>
+		<div class="menu js-menu">
+			<div class="inner">
+				{% for nav in menu.nav %}
+				<div class="menu__row js-menu-item" data-menu="menu-{{loop.index0}}">
+					<div class="menu__col menu__col_lg">
+						<div class="menu__lists">
+							{% for submenu in nav.submenu %}
+							<div class="menu__col-in">
+								<div class="menu__title"><a href="#">{{submenu.sublink}}</a></div>
+								<ul class="menu__list">
+									{% for link in submenu.dropdown %}
+									<li><a href="#">{{link}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="menu__col menu__col_xs">
+						{{mixins.item({
+							title: 'Hartan Racer GT',
+							category: 'Детские коляски',
+							discount: '-25%',
+							sales: true,
+							images: [
+								'item1.jpg',
+								'item2.jpg',
+								'item3.jpg',
+								'item4.jpg',
+								'item5.jpg',
+								'item6.jpg'
+							],
+							price: {
+								current: '91 730 руб.',
+								old: '98 763 руб.'
+							}
+						})}}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</header>
+<!-- end header -->
+
+<!-- begin search-results  -->
+<div class="search-results js-search-container">
+	<div class="inner">
+		<ul class="search-results__list">
+			{% for li in searchList %}
+				<li class="js-search-item">{{li}}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end search-results -->
+
+<!-- begin mobile-nav -->
+<div class="mobile-nav js-nav">
+	<div class="mobile-nav__header">
+		<button class="mobile-nav__close js-nav-close">
+			{{mixins.icon('prev')}}
+		</button>
+		<a href="#" class="logo mobile-nav__logo">
+			{{mixins.icon('logo')}}
+			<div class="logo__text">
+				<span>Shopping</span>
+				<strong>Skidka.com</strong>
+			</div>
+		</a>
+	</div>
+	<div class="mobile-action">
+		<div class="mobile-search">
+			{{mixins.smSearch({
+				mod: 'mobile-search__inner'
+			})}}
+		</div>
+		<div class="mobile-action__item">
+			<a href="#" class="mobile-action__link">
+				{{mixins.icons('plane')}}
+				<span class="mobile-action__text">Москва</span>
+			</a>
+		</div>
+	</div>
+	<a href="#" class="mobile-nav__title">Совместные покупки</a>
+	<ul class="mobile-nav__menu js-accordion-md" data-accordion-parent="nav-submenu">
+		{% for item in menu.nav %}
+		<li class="mobile-nav__item">
+			<a href="#" class="mobile-nav__link js-accordion-md-open" data-accordion-child="nav-submenu">
+				<span>{{item.link}}</span>
+				{{mixins.icon('down')}}
+			</a>
+			<ul class="mobile-nav__submenu js-accordion-md-content js-accordion-md" data-accordion-child="nav-submenu" data-accordion-parent="nav-dropdown">
+				{% for item in item.submenu %}
+				<li class="mobile-nav__subitem">
+					<a href="#" class="mobile-nav__sublink js-accordion-md-open" data-accordion-child="nav-dropdown">
+						<span>{{item.sublink}}</span>
+						{{mixins.icon('down')}}
+					</a>
+					<ul class="mobile-nav__dropdown js-accordion-md-content" data-accordion-child="nav-dropdown">
+						{% for link in item.dropdown %}
+						<li><a href="#">{{link}}</a></li>
+						{% endfor %}
+					</ul>
+				</li>
+				{% endfor %}
+			</ul>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+<!-- end mobile-nav -->

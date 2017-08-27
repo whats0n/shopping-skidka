@@ -1,0 +1,29 @@
+<div class="heading">
+	<h2 class="title-h2 heading__title">Вам может понравиться</h2>
+	<div class="heading__more">
+		<button class="btn">Ещё</button>
+	</div>
+</div>
+<div class="recommended">
+	{% for item in range(0, 2) %}
+	<div class="recommended__row">
+		{% for item in range(0, recommendedItems) %}
+		<div class="recommended__col {{recommendedItemsClass}}">
+			{{mixins.item({
+				title: 'Hartan Racer GT',
+				category: 'Детские коляски',
+				discount: '-25%',
+				sales: true,
+				images: [
+					'item1.jpg'
+				],
+				price: {
+					current: '91 730 руб.',
+					old: '98 763 руб.'
+				}
+			})}}
+		</div>
+		{% endfor %}
+	</div>
+	{% endfor %}
+</div>

@@ -1,0 +1,35 @@
+.tooltipster-base
+	&.tooltipster-sidetip
+		&.tooltipster-top,
+		&.tooltipster-bottom,
+		&.tooltipster-left,
+		&.tooltipster-right
+			.tooltipster-box
+				margin: 0
+		&.tooltipster-top
+			.tooltipster-arrow
+				bottom: -9px
+				+arr(16, 9, $dark, b)
+		&.tooltipster-bottom
+			.tooltipster-arrow
+				top: -9px
+				+arr(16, 9, $dark, t)
+		&.tooltipster-left
+			.tooltipster-arrow
+				right: -9px
+				+arr(16, 9, $dark, r)
+		&.tooltipster-right
+			.tooltipster-arrow
+				left: -9px
+				+arr(16, 9, $dark, l)
+	.tooltipster-box
+		border: none
+		background: $dark
+		border-radius: 2px
+	.tooltipster-content
+		padding: 8px 16px
+
+		color: whitesmoke
+
+		+sreg
+		+f(12, 16)

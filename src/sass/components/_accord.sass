@@ -1,0 +1,86 @@
+.accord
+	position: relative
+	padding: 20px 0
+	+ .accord
+		&:before
+			display: none
+	&:before,
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		border-top: 1px solid rgba(29, 46, 73, 0.1)
+		left: -16px
+		right: -16px
+		top: 0
+	&:after
+		top: auto
+		bottom: 0
+	&.is-open
+		.accord__content
+			display: block
+		.accord__text
+			.icon
+				+rotate(180)
+	.field
+		max-width: 80px
+		display: inline-block
+		vertical-align: top
+		.input
+			padding: 0 10px
+			height: 32px
+			line-height: 32px
+			text-align: center
+.accord__text
+	color: $dark
+	+reg
+	font-size: 15px
+	line-height: 1
+	letter-spacing: 0.27px
+	position: relative
+	cursor: pointer
+	.icon
+		position: absolute
+		right: 4px
+		top: 50%
+		margin-top: -3px
+		font-size: 6px
+		fill: $dark
+		transition: transform 0.3s
+.accord__content
+	padding-top: 12px
+	display: none
+.accord__sepa
+	color: $darkGray
+	font-size: 13px
+	display: inline-block
+	vertical-align: middle
+	margin: 0 6px
+.accord__currency
+	color: $dark
+	+reg
+	font-size: 15px
+	display: inline-block
+	vertical-align: middle
+	margin: 4px 3px 0
+.accord__range
+	padding: 16px 0 23px
+.accord__purchase
+	white-space: nowrap
+.accord__meta
+	color: $text
+	line-height: (16/13)
+	font-size: 13px
+	margin-top: 8px
+.accord__list-item
+	line-height: 1
+	&:not(:last-of-type)
+		margin-bottom: 8px
+	&:nth-of-type(n+6)
+		display: none
+.accord__more
+	background: none
+	color: transparent
+	font-size: 13px
+	color: $text
+	margin-left: 24px

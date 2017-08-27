@@ -1,0 +1,301 @@
+---
+title: Guide
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<div class="guide">
+		<div class="inner">
+
+			{% set breadcrumbs = [
+				'Хлебнаые крошки',
+				'Типовая страница'
+			] %}
+
+			{% include "partials/components/_breadcrumbs.html" %}
+
+			<article class="article">
+				<h1>Заголовок H1</h1>
+				<div class="title-h1">Заголовок H1</div>
+
+				<h2>Заголовок H2</h2>
+				<div class="title-h2">Заголовок H2</div>
+
+				<h3>Заголовок H2</h3>
+				<div class="title-h3">Заголовок H3</div>
+
+				<div class="article__text article__text_indent">
+					<p>Выбрать умные часы не так уж и просто. Одни привлекают благородством и стилем, другие берут отличным функционалом, третьи впечатляют уровнем защиты или спортивными возможностями. Мы поможем тебе разобраться и решить, какой гаджет идеально подойдет именно тебе!</p>
+					<p>Если ты достиг высокого социального статуса, большую часть времени проводишь в деловом костюме, то и часы на руке должны быть соответствующими. Основным трендом у бизнес-элиты десятилетиями остается стрелочная классика. Но теперь, с появлением Huawei Watch Classic, ты можешь позволить себе умные часы, внешне почти не отличимые от премиальных механических моделей.</p>
+				</div>
+
+				<div class="article__text article__text_indent">
+					<div class="article__row">
+						<div class="article__col">
+							<p>ShoppingSkidka.com — старейший в рунете сервис подбора и сравнения товаров. Был образован в 1996 году как каталог цен компьютерных товаров и офисного оборудования в интернете. Со временем ShoppingSkidka.com расширял категории представленных товаров и сейчас насчитывает предложения по 1200 категориям, от более чем 5 000 интернет-магазинов. Ежемесячная аудитория сервиса согласно данным TNS 4 млн. пользователей (данные за декабрь 2014, вся Россия, возраст 12-64).</p>
+						</div>
+						<div class="article__col">
+							<p>Cервис ShoppingSkidka.com позволяет экономить время на поиски интересующего товара в интернете. Достаточно просто зайти на ShoppingSkidka.com, выбрать нужную категорию или набрать название товара в поиске, и получить список магазинов, предлагающих нужную продукцию с текущими ценами. Отзывы на товары и рейтинги магазинов позволяют получить от процесса покупки максимальное количество положительных эмоций.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="blockquote-wrapper">
+					<blockquote class="blockquote blockquote_right">
+						{{mixins.icon('quotes-open')}}
+						{{mixins.icon('quotes-close')}}
+						<p>Всегда был за яблочную продукцию. Но при сравнении понял что те проиграли на порядок и по цене и по качеству. У яблока нет нормальных циферблатов. Все какое то детское. Хувы похожи на реальные часы на столько, что люди далеко не всегда понимают что они не аналоговые. Большой косяк когда паришь их с айфоном. Мочь то могут, только функций 2/3 не работаю, приложения не установишь, карты не посмотри и еще много чего нету. Может быть со временем софт обновят и что то поменяется, но не факт и надо ждать. Подключив их к андроиду, узнал много нового и приятного о них. В сухом остатке - вещ! Вещ хорошая! Всем советую!</p>
+					</blockquote>
+				</div>
+
+				<div class="blockquote-wrapper">
+					<blockquote class="blockquote">
+						{{mixins.icon('quotes-open')}}
+						{{mixins.icon('quotes-close')}}
+						<p>Всегда был за яблочную продукцию. Но при сравнении понял что те проиграли на порядок и по цене и по качеству. У яблока нет нормальных циферблатов. Все какое то детское. Хувы похожи на реальные часы на столько, что люди далеко не всегда понимают что они не аналоговые. Большой косяк когда паришь их с айфоном. Мочь то могут, только функций 2/3 не работаю, приложения не установишь, карты не посмотри и еще много чего нету. Может быть со временем софт обновят и что то поменяется, но не факт и надо ждать. Подключив их к андроиду, узнал много нового и приятного о них. В сухом остатке - вещ! Вещ хорошая! Всем советую!</p>
+					</blockquote>
+				</div>
+
+			</article>
+
+			<div class="guide__btns">
+				<button class="btn-direction btn-direction_prev">
+					{{mixins.icon('prev')}}
+				</button>
+				<button class="btn-direction btn-direction_next">
+					{{mixins.icon('next')}}
+				</button>
+				<button class="btn-direction btn-direction_lg btn-direction_up">
+					{{mixins.icon('up')}}
+				</button>
+				<button class="btn-close btn-close_lg js-close">
+					{{mixins.icon('close')}}
+				</button>
+				<button class="btn btn_lg">Button</button>
+				<button class="btn btn_lg" disabled>Button</button>
+				<button class="btn">Button</button>
+				<button class="btn" disabled>Button</button>
+				<button class="btn btn_extra">Button</button>
+				<button class="btn btn_extra btn_gray" disabled>Button</button>
+				<a href="#" class="btn-social">
+					<div class="btn-social__link">
+						{{mixins.icon('facebook')}}
+					</div>
+					<span class="btn-social__meta">Oleg toptalov</span>
+				</a>
+				{{mixins.btnFilter()}}
+				<button type="button" class="btn-del">Удалить</button>
+			</div>
+
+			<div class="guide__field">
+				<div class="field">
+					<input type="text" class="input" placeholder="По Дефолту">
+				</div>
+			</div>
+			<div class="guide__field">
+				<div class="field is-success">
+					<input type="text" class="input is-success" placeholder="По Дефолту" value="Поис">
+					{{mixins.icon('check')}}
+				</div>
+			</div>
+			<div class="guide__field">
+				<div class="field is-error">
+					<input type="text" class="input is-error" placeholder="По Дефолту" value="+790s">
+					{{mixins.icon('error')}}
+				</div>
+			</div>
+			<div class="guide__field">
+				<div class="field">
+					<input type="text" class="input" placeholder="По Дефолту" value="Заполненное поле">
+				</div>
+			</div>
+			<div class="guide__field">
+				{{mixins.checkbox()}}
+			</div>
+			<div class="guide__field">
+				{{mixins.radio()}}
+			</div>
+			<div class="guide__field">
+				{{mixins.select({
+					options: [
+						'Цене, Возрастание',
+						'Цене, Убывание',
+						'Популярности',
+						'Новизне'
+					]
+				})}}
+			</div>
+			<div class="guide__range">
+				{{mixins.range({
+					start: 200,
+					end: 800,
+					min: 0,
+					max: 1000
+				})}}
+			</div>
+
+			{% include "partials/components/_pagination.html" %}
+
+			<div class="guide__warning">
+				{{mixins.warning({
+					circle: true,
+					title: 'Заголовок проблемы',
+					text: 'Пояснительный текст'
+				})}}
+			</div>
+			<div class="guide__warning">
+				{{mixins.warning({
+					triangle: true,
+					title: 'Заголовок проблемы',
+					text: 'Пояснительный текст'
+				})}}
+			</div>
+			<div class="guide__warning">
+				{{mixins.warning({
+					circle: true,
+					title: 'Заголовок проблемы',
+					text: 'Пояснительный текст и предполагаемое решение',
+					btn: true
+				})}}
+			</div>
+			<div class="guide__warning">
+				{{mixins.alert({
+					class: 'alert_success',
+					success: true,
+					text: 'Обновление успешно'
+				})}}
+			</div>
+			<div class="guide__warning">
+				{{mixins.alert({
+					class: 'alert_error',
+					error: true,
+					text: 'Поле заполнено не верно'
+				})}}
+			</div>
+
+			<div class="guide__tabs">
+				<div class="tabs js-tabs">
+					<ul class="tabs__list tabs__list_left">
+						<li><a href="tab1" class="js-tabs-open">Сумки и чемоданы</a></li>
+						<li><a href="tab2" class="js-tabs-open is-active">Встраиваемая техника</a></li>
+						<li><a href="tab3" class="js-tabs-open">Товары для собак</a></li>
+					</ul>
+					<div class="tabs__container">
+						<div class="tabs__content js-tabs-content" data-id="tab1">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam saepe facere error omnis dolor incidunt nostrum quod optio corporis porro ipsa tempora esse, in aliquam alias dolore, neque modi temporibus.</p>
+						</div>
+						<div class="tabs__content js-tabs-content is-active" data-id="tab2">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente earum voluptatum in beatae laboriosam, quaerat ab dicta eligendi minus aut doloremque rem eos, adipisci neque magnam sit iusto quo quibusdam. Expedita consequuntur, dolores!</p>
+						</div>
+						<div class="tabs__content js-tabs-content" data-id="tab3">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tenetur quibusdam reiciendis veritatis natus laborum ipsam perferendis minus nam voluptatem, fugiat rerum odio sed ratione minima vitae, temporibus impedit perspiciatis debitis tempore aliquid officia? Unde.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="grid__row">
+					<div class="grid__col grid__col_xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+					<div class="grid__col grid__col_xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, illum.</div>
+					<div class="grid__col grid__col_xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, similique!</div>
+					<div class="grid__col grid__col_xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, asperiores.</div>
+				</div>
+				<div class="grid__row">
+					<div class="grid__col grid__col_sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+					<div class="grid__col grid__col_sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, illum.</div>
+					<div class="grid__col grid__col_sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, similique!</div>
+				</div>
+				<div class="grid__row">
+					<div class="grid__col grid__col_md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+					<div class="grid__col grid__col_md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, illum.</div>
+				</div>
+				<div class="grid__row">
+					<div class="grid__col grid__col_lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+				</div>
+				<div class="grid__row">
+					<div class="grid__col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, ipsam!</div>
+				</div>
+			</div>
+		</div>
+		{% include "partials/components/_subscribe.html" %}
+	</div>
+
+
+	<div class="inner">
+		<div class="stock">
+			<div class="stock__container">
+				{% set stock = {
+					row: [
+						{
+							img: 'product-row.jpg',
+							title: 'Моноблок Dell Inspiron со скидкой 40%',
+							side: 'left',
+							meta: {
+								participant: '8',
+								time: '5 дней',
+								timeout: true
+							}
+						},
+						{
+							img: 'product-row.jpg',
+							title: 'Мягкие игрушки 	Orange Toys 3 по цене 2',
+							side: 'right',
+							meta: {
+								participant: '16',
+								time: '2 часа',
+								timeout: true
+							}
+						}
+					],
+					lg: {
+						img: 'product-lg.jpg',
+						title: 'При покупке стиральной машины LG F-12U1HBS4 вы получаете в подарок хлебопечку!',
+						side: 'left',
+						logo: 'm-video.png',
+						meta: {
+							participant: '4',
+							time: '12 дней'
+						}
+					},
+					col: {
+						img: 'product-col.jpg',
+						title: 'Моноблок Dell Inspiron со скидкой 40%',
+						meta: {
+							participant: '8',
+							time: '5 дней'
+						}
+					}
+				} %}
+
+				<div class="stock__row scrollbar js-scrollbar">
+					<div class="stock__col stock__col_right">
+						<div class="stock__item">
+							{{mixins.product({
+								classes: 'product_lg product_side-' + stock.lg.side,
+								img: stock.lg.img,
+								title: stock.lg.title,
+								logo: stock.lg.logo,
+								meta: stock.lg.meta
+							})}}
+						</div>
+					</div>
+					{% for item in stock.row %}
+					<div class="stock__col stock__col_left">
+						<div class="stock__item">
+							{{mixins.product({
+								classes: 'product_row product_side-' + item.side,
+								img: item.img,
+								title: item.title,
+								meta: item.meta
+							})}}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

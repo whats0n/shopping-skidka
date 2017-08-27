@@ -1,0 +1,58 @@
+{% set cardSliders = [
+	{
+		title: 'С этим товаром также покупают'
+	},
+	{
+		title: 'С этим товаром также смотрят'
+	},
+	{
+		title: 'Вы смотрели'
+	}
+] %}
+
+{% for slider in cardSliders %}
+<!-- begin section  -->
+<div class="section inner js-popular">
+	<div class="heading">
+		<h2 class="title-h2 heading__title">{{slider.title}}</h2>
+		<div class="heading__navigation">
+			{{mixins.btnDirection({
+				classes: 'btn-direction_prev popular-arrows js-popular-prev',
+				icon: 'prev'
+			})}}
+			{{mixins.btnDirection({
+				classes: 'btn-direction_next popular-arrows js-popular-next',
+				icon: 'next'
+			})}}
+		</div>
+	</div>
+	<!-- begin popular  -->
+	<div class="popular">
+		<div class="popular__container">
+			<div class="popular__row slider-load js-popular-slider">
+				{% for item in range(0, 8) %}
+				<div class="popular__col">
+					{{mixins.item({
+						title: 'Hartan Racer GT',
+						category: 'Детские коляски',
+						discount: '-25%',
+						sales: true,
+						images: [
+							'item1.jpg',
+							'item2.jpg',
+							'item3.jpg'
+						],
+						price: {
+							current: '91 730 руб.',
+							old: '98 763 руб.'
+						}
+					})}}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- end popular -->
+</div>
+<!-- end section -->
+{% endfor %}

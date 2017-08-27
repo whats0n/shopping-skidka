@@ -1,0 +1,23 @@
+.controllers
+	position: fixed
+	z-index: 5
+	bottom: 20px
+	left: 0
+	right: 0
+	+vertical
+	.btn-filter
+		display: none
+		margin-left: 24px
+		+md
+			display: inline-block
+	&__right
+		position: absolute
+		bottom: 0
+		left: 100%
+		margin-left: -16px
+		+lg
+			left: auto
+			right: 24px
+			margin-left: 0
+		+sm
+			right: 16px

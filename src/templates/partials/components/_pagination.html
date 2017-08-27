@@ -1,0 +1,17 @@
+<!-- begin pagination -->
+<div class="pagination {{paginationClass}}">
+	<ul class="pagination__list">
+		{% for item in range(0, paginationRange) %}
+			<li>
+				{% if loop.index === paginationActive %}
+				<a href="#" class="is-active">{{loop.index}}</a>
+				{% else %}
+				<a href="#">{{loop.index}}</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+		<li><span>...</span></li>
+		<li><a href="#">16</a></li>
+	</ul>
+</div>
+<!-- end pagination -->

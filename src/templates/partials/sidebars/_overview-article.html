@@ -1,0 +1,83 @@
+{% import "data/sidebars/overview-article.html" as sidebar %}
+
+<!-- begin sidebar  -->
+<aside class="sidebar page__sidebar page__sidebar_non-top">
+	<div class="sidebar__only-desktop">
+		<div class="sidebar-box js-box">
+			<div class="heading">
+				<h2 class="title-h2 heading__title">В обзоре</h2>
+				<div class="heading__navigation">
+					{{mixins.btnDirection({
+						classes: 'btn-direction_prev popular-arrows js-box-prev',
+						icon: 'prev'
+					})}}
+					{{mixins.btnDirection({
+						classes: 'btn-direction_next popular-arrows js-box-next',
+						icon: 'next'
+					})}}
+				</div>
+			</div>
+			<div class="sidebar-box__container js-box-slider">
+				{% for data in sidebar.items %}
+					<div class="sidebar-box__col">
+						{{mixins.item({
+							title: data.title,
+							category: data.subtitle,
+							discount: data.discount,
+							favorite: data.discount,
+							sales: data.heart,
+							images: data.picture,
+							price: {
+								current: data.price,
+								old: data.oldPrice
+							}
+						})}}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="sm-reviews sidebar__sm-reviews">
+			<div class="sm-reviews__header">
+				<h2 class="title-h2 sm-reviews__title">Топ-5 обзоров</h2>
+			</div>
+			{% for review in sidebar.reviews %}
+				<div class="sm-review">
+					<a href="#" class="sm-review__img">
+						<img src="img/{{review.img}}" alt="">
+					</a>
+					{% if review.category %}
+						<small class="sm-review__category">{{review.category}}</small>
+					{% endif %}
+					<h3 class="sm-review__title">
+						<a href="#">{{review.title |safe }}</a>
+					</h3>
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="sidebar-box js-box">
+			<div class="heading">
+				<h2 class="title-h2 heading__title">Похожее</h2>
+				<div class="heading__navigation">
+					{{mixins.btnDirection({
+						classes: 'btn-direction_prev popular-arrows js-box-prev',
+						icon: 'prev'
+					})}}
+					{{mixins.btnDirection({
+						classes: 'btn-direction_next popular-arrows js-box-next',
+						icon: 'next'
+					})}}
+				</div>
+			</div>
+			<div class="sidebar-box__container js-box-slider">
+				{% for data in sidebar.similar %}
+					<div class="sidebar-box__col">
+						{{mixins.review(data)}}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</aside>
+<!-- end sidebar -->

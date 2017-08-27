@@ -1,0 +1,86 @@
+.form-comment
+	padding: 24px
+	border: 1px solid rgba(28, 46, 73, 0.05)
+	border-radius: 2px
+	background: rgba($white, 0.5)
+	+sm
+		padding: 15px 15px 23px
+	&:not(:last-child)
+		margin-bottom: 16px
+	&__title
+		margin-bottom: 16px
+		text-align: center
+		+sm
+			padding: 8px 0
+			margin: 0
+	&__body
+		position: relative
+		padding-left: 56px
+		+sm
+			padding: 56px 0 0
+			margin-top: -40px
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		border-radius: 50%
+		width: 40px
+		height: 40px
+		background: $gray
+		+vertical
+		img,
+		.icon
+			display: inline-block
+			vertical-align: middle
+		img
+			border-radius: 50%
+			width: 100%
+			height: 100%
+			object-fit: cover
+		.icon
+			fill: $dark
+			color: $blue-light
+			font-size: 19px
+	&__header
+		+clr
+	&__row
+		margin: 0 -8px
+		+clr
+		+sm
+			margin: 0
+	&__col
+		width: 32%
+	&__btn
+		width: 28%
+		+md
+			width: 29%
+		.btn
+			padding-left: 8px
+			padding-right: 8px
+	&__slash
+		padding: 12px 0
+		width: 8%
+		color: $text
+		+sreg
+		+f(13, 16)
+		text-align: center
+		+md
+			width: 7%
+		+sm
+			margin: -8px 0 8px
+	&__col,
+	&__btn
+		padding: 0 8px
+	&__col,
+	&__btn,
+	&__slash
+		float: left
+		margin-bottom: 16px
+		+sm
+			width: 100%
+			padding: 0
+	&__message
+		margin-bottom: 24px
+	&__submit
+		font-size: 0
+		text-align: center

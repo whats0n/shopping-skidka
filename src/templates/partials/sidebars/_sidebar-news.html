@@ -1,0 +1,11 @@
+<div class="news-boxes sidebar__news-boxes">
+	<div class="news-boxes__header">
+		<h2 class="title-h2 news-boxes__title">Новости</h2>
+		<div class="news-boxes__more">
+			<button class="btn">Все</button>
+		</div>
+	</div>
+	{% for item in sidebar.news %}
+		{{mixins.newsBox(item)}}
+	{% endfor %}
+</div>

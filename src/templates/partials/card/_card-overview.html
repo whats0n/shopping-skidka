@@ -1,0 +1,94 @@
+<!-- begin card-overview  -->
+<div class="card-overview tabs__content js-tabs-content" data-id="card-overview">
+	{% set cardOverview = {
+		meta: [
+			{
+				icon: 'view',
+				text: 12
+			},
+			{
+				icons: 'heart-sm',
+				text: 3
+			},
+			{
+				icons: 'comment',
+				text: '1'
+			}
+		],
+		items: [
+			{
+				title: '1. Обзор обновленного MacBook 12 (early 2016): Пятерка за работу над ошибками',
+				link: 'http://vilianov.com/gadgets-mobile/obzor-obnovlennogo-macbook-12-early-2016-pyaterka-za-rabotu-nad-oshibkami/'
+			},
+			{
+				title: '2. Обзор Apple MacBook (Early 2016)',
+				link: 'http://www.notebookcheck-ru.com/Obzor-Apple-MacBook-Early-2016.164888.0.html'
+			},
+			{
+				title: '3. Обзор обновленного MacBook 12 (early 2016): Пятерка за работу над ошибками',
+				link: 'http://vilianov.com/gadgets-mobile/obzor-obnovlennogo-macbook-12-early-2016-pyaterka-za-rabotu-nad-oshibkami/'
+			},
+			{
+				title: '4. Обзор Apple MacBook (Early 2016)',
+				link: 'http://www.notebookcheck-ru.com/Obzor-Apple-MacBook-Early-2016.164888.0.html'
+			},
+			{
+				title: '5. Обзор обновленного MacBook 12 (early 2016): Пятерка за работу над ошибками',
+				link: 'http://vilianov.com/gadgets-mobile/obzor-obnovlennogo-macbook-12-early-2016-pyaterka-za-rabotu-nad-oshibkami/'
+			},
+			{
+				title: '6. Обзор Apple MacBook (Early 2016)',
+				link: 'http://www.notebookcheck-ru.com/Obzor-Apple-MacBook-Early-2016.164888.0.html'
+			},
+			{
+				title: '7. Обзор обновленного MacBook 12 (early 2016): Пятерка за работу над ошибками',
+				link: 'http://vilianov.com/gadgets-mobile/obzor-obnovlennogo-macbook-12-early-2016-pyaterka-za-rabotu-nad-oshibkami/'
+			},
+			{
+				title: '8. Обзор Apple MacBook (Early 2016)',
+				link: 'http://www.notebookcheck-ru.com/Obzor-Apple-MacBook-Early-2016.164888.0.html'
+			}
+		]
+	} %}
+	<div class="card-overview__item">
+		<div class="card-overview__img">
+			<img src="img/card-overview.jpg" alt="">
+		</div>
+		<div class="card-overview__info">
+			<div class="sticker-text card-overview__sticker">Новинки</div>
+			<h4 class="card-overview__subtitle">Обзор Apple MacBook (Early 2016)</h4>
+			<div class="card-overview__description">Знакомимся с ASUS ZenFone 3, ASUS ZenFone 3 Laser и ASUS ZenFone 3 Max.</div>
+			<ul class="card-overview__meta">
+				{% for item in cardOverview.meta %}
+					<li>
+						{# <a href="#" class="card-overview__meta-link">
+							{% if item.icon %}
+								{{mixins.icon(item.icon)}}
+							{% elif item.icons %}
+								{{mixins.icons(item.icons)}}
+							{% endif %}
+							<span class="card-overview__meta-text">{{item.text}}</span>
+						</a> #}
+						{{mixins.btnAction(item)}}
+					</li>
+				{% endfor %}
+			</ul>
+			<div class="card-overview__more">
+				<a href="#" class="btn btn_full-lg">Подробнее</a>
+			</div>
+		</div>
+	</div>
+	<div class="card-overview__container">
+		<ul class="card-overview__list">
+			{% for item in cardOverview.items %}
+				<li class="card-overview__product">
+					<a href="#" class="card-overview__product-in">
+						<h3 class="title-h3 title-h3_sm card-overview__title">{{item.title}}</h3>
+						<div class="card-overview__link">{{item.link}}</div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end card-overview -->

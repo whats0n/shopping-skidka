@@ -1,0 +1,68 @@
+.product-review
+	&_score
+		.product-review
+			&__title
+				padding-bottom: 16px
+				margin-bottom: 24px
+				border-bottom: 1px solid rgba($dark, 0.1)
+				+md
+					display: block
+					margin-bottom: 16px
+				+sm
+					padding-bottom: 10px
+			&__steps
+				width: 59%
+				+md
+					width: 64%
+				+sm
+					width: 100%
+			&__info
+				width: 41%
+				+md
+					width: 36%
+				+sm
+					width: 100%
+	&__title
+		margin-bottom: 16px
+		+md
+			display: none
+	&__rating
+		margin-bottom: 8px
+	&__body
+		+clr
+	&__steps
+		float: left
+		width: 54%
+		+md
+			width: 64%
+		+sm
+			width: 100%
+			padding-bottom: 16px
+		&-in
+			max-width: 344px
+			+sm
+				max-width: 100%
+	&__info
+		float: right
+		width: 46%
+		+md
+			width: 36%
+		+sm
+			width: 100%
+		.btn
+			+sm
+				width: 100%
+	&__label
+		margin-bottom: 8px
+		color: $text
+		+sreg
+		+f(13, 16)
+	&__value
+		margin-bottom: 16px
+		max-width: 270px
+		min-height: 48px
+		color: $dark
+		+reg
+		+f(15, 24, 1)
+		+sm
+			min-height: 1px

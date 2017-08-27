@@ -1,0 +1,47 @@
+{% import "data/sidebars/brand.html" as sidebar %}
+{% import "partials/_mixins.html" as mixins %}
+
+<!-- begin sidebar  -->
+<aside class="sidebar page__sidebar js-filter">
+	<!-- begin sm-filter  -->
+	<div class="sm-filter">
+		<form action="/" class="sm-filter__form js-range-form">
+			<div class="sm-filter__btn sm-filter__reset">
+				<button class="btn btn_lg btn_extra js-range-reset" type="reset">Очистить все</button>
+			</div>
+
+			{% for filterBox in sidebar.filterList %}
+			<div class="sm-filter__box js-accordion-lg" data-accordion-parent="filters">
+				<a href="#" class="sm-filter__title js-accordion-lg-open" data-accordion-child="filters">
+					<span>{{filterBox.title | safe}}</span>
+					{{mixins.icon('down')}}
+				</a>
+				<div class="sm-filter__container js-accordion-lg-content js-show-more" data-accordion-child="filters" data-show-parent="filters">
+					<ul class="sm-filter__list">
+						{% for item in filterBox.list %}
+							<li class="js-show-more-item" data-show-child="filters">
+								{% if filterBox.checkbox %}
+									{{mixins.checkbox(item)}}
+								{% elif filterBox.radio %}
+									{{mixins.radio(item)}}
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+					<a href="#" class="sm-filter__link btn-more js-show-more-open" data-show-child="filters">
+						<span class="btn-more__show">Еще</span>
+						<span class="btn-more__hide">Свернуть</span>
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+			<div class="sm-filter__btn sm-filter__submit">
+				<button class="btn btn_lg btn_extra" type="submit">Применить</button>
+			</div>
+		</form>
+	</div>
+	<!-- end sm-filter -->
+	{% include "partials/sidebars/_sidebar-news.html" %}
+	{% include "partials/sidebars/_sidebar-reviews.html" %}
+</aside>
+<!-- end sidebar -->

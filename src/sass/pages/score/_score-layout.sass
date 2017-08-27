@@ -1,0 +1,59 @@
+.score
+	position: relative
+	padding-top: 24px
+	+clr
+	+md
+		padding-top: 0
+	&__row
+		margin: 0 -8px
+		+clr
+	&__sidebar
+		float: left
+		width: 25%
+		padding: 0 8px
+		+md
+			width: 100%
+		&:after
+			content: ''
+			display: none
+			margin-top: -1px
+			border-bottom: 1px solid rgba(29, 46, 73, 0.1)
+			+sm
+				display: block
+	&__content
+		float: right
+		padding: 0 8px
+		width: 75%
+		+md
+			padding: 22px 8px 0
+			width: 100%
+		+sm
+			padding-top: 16px
+	&__box
+		margin-bottom: 24px
+		border: 1px solid rgba(28, 46, 73, 0.1)
+		border-radius: 2px
+		// min-height: 470px
+		background: $white
+		// +md
+			// min-height: 430px
+	&__popular
+		margin-bottom: -32px
+		+md
+			margin-bottom: -24px
+
+.score-tabs
+	&:after
+		content: ""
+		display: block
+		margin-top: -1px
+		border-bottom: 1px solid rgba($dark, 0.1)
+	li
+		&:not(:last-child)
+			padding-right: 40px
+			+sm
+				// padding-right: 16px
+				padding-right: 24px
+		a
+			+sm
+				+f(14, 24, 0)

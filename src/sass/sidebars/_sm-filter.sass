@@ -1,0 +1,109 @@
+.sm-filter
+	position: relative
+	margin: -4px 0 40px
+	border: 1px solid rgba(28, 46, 73, 0.1)
+	border-radius: 2px
+	background: $white
+	+md
+		margin-top: 4px
+	+sm
+		margin: 4px 0 0
+		border: none
+		background: none
+
+	//btns
+	&__btn
+		padding: 16px
+		.btn
+			+sm
+				padding-top: 8px
+				padding-bottom: 8px
+	&__reset
+		border-bottom: 1px solid rgba($dark, 0.1)
+		+sm
+			padding: 0 16px 16px
+	//tooltip
+	&__tooltip
+		position: absolute
+		z-index: 100
+		top: 246px
+		left: 100%
+		padding: 8px 16px
+		margin-left: 16px
+		border-radius: 2px
+		width: 160px
+		opacity: 0
+		background: $dark
+		text-align: left
+		transform: translate3d(-16px,0,0)
+		transition: opacity 0.25s ease, transform 0.25s ease
+		+md
+			display: none
+		&.is-active
+			opacity: 1
+			+gpu
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 0
+			width: 12px
+			height: 12px
+			background: $dark
+			transform: translate3d(-50%,-50%,0) rotate(45deg)
+	&__show
+		display: inline-block
+		vertical-align: top
+		position: relative
+		padding-right: 24px
+		color: $white
+		+bold
+		+f(14,24,1)
+		+hover
+			.icon
+				transform: translate3d(4px,0,0)
+		.icon
+			position: absolute
+			top: 7px
+			right: 10px
+			font-size: 10px
+			fill: currentColor
+			+gpu
+			+t(transform)
+	//fields
+	&__box
+		padding: 8px 16px
+		border-bottom: 1px solid rgba($dark, 0.1)
+	&__title
+		position: relative
+		display: block
+		padding: 8px 0
+		color: $dark
+		+reg
+		+f(15, 24, 1)
+		&.is-active
+			.icon-down
+				transform: translate3d(0,0,0) rotate(180deg)
+		.icon-down
+			position: absolute
+			top: 17px
+			right: 7px
+			color: $dark
+			font-size: 6px
+			+gpu
+			+t(transform)
+		small
+			color: $text
+	&__container
+		display: none
+		padding: 8px 0
+	&__link
+		color: $text
+		+sreg
+		+f(13, 24)
+		+t(color)
+		+hover
+			color: $blue
+	&__checkbox
+		padding: 8px 0
+		font-size: 0

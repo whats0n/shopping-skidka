@@ -1,0 +1,29 @@
+<!-- BEGIN nav-list -->
+<div class="nav-list js-scrollbar">
+	<ul class="nav-list__inner">
+		{% set
+			navList = [
+				{link: "Мои данные"},
+				{link: "Избранное"},
+				{link: "Подписки"},
+				{link: "Выйти"}
+			]
+		%}
+		{% for item in navList %}
+			{% if loop.last %}
+			<li class="nav-list__item nav-list__item_last">
+			{% else %}
+			<li class="nav-list__item">
+			{% endif %}
+				{% if loop.index0 == activeNavItem %}
+					<a href="#" class="nav-list__link is-active">{{item.link}}</a>
+				{% elif loop.last %}
+					<a href="#" class="nav-list__link js-popup-open" data-target="logout">{{item.link}}</a>
+				{% else %}
+					<a href="#" class="nav-list__link">{{item.link}}</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+<!-- END nav-list -->

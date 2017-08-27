@@ -1,0 +1,504 @@
+.header
+	position: relative
+	z-index: 100
+	+md
+		background: #e4e7ec
+	&__top
+		position: relative
+		z-index: 10
+		padding: 24px 0
+		+md
+			padding: 12px 0
+		+sm
+			padding: 8px 0
+	&__bottom
+		position: relative
+		background: #e4e7ec
+		+md
+			display: none
+	&__logo
+		float: left
+		margin-right: 22px
+		+md
+			margin-top: 2px
+	&__search
+		float: left
+		+md
+			margin: -4px 0
+		+sm
+			display: none
+	&__list
+		float: right
+		font-size: 0
+		li
+			font-size: 0
+		li
+			display: inline-block
+			vertical-align: top
+			&:first-child
+				.header__link
+					margin-left: 0
+	&__link
+		display: inline-block
+		vertical-align: top
+		padding: 10px 0 11px
+		margin-left: 30px
+		font-size: 0
+		+md
+			padding: 6px 0 7px
+		+sm
+			display: none
+			width: 32px
+			text-align: center
+			margin-left: 16px
+		+hover
+			.icon-wrapper
+				.icon
+					&:first-child
+						opacity: 0
+					&:last-child
+						opacity: 1
+			.icon
+				fill: $blue
+			.header__link-text
+				color: $blue
+		+active
+			.icon-wrapper
+				.icon
+					&:first-child
+						opacity: 0
+					&:last-child
+						opacity: 1
+			.icon
+				fill: $blue-dark
+			.header__link-text
+				color: $blue
+		.is-active &
+			.icon-wrapper
+				.icon
+					&:first-child
+						opacity: 0
+					&:last-child
+						opacity: 1
+			.icon
+				fill: $blue
+			.header__link-text
+				color: $blue
+		&_search
+			display: none
+			+md
+				display: inline-block
+		&_plane
+			.header__link-text
+				+md
+					display: inline-block
+		&_percent
+			+sm
+				display: inline-block
+		&_user
+			+sm
+				display: inline-block
+		.icon
+			color: $blue-light
+			fill: $dark
+			font-size: 19px
+		.icon-percent, .icon-plane
+			font-size: 17px
+	&__link-text
+		display: inline-block
+		vertical-align: top
+		padding: 2px 0 1px 6px
+
+		color: $dark
+
+		+f(13, 16, null)
+		+t(color)
+		+md
+			display: none
+			padding-left: 13px
+
+.btn-nav
+	position: relative
+	float: left
+	display: none
+	margin-right: 16px
+	width: 32px
+	height: 32px
+	background: none
+	+md
+		display: block
+	&:before, &:after, span
+		position: absolute
+		left: 6px
+		border-radius: 1px
+		width: 19px
+		height: 2px
+		background: $dark
+	&:before, &:after
+		content: ''
+	&:before
+		top: 8px
+	&:after
+		bottom: 8px
+	span
+		top: 15px
+
+.nav
+	margin: 0 -8px 0 -8px
+	font-size: 0
+	ul
+		font-size: 0.1px
+		text-align: justify
+		&:after
+			content: ''
+			display: inline-block
+			width: 100%
+	li, a
+		display: inline-block
+		vertical-align: top
+	li
+		position: relative
+		&:first-child
+			padding-right: 16px
+			&:before
+				content: ''
+				position: absolute
+				top: 13px
+				bottom: 12px
+				right: 8px
+				border-radius: 1px
+				width: 1px
+				background: rgba($dark, 0.3)
+			a
+				color: $blue
+	a
+		padding: 12px 8px
+		height: 56px
+
+		color: $dark
+		line-height: 32px
+		transition: color 0.25s ease, background 0.25s ease
+		&.is-active
+			color: $blue
+			&:before
+				transform: translate3d(0,0,0) scaleX(1)
+		&.is-open
+			color: #fff
+			background: $blue
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 8px
+			right: 8px
+			border-bottom: 2px solid $blue
+			transform: translate3d(0,0,0) scaleX(0)
+			transition: transform 0.2s ease
+	span
+		display: inline-block
+		vertical-align: middle
+
+		+sreg
+		+f(13, 16, null)
+
+.logo
+	position: relative
+	display: inline-block
+	vertical-align: top
+	+bold
+	font-size: 36px
+	+md
+		font-size: 27px
+	&_sm
+		font-size: 27px
+	.icon
+		position: absolute
+		top: 0
+		left: 0
+		color: $blue-light
+		fill: $dark
+	&__text
+		padding: 0.1112em 0 0 1.0556em
+	span,
+	strong
+		display: block
+		font-size: 0.45em
+		line-height: 1
+		letter-spacing: (0.24/16) + em
+	span
+		color: $dark
+	strong
+		color: $blue
+//SEARCH
+.search-results
+	position: absolute
+	z-index: 1001
+	top: 88px
+	left: 0
+	right: 0
+
+	overflow: auto
+	max-height: 248px
+
+	color: $white
+	opacity: 0
+	visibility: hidden
+	background: $blue
+	transition: opacity 0.25s ease, visibility 0.25s ease
+	+md
+		top: 56px
+	+sm
+		top: 120px
+		bottom: 0
+		max-height: none
+	&.is-active
+		opacity: 1
+		visibility: visible
+	&__list
+		padding: 16px 0
+		li
+			padding: 0 176px
+			border-radius: 2px
+			color: #f5f5f5
+			+sreg
+			+f(13, 24)
+			+t(background)
+			cursor: pointer
+			+hover
+				background: #517ab9
+			+md
+				padding: 0 202px
+			+sm
+				padding: 0 8px
+				margin: 0 -8px
+
+
+//MOBILE
+.mobile-nav
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 0
+	bottom: 0
+
+	display: none
+	overflow: auto
+	border-right: 1px solid rgba(28, 46, 73, 0.1)
+	width: 232px
+
+	background-color: whitesmoke
+
+	transform: translate3d(-100%,0,0)
+	transition: transform 0.25s ease, width 0.25s ease
+	+md
+		display: block
+	&.is-active
+		transform: translate3d(0,0,0)
+	&_full
+		+sm
+			overflow: hidden
+			width: 100%
+	&__header
+		padding: 8px 16px
+		border-bottom: 1px solid rgba($dark, 0.1)
+		font-size: 0
+	&__close
+		display: inline-block
+		vertical-align: top
+		margin-right: 16px
+		width: 32px
+		height: 32px
+		background: none
+		+vertical
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: $dark
+			font-size: 14px
+	&__title
+		padding: 16px
+		border-bottom: 1px solid rgba($dark, 0.1)
+	&__link
+		position: relative
+		padding: 8px 40px 8px 16px
+		&.is-active
+			.icon-down
+				transform: translate3d(0,0,0) rotate(180deg)
+		.icon-down
+			position: absolute
+			top: 17px
+			right: 23px
+			fill: $dark
+			font-size: 6px
+	&__title, &__link
+		display: block
+
+		color: $dark
+
+		+reg
+		+f(15, 24, 0.27)
+	&__item
+		padding: 8px 0
+		border-bottom: 1px solid rgba($dark, 0.1)
+	&__submenu
+		padding: 0 16px
+		display: none
+	&__sublink
+		position: relative
+		display: block
+		padding: 8px 24px 8px 8px
+		border-top: 1px solid rgba($dark, 0.1)
+
+		color: $dark
+
+		+reg
+		+f(13, 24, 0.24)
+		&.is-active
+			.icon-down
+				transform: translate3d(0,0,0) rotate(180deg)
+		.icon-down
+			position: absolute
+			top: 17px
+			right: 7px
+			fill: $dark
+			font-size: 6px
+	&__dropdown
+		padding-bottom: 8px
+		display: none
+		a
+			display: block
+			padding: 0 8px
+
+			color: $text
+
+			+sreg
+			+f(13, 24, null)
+
+.mobile-action
+	padding: 16px 0
+	border-bottom: 1px solid rgba($dark, 0.1)
+	display: none
+	+sm
+		display: block
+	&__item
+		padding: 0 16px
+	&__link
+		position: relative
+		display: block
+		padding: 0px 32px
+		+hover
+			.icon-wrapper
+				.icon
+					&:first-child
+						opacity: 0
+					&:last-child
+						opacity: 1
+			.icon
+				fill: $blue
+			.mobile-action__text
+				color: $blue
+		+active
+			.icon-wrapper
+				.icon
+					&:first-child
+						opacity: 0
+					&:last-child
+						opacity: 1
+			.icon
+				fill: $blue-dark
+			.mobile-action__text
+				color: $blue
+		.icon-wrapper
+			position: absolute
+			top: 0px
+			left: 6px
+			&-plane
+				.icon
+					font-size: 17px
+		.icon
+			fill: $dark
+			color: $blue-light
+	&__text
+		display: block
+		color: $dark
+		+sreg
+		+f(13, 16)
+
+.mobile-search
+	padding-left: 16px
+	margin-bottom: 16px
+	.sm-search
+		&__input
+			width: 100%
+		&__field
+			width: 100%
+
+//MENU
+.menu
+	background: $blue
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.25s ease, visibility 0.25s ease
+	&.is-open
+		opacity: 1
+		visibility: visible
+	&__row
+		margin: 0 -8px
+		+clr
+		display: none
+		&.is-open
+			display: block
+	&__col
+		float: left
+		padding: 16px 8px
+		width: 100%
+		+clr
+		&_xs
+			width: 25%
+		&_lg
+			width: 75%
+		&-in 
+			float: left
+			padding-right: 8px
+			margin-bottom: 18px
+			width: 33.33%
+	&__title
+		padding-bottom: 8px
+
+		color: #fff
+
+		+reg
+		+f(15, 24, 0.27)
+		a
+			display: block
+			padding: 0 8px
+			margin: 0 0 0 -8px
+			border-radius: 2px
+			color: inherit
+			+t(background)
+			+hover
+				background: #517ab9
+	&__lists
+		float: left
+		width: 100%
+		margin: 0 -8px -16px 0
+		+clr
+	&__list
+		padding: 0 8px
+		a
+			display: block
+			padding: 0 8px
+			margin: 0 -8px
+			border-radius: 2px
+
+			color: whitesmoke
+
+			+sreg
+			+f(13, 24, null)
+			+t(background)
+			+hover
+				background: #517ab9

@@ -1,0 +1,64 @@
+.rating-static
+	font-size: 0
+	&_lg
+		.rating-static
+			&__value
+				+f(22,24,1)
+				+md
+					+f(20,24,1)
+				+sm
+					+f(16,24,1)
+			&__bar
+				+md
+					margin-top: 6px
+				+sm
+					margin-top: 5px
+			&__disabled,
+			&__active
+				.icon-stars
+					font-size: 19px
+					+md
+						font-size: 13px
+	&_md
+		.rating-static
+			&__value
+				+f(15,24,1)
+			&__bar
+				margin-top: 4px
+			&__disabled,
+			&__active
+				.icon-stars
+					font-size: 13px
+	&_sm
+		.rating-static
+			&__disabled,
+			&__active
+				.icon-stars
+					font-size: 13px
+	&__bar,
+	&__value
+		display: inline-block
+		vertical-align: top
+	&__bar
+		position: relative
+	&__value
+		padding-left: 8px
+		color: $dark
+		+reg
+	&__disabled,
+	&__active
+		font-size: 0
+	&__disabled
+		.icon-stars
+			fill: rgba($dark, 0.1)
+	&__active
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		overflow: hidden
+		.icon-stars
+			position: absolute
+			top: 0
+			left: 0
+			fill: $blue

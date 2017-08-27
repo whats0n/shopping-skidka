@@ -1,0 +1,66 @@
+{% import "data/form.html" as profileForm %}
+<!-- BEGIN main-form -->
+<div class="main-form main-form_checkboxes">
+	<div class="main-form__container">
+		<div class="main-form__section">
+			<div class="main-form__header">
+				<div class="main-form__title title-h3">Подписки</div>
+			</div>
+			<div class="main-form__row">
+				<div class="main-form__col main-form__col_lg">
+					<div class="main-form__meta">Я хочу получать информацию о новостях и акциях:</div>
+				</div>
+			</div>
+			<div class="main-form__row main-form__row_items">
+				<div class="main-form__col main-form__col_lg">
+					<ul class="main-form__list">
+						<li class="main-form__item">
+							{{mixins.checkbox({
+								class: 'checkbox_blue',
+								text: "по телефону через SMS"
+							})}}
+						</li>
+						<li class="main-form__item">
+							{{mixins.checkbox({
+								class: 'checkbox_blue',
+								text: "по электронной почте (4epikart@gmail.com)"
+							})}}
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="main-form__section">
+			<div class="main-form__header">
+				<div class="main-form__title title-h3">Интересы</div>
+			</div>
+			<div class="main-form__row">
+				<div class="main-form__col main-form__col_lg">
+					<div class="main-form__meta">Мне интересны следующие темы:</div>
+				</div>
+			</div>
+			<div class="main-form__row main-form__row_items">
+				{% for item in profileForm.checkbox %}
+					<div class="main-form__col main-form__col_sm">
+						<ul class="main-form__list">
+							{% for checkbox in item %}
+								<li class="main-form__item">
+									{{mixins.checkbox({
+										class: 'checkbox_blue',
+										text: checkbox.name
+									})}}
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="main-form__save">
+				<div class="main-form__col main-form__col_sm main-form__col_pull-sm">
+					<button class="btn btn_lg btn_extra" disabled>Сохранить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END main-form -->
