@@ -2,12 +2,12 @@ import select2 from 'select2';
 
 (function() {
 
-	let select = $('.js-select');
+  let select = $('.js-select');
 
-	select.each(function() {
-		$(this).select2({
-			minimumResultsForSearch: -1
-		});
-	});
+  select.each(function() {
+    $(this).select2({
+      minimumResultsForSearch: -1
+    });
+  });
 
 })();

@@ -6,12 +6,12 @@ function build(cb) {
     runSequence(
         'clean',
         'sprite:svg',
-        'sprite:png',
         'svgo',
         'sass',
         'nunjucks',
         'webpack',
         'copy',
+        // 'list-pages',
         cb
     );
 }

@@ -228,46 +228,35 @@
 	</a>
 
 	<div class="item__footer">
+		{% if config.noButtons != true %}
+			<div class="item__btns">
+				{% if config.sales %}
+				<div class="item__col item__col_lg">
+					<button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
+						{{icon('percent')}}
+						<span>Сообщить о скидке</span>
+					</button>
+				</div>
+				{% endif %}
+
+				<div class="item__col item__col_sm">
+					<button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
+						{{icon('cooperative')}}
+					</button>
+				</div>
+
+				<div class="item__col item__col_sm">
+					<button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
+						{{icon('heart-active')}}
+					</button>
+				</div>
+			</div>
+		{% endif %}
 		<div class="item__price">
 			<div class="item__current">{{config.price.current}}</div>
 			{% if config.price.old %}
 			<div class="item__old">{{config.price.old}}</div>
 			{% endif %}
-		</div>
-		<div class="item__btns">
-			{% if config.sales %}
-			<div class="item__col item__col_lg">
-				<button class="item__btn item__btn-discount js-tooltip" title="Сообщить о скидке">
-					{# <svg class="icon icon-percent" viewBox="0 0 14.5 12.8" enable-background="new 0 0 14.5 12.8">
-						<path d="M8.5,9.5c0-1.7,1.3-3,3-3s3,1.3,3,3s-1.3,3-3,3S8.5,11.2,8.5,9.5z M0,3c0-1.7,1.3-3,3-3s3,1.3,3,3S4.7,6,3,6S0,4.7,0,3z M11.5,11c0.8,0,1.5-0.7,1.5-1.5S12.3,8,11.5,8S10,8.7,10,9.5S10.7,11,11.5,11z M3,4.5c0.8,0,1.5-0.7,1.5-1.5S3.8,1.5,3,1.5S1.5,2.2,1.5,3S2.2,4.5,3,4.5z"/>
-						<path d="M9.9,0.6c0.3-0.5,0.9-0.6,1.4-0.2l0,0c0.5,0.3,0.6,0.9,0.2,1.4L4,12.4c-0.3,0.5-0.9,0.6-1.4,0.2l0,0c-0.5-0.3-0.6-0.9-0.2-1.4L9.9,0.6z"/>
-						<path fill="currentColor" d="M11.5,11c0.8,0,1.5-0.7,1.5-1.5S12.3,8,11.5,8S10,8.7,10,9.5S10.7,11,11.5,11z"/>
-						<path fill="currentColor" d="M3,4.5c0.8,0,1.5-0.7,1.5-1.5S3.8,1.5,3,1.5S1.5,2.2,1.5,3S2.2,4.5,3,4.5z"/>
-					</svg> #}
-					{{icon('percent')}}
-					<span>Сообщить о скидке</span>
-				</button>
-			</div>
-			{% endif %}
-
-			<div class="item__col item__col_sm">
-				<button class="item__btn item__btn-icon js-tooltip" title="Совместная покупка">
-					{# <svg class="icon icon-cooperative" viewBox="1 0 23 19" enable-background="new 1 0 23 19">
-						<path d="M3.2,17.3c0.2-0.6,0.4-1.2,0.8-1.8C4.9,13.9,6.5,13,9,13s4.1,0.9,5.1,2.5c0.3,0.6,0.7,1.5,0.7,1.5S9.6,17,7,17c-0.6,0-1,0.5-1,1s0.4,1,1,1h9c0.6,0,1.1-0.5,1-1.1c-0.1-0.9-0.4-2.2-1.2-3.5C14.4,12.3,12.2,11,9,11s-5.4,1.3-6.8,3.5C1.4,15.8,1.1,17,1,17.9c0,0.5,0.4,1,0.9,1.1c0.5,0,1-0.4,1.1-0.9C3,18,3.1,17.7,3.2,17.3zM9,10c2.8,0,5-2.2,5-5s-2.2-5-5-5S4,2.2,4,5S6.2,10,9,10z M9,8C7.3,8,6,6.7,6,5s1.3-3,3-3s3,1.3,3,3S10.7,8,9,8z M21,13v-3h3V8h-3V5h-2v3h-3v2h3v3H21z"/>
-					</svg> #}
-					{{icon('cooperative')}}
-				</button>
-			</div>
-
-			<div class="item__col item__col_sm">
-				<button class="item__btn item__btn-icon js-tooltip js-favorite-btn" title="Добавить в избранное">
-					{# <svg class="icon icon-heart-active" viewBox="-295 387 20 19" enable-background="new -295 387 20 19">
-						<path fill="currentColor" d="M-283.6,390.2c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-1.8-1.2-2.8-1.2c-2.1,0-3.8,1.7-3.8,3.9c0,1.4,0.6,2.7,1.9,4.4c1.1,1.4,6.1,6,6.1,6s5-4.6,6.1-6c1.3-1.7,1.9-3.1,1.9-4.4c0-2.2-1.6-3.9-3.8-3.9C-281.8,389-282.8,389.4-283.6,390.2z"/>
-						<path d="M-283.6,390.2c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-1.8-1.2-2.8-1.2c-2.1,0-3.8,1.7-3.8,3.9c0,1.4,0.6,2.7,1.9,4.4c1.1,1.4,6.1,6,6.1,6s5-4.6,6.1-6c1.3-1.7,1.9-3.1,1.9-4.4c0-2.2-1.6-3.9-3.8-3.9C-281.8,389-282.8,389.4-283.6,390.2z M-275,392.9c0,1.9-0.8,3.7-2.4,5.7c-1.4,1.7-3.3,3.5-5.9,5.9l-1.3,1.3c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2l-1.3-1.3c-2.6-2.4-4.5-4.1-5.9-5.9c-1.6-2-2.3-3.8-2.3-5.7c0-3.3,2.5-5.9,5.8-5.9c1.6,0,3.1,0.6,4.2,1.8c1.1-1.1,2.7-1.8,4.2-1.8C-277.5,387-275,389.6-275,392.9z"/>
-					</svg> #}
-					{{icon('heart-active')}}
-				</button>
-			</div>
 		</div>
 	</div>
 </div>

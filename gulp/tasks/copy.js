@@ -13,10 +13,10 @@ gulp.task('copy:lib', function() {
         .pipe(gulp.dest(config.dest.lib));
 });
 
-gulp.task('copy:json', function() {
+gulp.task('copy:rootfiles', function() {
     return gulp
-        .src(config.src.root + '/json/**.*')
-        .pipe(gulp.dest(config.dest.root + '/json/'));
+        .src(config.src.root + '/*.*')
+        .pipe(gulp.dest(config.dest.root));
 });
 
 gulp.task('copy:img', function() {
@@ -30,7 +30,7 @@ gulp.task('copy:img', function() {
 
 gulp.task('copy', [
     'copy:img',
-    'copy:json',
+    // 'copy:rootfiles',
     // 'copy:lib',
     'copy:fonts'
 ]);

@@ -2,12 +2,12 @@ import {WIN} from './_global.js';
 
 (function() {
 
-	let scrollbar = $('.js-scrollbar');
+  let scrollbar = $('.js-scrollbar');
 
-	scrollbar.perfectScrollbar();
+  scrollbar.perfectScrollbar();
 
-	WIN.on('resize', () => {
-		scrollbar.perfectScrollbar('update');
-	});
+  WIN.on('resize', () => {
+    scrollbar.perfectScrollbar('update');
+  });
 
 })();
