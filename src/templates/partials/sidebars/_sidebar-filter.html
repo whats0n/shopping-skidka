@@ -77,6 +77,192 @@
 			</div>
 		</div>
 		{% endfor %}
+		<div class="sm-filter__box js-accordion-lg" data-accordion-parent="filters">
+			<a href="#" class="sm-filter__title js-accordion-lg-open" data-accordion-child="filters">
+				<span>Бренды</span>
+				{{mixins.icon('down')}}
+			</a>
+			{% set brends = [
+				{
+					text: 'Samsung',
+					attrs: 'checked'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony',
+					attrs: 'checked'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				}
+			] %}
+			<div class="sm-filter__container js-accordion-lg-content js-show-more" data-accordion-child="filters">
+				<div class="sm-filter__search">
+					<input type="text" class="input">
+					{{mixins.icon('search-default')}}
+				</div>
+				<ul class="sm-filter__list">
+					{% for item in brends %}
+						<li>
+							{{mixins.checkbox(item)}}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
 		<div class="sm-filter__box">
 			<div class="sm-filter__checkbox">
 				{{mixins.checkbox({
