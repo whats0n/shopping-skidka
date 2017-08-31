@@ -107,3 +107,20 @@
 	&__checkbox
 		padding: 8px 0
 		font-size: 0
+	&__search
+		position: relative
+		margin-bottom: 20px
+		.icon-search-default
+			position: absolute
+			top: 11px
+			left: 15px
+
+			color: $blue-light
+			fill: $dark
+
+			font-size: 19px
+			~ .input
+				padding-left: 40px
+	&__scrollable
+		overflow: auto
+		max-height: 360px

@@ -7,13 +7,6 @@ import {ACTIVE, BODY, HTMLBODY, WIN} from './_global.js';
   let filter = $('.js-filter');
 
   filterOpen.on('click', function(e) {
-    // let filterTop = filter.offset().top;
-    // if (!filterOpen.hasClass(ACTIVE) && filterTop < WIN.scrollTop()) {
-    // 	console.log(filterTop);
-    // 	HTMLBODY.animate({
-    // 		scrollTop: filterTop
-    // 	}, 400);
-    // }
     filterOpen.toggleClass(ACTIVE);
     BODY.toggleClass(filterActive);
     return false;

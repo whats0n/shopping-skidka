@@ -43,4 +43,6 @@ $(document).ready(function() {
   //js from other developers
   require('./_from-site.js');
 
+  require('./_filters.js');
+
 });

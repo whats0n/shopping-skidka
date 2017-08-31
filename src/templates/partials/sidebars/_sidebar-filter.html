@@ -84,15 +84,13 @@
 			</a>
 			{% set brends = [
 				{
-					text: 'Samsung',
-					attrs: 'checked'
+					text: 'Samsung'
 				},
 				{
 					text: 'LG'
 				},
 				{
-					text: 'Sony',
-					attrs: 'checked'
+					text: 'Sony'
 				},
 				{
 					text: 'Philips'
@@ -101,31 +99,7 @@
 					text: 'Mystery'
 				},
 				{
-					text: 'Sony',
-					attrs: 'checked'
-				},
-				{
-					text: 'Philips'
-				},
-				{
-					text: 'Mystery'
-				},
-				{
-					text: 'LG'
-				},
-				{
-					text: 'Sony',
-					attrs: 'checked'
-				},
-				{
-					text: 'Philips'
-				},
-				{
-					text: 'Mystery'
-				},
-				{
-					text: 'Sony',
-					attrs: 'checked'
+					text: 'Sony'
 				},
 				{
 					text: 'Philips'
@@ -137,8 +111,7 @@
 					text: 'LG'
 				},
 				{
-					text: 'Sony',
-					attrs: 'checked'
+					text: 'Sony'
 				},
 				{
 					text: 'Philips'
@@ -147,31 +120,7 @@
 					text: 'Mystery'
 				},
 				{
-					text: 'Sony',
-					attrs: 'checked'
-				},
-				{
-					text: 'Philips'
-				},
-				{
-					text: 'Mystery'
-				},
-				{
-					text: 'LG'
-				},
-				{
-					text: 'Sony',
-					attrs: 'checked'
-				},
-				{
-					text: 'Philips'
-				},
-				{
-					text: 'Mystery'
-				},
-				{
-					text: 'Sony',
-					attrs: 'checked'
+					text: 'Sony'
 				},
 				{
 					text: 'Philips'
@@ -183,8 +132,7 @@
 					text: 'LG'
 				},
 				{
-					text: 'Sony',
-					attrs: 'checked'
+					text: 'Sony'
 				},
 				{
 					text: 'Philips'
@@ -193,31 +141,7 @@
 					text: 'Mystery'
 				},
 				{
-					text: 'Sony',
-					attrs: 'checked'
-				},
-				{
-					text: 'Philips'
-				},
-				{
-					text: 'Mystery'
-				},
-				{
-					text: 'LG'
-				},
-				{
-					text: 'Sony',
-					attrs: 'checked'
-				},
-				{
-					text: 'Philips'
-				},
-				{
-					text: 'Mystery'
-				},
-				{
-					text: 'Sony',
-					attrs: 'checked'
+					text: 'Sony'
 				},
 				{
 					text: 'Philips'
@@ -229,8 +153,7 @@
 					text: 'LG'
 				},
 				{
-					text: 'Sony',
-					attrs: 'checked'
+					text: 'Sony'
 				},
 				{
 					text: 'Philips'
@@ -239,8 +162,70 @@
 					text: 'Mystery'
 				},
 				{
-					text: 'Sony',
-					attrs: 'checked'
+					text: 'Sony'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'LG'
+				},
+				{
+					text: 'Sony'
+				},
+				{
+					text: 'Philips'
+				},
+				{
+					text: 'Mystery'
+				},
+				{
+					text: 'Sony'
 				},
 				{
 					text: 'Philips'
@@ -249,18 +234,23 @@
 					text: 'Mystery'
 				}
 			] %}
-			<div class="sm-filter__container js-accordion-lg-content js-show-more" data-accordion-child="filters">
+			<div class="sm-filter__container js-accordion-lg-content js-show-more js-filters" data-accordion-child="filters">
 				<div class="sm-filter__search">
-					<input type="text" class="input">
 					{{mixins.icon('search-default')}}
+					<input type="text" class="input js-filters-input">
 				</div>
-				<ul class="sm-filter__list">
-					{% for item in brends %}
-						<li>
-							{{mixins.checkbox(item)}}
-						</li>
-					{% endfor %}
-				</ul>
+				<div class="sm-filter__scrollable">
+					<ul class="sm-filter__list">
+						{% for item in brends %}
+							<li class="js-filters-item">
+								{{mixins.checkbox({
+									text: item.text,
+									attrs: 'data-value="' + item.text + '" class="js-filters-value"'
+								})}}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="sm-filter__box">

@@ -10693,6 +10693,29 @@ a {
   font-size: 0;
 }
 
+.sm-filter__search {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.sm-filter__search .icon-search-default {
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  color: #9db7df;
+  fill: #1d2e49;
+  font-size: 19px;
+}
+
+.sm-filter__search .icon-search-default ~ .input {
+  padding-left: 40px;
+}
+
+.sm-filter__scrollable {
+  overflow: auto;
+  max-height: 360px;
+}
+
 .sidebar-box__container {
   padding: 16px 0 0;
   margin: 0 -8px;
