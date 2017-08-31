@@ -3810,13 +3810,17 @@ a {
   padding: 0 8px;
 }
 
+.breadcrumbs li.is-active {
+  color: #3160aa;
+}
+
 .breadcrumbs a {
   color: inherit;
   transition: color 0.15s ease-in-out;
 }
 
 .no-touch .breadcrumbs a:hover {
-  color: #9db7df;
+  color: #3160aa;
 }
 
 .breadcrumbs a.is-active {
