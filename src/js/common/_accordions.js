@@ -9,10 +9,13 @@ import {WIN, ACTIVE, getWidthMD, getWidthSM} from './_global.js';
       this._contentClass = config.content;
       this._closeOther = config.closeOther || false;
 
+
       this._section = config.section;
       this._accordionFamily = this._section.data('accordion-parent');
       this._btn = this._section.find(`${config.button}[data-accordion-child="${this._accordionFamily}"]`);
       this._content = this._section.find(`${this._contentClass}[data-accordion-child="${this._accordionFamily}"]`);
+      this._linkName = `${config.link}[data-accordion-child="${this._accordionFamily}"]`;
+      this._link = this._section.find(this._linkName);
 
       this._duration = config.duration || 300;
 
@@ -39,15 +42,16 @@ import {WIN, ACTIVE, getWidthMD, getWidthSM} from './_global.js';
 
         e.preventDefault();
         let _this = $(this);
-        let activeContent = _this.siblings(`${that._contentClass}[data-accordion-child="${that._accordionFamily}"]`);
-
-        if (_this.hasClass(ACTIVE)) {
-          that._close(_this, activeContent);
+        let activeElement = that._link.length ? _this.closest(that._linkName) : _this;
+        let activeContent = activeElement.siblings(`${that._contentClass}[data-accordion-child="${that._accordionFamily}"]`);
+        console.log('click', activeElement);
+        if (activeElement.hasClass(ACTIVE)) {
+          that._close(activeElement, activeContent);
         } else {
 
           if (that._closeOther) that._close(that._btn, that._content);
 
-          _this.addClass(ACTIVE);
+          activeElement.addClass(ACTIVE);
           activeContent
             .stop(false, true, true)
             .slideDown(that._duration);
@@ -98,6 +102,16 @@ import {WIN, ACTIVE, getWidthMD, getWidthSM} from './_global.js';
       section: $(this),
       button: '.js-accordion-lg-open',
       content: '.js-accordion-lg-content',
+      duration: 250
+    });
+  });
+
+  $('.js-accordion-category').each(function() {
+    new Accordion({
+      section: $(this),
+      button: '.js-accordion-category-open',
+      content: '.js-accordion-category-content',
+      link: '.js-accordion-category-link',
       duration: 250
     });
   });

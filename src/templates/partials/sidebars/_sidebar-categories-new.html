@@ -1,0 +1,44 @@
+<div class="category js-accordion-category" data-accordion-parent="category">
+	{% for category in sidebar.category %}
+		<div class="category__box">
+			<div class="category__title category__title_parts js-accordion-category-link {{category.active}}" data-accordion-child="category">
+				<div class="category__arrow category__arrow_title js-accordion-category-open" data-accordion-child="category">
+					{{mixins.icon('down')}}
+				</div>
+				<a href="#" class="category__title-in">{{category.title}}</a>
+			</div>
+			<div class="category__block js-accordion-category-content {{category.open}}" data-accordion-child="category" data-show-parent="category">
+				<ul class="category__list js-accordion-category" data-accordion-parent="sub-category">
+					{% for item in category.list %}
+						<li class="category__item">
+							{% if item.dropdown %}
+								<div class="category__link category__link_parts {{item.active}} js-accordion-category-link" data-accordion-child="sub-category">
+									<div class="category__arrow category__arrow_default js-accordion-category-open" data-accordion-child="sub-category">
+										{{mixins.icon('down')}}
+									</div>
+									<a href="#" class="category__link-in">{{category.title}}</a>
+								</div>
+								<ul class="category__dropdown js-accordion-category-content {{item.open}}" data-accordion-child="sub-category">
+									{% for item in sidebar.categoryDropdown %}
+										<li>
+											<a href="#">{{item}}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							{% else %}
+								<div class="category__link category__link_parts {{item.active}}">
+									<a href="#" class="category__link-in">{{category.title}}</a>
+								</div>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+				{# <a href="#" class="category__link btn-more js-show-more-open" data-show-child="category">
+					<span class="btn-more__show">Еще</span>
+					<span class="btn-more__hide">Свернуть</span>
+					{{mixins.icon('down')}}
+				</a> #}
+			</div>
+		</div>
+	{% endfor %}
+</div>

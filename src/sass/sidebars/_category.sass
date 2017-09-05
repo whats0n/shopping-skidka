@@ -1,6 +1,8 @@
 .category
 	margin-bottom: 110px
+	color: $text
 	&__box
+		position: relative
 		padding-bottom: 8px
 		margin-bottom: 12px
 		border-bottom: 1px solid rgba($dark, 0.1)
@@ -26,11 +28,24 @@
 			padding: 4px 32px 4px 8px
 			margin: 0 0 4px
 		&.is-active
+			color: $blue
+			background: rgba($dark, 0.07)
 			.icon-down
 				transform: translate3d(0,0,0) rotate(180deg)
 		+hover
 			color: $blue
-			background: rgba($dark, 0.1)
+			background: rgba($dark, 0.07)
+		&_parts
+			padding: 0
+			transition: background 0.25s ease
+		&-in
+			display: block
+			overflow: hidden
+			padding: 4px 8px 4px 8px
+			color: inherit
+			transition: background 0.25s ease
+			+hover
+				background: rgba($dark, 0.07)
 	.icon-down
 		position: absolute
 		top: 50%
@@ -44,15 +59,46 @@
 			right: 13px
 		+sm
 			right: 7px
+	&__arrow
+		float: right
+		border-radius: 0 2px 2px 0
+		width: 40px
+		height: 100%
+		cursor: pointer
+		transition: background 0.25s ease
+		+hover
+			background: rgba($black, 0.07)
+		&_title 
+			height: 32px
+		&_default
+			height: 24px
 	&__link
 		position: relative
 		padding-right: 24px
+		&_parts
+			padding: 0
+			margin: 0 -8px
+			transition: background 0.25s ease
+			&.is-active
+				color: $blue
+				background: rgba($dark, 0.1)
+			+hover
+				color: $blue
+				background: rgba($dark, 0.1)
+		&-in
+			display: block
+			overflow: hidden
+			margin: 0 !important
+			color: inherit !important
 		&.is-active
 			.icon-down
 				transform: translate3d(0,0,0) rotate(180deg)
 	&__block
+		position: relative
 		display: none
 		padding-bottom: 8px
+		&.is-open
+			display: block
 		a
 			display: block
 			padding: 0 8px
@@ -70,9 +116,12 @@
 			+sm
 				padding: 0 8px
 				margin: 0
+			&.is-active
+				color: $blue
+				background: rgba($dark, 0.07)
 			+hover
 				color: $blue
-				background: rgba($dark, 0.1)
+				background: rgba($dark, 0.07)
 	&__item
 		&:last-child
 			.category
@@ -85,3 +134,5 @@
 		margin: 8px 0 8px 16px
 		border-top: 1px solid rgba($dark, 0.1)
 		border-bottom: 1px solid rgba($dark, 0.1)
+		&.is-open
+			display: block
