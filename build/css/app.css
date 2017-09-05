@@ -10762,6 +10762,10 @@ a {
   padding: 8px 0;
 }
 
+.sm-filter__container.is-open {
+  display: block;
+}
+
 .sm-filter__link {
   color: #5d6a7e;
   font-family: "SegoeUI Regular", Arial, sans-serif;

@@ -78,7 +78,7 @@
 		</div>
 		{% endfor %}
 		<div class="sm-filter__box js-accordion-lg" data-accordion-parent="filters">
-			<a href="#" class="sm-filter__title js-accordion-lg-open" data-accordion-child="filters">
+			<a href="#" class="sm-filter__title js-accordion-lg-open is-active" data-accordion-child="filters">
 				<span>Бренды</span>
 				{{mixins.icon('down')}}
 			</a>
@@ -234,7 +234,7 @@
 					text: 'Mystery'
 				}
 			] %}
-			<div class="sm-filter__container js-accordion-lg-content js-show-more js-filters" data-accordion-child="filters">
+			<div class="sm-filter__container js-accordion-lg-content js-show-more js-filters is-open" data-accordion-child="filters">
 				<div class="sm-filter__search">
 					{{mixins.icon('search-default')}}
 					<input type="text" class="input js-filters-input">
