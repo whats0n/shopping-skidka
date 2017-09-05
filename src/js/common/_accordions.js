@@ -44,7 +44,7 @@ import {WIN, ACTIVE, getWidthMD, getWidthSM} from './_global.js';
         let _this = $(this);
         let activeElement = that._link.length ? _this.closest(that._linkName) : _this;
         let activeContent = activeElement.siblings(`${that._contentClass}[data-accordion-child="${that._accordionFamily}"]`);
-        console.log('click', activeElement);
+
         if (activeElement.hasClass(ACTIVE)) {
           that._close(activeElement, activeContent);
         } else {

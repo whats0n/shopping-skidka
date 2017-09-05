@@ -10645,6 +10645,10 @@ a {
   display: block;
 }
 
+.no-touch .category__dropdown a:hover {
+  background: rgba(29, 46, 73, 0.17);
+}
+
 .sm-filter {
   position: relative;
   margin: -4px 0 40px;

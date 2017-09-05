@@ -19,9 +19,13 @@
 									<a href="#" class="category__link-in">{{category.title}}</a>
 								</div>
 								<ul class="category__dropdown js-accordion-category-content {{item.open}}" data-accordion-child="sub-category">
-									{% for item in sidebar.categoryDropdown %}
+									{% for subitem in sidebar.categoryDropdown %}
 										<li>
-											<a href="#">{{item}}</a>
+											{% if item.open and loop.index == 1 %}
+												<a href="#" class="is-active">{{subitem}}</a>
+											{% else %}
+												<a href="#">{{subitem}}</a>
+											{% endif %}
 										</li>
 									{% endfor %}
 								</ul>
