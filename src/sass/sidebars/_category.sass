@@ -60,18 +60,31 @@
 		+sm
 			right: 7px
 	&__arrow
-		float: right
+		position: absolute
+		top: 0
+		right: 0
 		border-radius: 0 2px 2px 0
 		width: 40px
 		height: 100%
 		cursor: pointer
 		transition: background 0.25s ease
+		+vertical
 		+hover
 			background: rgba($black, 0.07)
-		&_title 
-			height: 32px
-		&_default
-			height: 24px
+		// &_title 
+		// 	height: 32px
+		// &_default
+		// 	height: 24px
+		.icon-down
+			position: relative
+			top: auto
+			right: auto
+			display: inline-block
+			vertical-align: middle
+			margin: 0
+		+ .category__title-in,
+		+ .category__link-in
+			margin-right: 40px !important
 	&__link
 		position: relative
 		padding-right: 24px

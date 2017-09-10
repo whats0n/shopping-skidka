@@ -10544,24 +10544,42 @@ a {
 }
 
 .category__arrow {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   border-radius: 0 2px 2px 0;
   width: 40px;
   height: 100%;
   cursor: pointer;
   transition: background 0.25s ease;
+  text-align: center;
+  font-size: 0;
+}
+
+.category__arrow:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
 }
 
 .no-touch .category__arrow:hover {
   background: rgba(0, 0, 0, 0.07);
 }
 
-.category__arrow_title {
-  height: 32px;
+.category__arrow .icon-down {
+  position: relative;
+  top: auto;
+  right: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
 }
 
-.category__arrow_default {
-  height: 24px;
+.category__arrow + .category__title-in,
+.category__arrow + .category__link-in {
+  margin-right: 40px !important;
 }
 
 .category__link {
