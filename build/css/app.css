@@ -11192,6 +11192,82 @@ a {
   margin-bottom: 16px;
 }
 
+.typography {
+  color: #5d6a7e;
+}
+
+.typography h1,
+.typography h2,
+.typography h3,
+.typography p,
+.typography ul,
+.typography ol,
+.typography table {
+  margin-bottom: 16px;
+}
+
+.typography strong {
+  font-family: "PFAgoraSlabPro Bold", Arial, sans-serif;
+}
+
+.typography b {
+  font-family: "PFAgoraSlabPro Medium", Arial, sans-serif;
+}
+
+.typography u {
+  text-decoration: underline;
+}
+
+.typography em {
+  font-family: "PFAgoraSlabPro Italic", Arial, sans-serif;
+}
+
+.typography ul li {
+  list-style-type: disc;
+}
+
+.typography ol li {
+  list-style-type: decimal-leading-zero;
+}
+
+.typography ul,
+.typography ol {
+  list-style-position: outside;
+  margin-left: 20px;
+}
+
+.typography table {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.typography table th {
+  background: #e3e6ec;
+  font-family: "PFAgoraSlabPro Bold", Arial, sans-serif;
+  font-size: 16px;
+}
+
+.typography table th,
+.typography table td {
+  vertical-align: top;
+  padding: 10px;
+  border: 1px solid #a7aeba;
+}
+
+.no-touch .typography table.table-with-hover tr:hover {
+  background: #eaeff8;
+}
+
+.typography table.table-zebra-even tr:nth-child(even) {
+  background: #eaeff8;
+}
+
+.typography table.table-zebra-odd tr:nth-child(odd) {
+  background: #eaeff8;
+}
+
 @media only screen and (max-width: 1200px) {
 
   .controllers__right {
@@ -12815,6 +12891,12 @@ a {
   .brand-about__content p {
     margin-bottom: 16px;
   }
+
+  .typography h2 {
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.06667em;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -14378,6 +14460,12 @@ a {
 
   .gallery__thumbnail-in:after {
     box-shadow: none;
+  }
+
+  .typography h1 {
+    font-size: 24px;
+    line-height: 1.34;
+    letter-spacing: 0.04167em;
   }
 }
 
